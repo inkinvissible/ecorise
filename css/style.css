@@ -551,3 +551,12 @@ h6,
 .footer .copyright a:hover {
     color: var(--primary);
 }
+.rounded{
+    border-radius: 10px!important;
+}
+.fs-1{
+    font-size: 5rem!important;
+}
+.text-primary{
+    color: var(--primary)!important;
+}
