@@ -560,3 +560,14 @@ h6,
 .text-primary{
     color: var(--primary)!important;
 }
+
+.btn-noFill{
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.btn-noFill:hover{
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
