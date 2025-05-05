@@ -82,3 +82,25 @@
     
 })(jQuery);
 
+// Add this to your main.js file or include inline
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click event listeners to all flip buttons
+    const flipButtons = document.querySelectorAll('.btn-flip');
+    flipButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = this.closest('.news-card');
+            card.classList.add('flipped');
+        });
+    });
+
+    // Add click event listeners to all back buttons
+    const flipBackButtons = document.querySelectorAll('.btn-flip-back');
+    flipBackButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = this.closest('.news-card');
+            card.classList.remove('flipped');
+        });
+    });
+});

@@ -31,6 +31,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 
 <body>
@@ -46,30 +49,35 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
     <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-        <h1 class="text-primary m-0"><img class="me-3" src="img/icons/icon-1.png" alt="Icon">Arkitektur</h1>
+        <h1 class="text-primary m-0">ECORISE</h1>
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="index.html" class="nav-item nav-link active">Inicio</a>
+            <a href="energia-solar.html" class="nav-item nav-link">Energía solar</a>
+            <a href="sustentabilidad.html" class="nav-item nav-link">Sustentabilidad</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros servicios</a>
                 <div class="dropdown-menu border-0 m-0">
-                    <a href="feature.html" class="dropdown-item">Our Features</a>
-                    <a href="project.html" class="dropdown-item">Our Projects</a>
-                    <a href="team.html" class="dropdown-item">Team Members</a>
-                    <a href="appointment.html" class="dropdown-item">Appointment</a>
-                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    <a href="404.html" class="dropdown-item">404 Page</a>
+                    <a href="mantenimiento.html" class="dropdown-item">Mantenimiento e inspección</a>
+                    <a href="consultoria-tecnica.html" class="dropdown-item">Consultoría técnica</a>
+
                 </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
+                    <a href="https://wa.me/5493513994184" class="dropdown-item">Teléfono</a>
+                </div>
+            </div>
         </div>
-        <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Appointment</a>
+        <a href=""
+           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+           class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
     </div>
 </nav>
 <!-- Navbar End -->
@@ -78,55 +86,69 @@
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-1.jpg'>">
-            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+        <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-start1.jpg'>">
+            <div class="carousel-img-container">
+                <img class="img-fluid w-100 h-100 object-fit-cover" src="img/carousel-start1.jpg" alt="Paneles solares en Córdoba Argentina - Ecorise energía renovable">
+            </div>
             <div class="owl-carousel-inner">
                 <div class="container">
                     <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h1 class="display-1 text-white animated slideInDown">Ecorise: La empresa sustentable que
-                                está para vos</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at
-                                sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                            <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft rounded">Conocé más</a>
-                            <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft rounded mx-lg-2">Agendá tu
-                                reunión</a>
+                        <div class="col-12 col-lg-8">
+                            <h1 class="display-1 display-md-2 display-sm-3 text-white animated slideInDown">Ecorise:
+                                Impulsamos tu energía</h1>
+                            <p class="fs-5 fs-md-6 fw-medium text-white mb-4 pb-3">Proveemos soluciones de energía renovable y paneles solares en Córdoba y alrededores. Reducí tu factura eléctrica hasta un 70% y contribuí al medio ambiente con nuestra tecnología fotovoltaica de última generación.</p>
+                            <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-2">
+                                <a href="energia-solar.html"
+                                   class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Energía Solar</a>
+                                <a href="#"
+                                   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                                   class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Agenda una Consulta</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-2.jpg'>">
-            <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+        <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-start2.jpg'>">
+            <div class="carousel-img-container">
+                <img class="img-fluid w-100 h-100 object-fit-cover" src="img/carousel-start2.jpg" alt="Consultoría de sustentabilidad empresarial en Córdoba - Ecorise">
+            </div>
             <div class="owl-carousel-inner">
                 <div class="container">
                     <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h2 class="display-1 text-white animated slideInDown fs-1">Somos Ecorise: Asesoría
-                                Sustentable</h2>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at
-                                sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                            <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft rounded">Conocé más</a>
-                            <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft rounded mx-lg-2">Agendá tu
-                                reunión</a>
+                        <div class="col-12 col-lg-8">
+                            <h2 class="display-1 display-md-2 display-sm-3 text-white animated slideInDown">Consultoría Sustentable
+                                para Empresas</h2>
+                            <p class="fs-5 fs-md-6 fw-medium text-white mb-4 pb-3">Optimizamos la huella de carbono de tu empresa en Córdoba con estrategias ESG y planes de reducción de emisiones. Obtené certificaciones ambientales y mejorá tu competitividad con nuestras soluciones de economía circular.</p>
+                            <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-2">
+                                <a href="sustentabilidad.html"
+                                   class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Sustentabilidad</a>
+                                <a href="#"
+                                   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                                   class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Asesoría Gratuita</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-3.jpg'>">
-            <img class="img-fluid" src="img/carousel-3.jpg" alt="">
+        <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-start3.jpg'>">
+            <div class="carousel-img-container">
+                <img class="img-fluid w-100 h-100 object-fit-cover" src="img/carousel-start3.jpg" alt="Sistemas fotovoltaicos y energía renovable en Córdoba Argentina">
+            </div>
             <div class="owl-carousel-inner">
                 <div class="container">
                     <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h2 class="display-1 text-white animated slideInDown fs-1">Consultoría y Asesoría
-                                sustentable en Córdoba</h2>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at
-                                sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                            <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft rounded">Conocé más</a>
-                            <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft rounded mx-lg-2">Agendá tu
-                                reunión</a>
+                        <div class="col-12 col-lg-8">
+                            <h2 class="display-1 display-md-2 display-sm-3 text-white animated slideInDown">Eficiencia Energética
+                                para Tu Negocio</h2>
+                            <p class="fs-5 fs-md-6 fw-medium text-white mb-4 pb-3">Implementamos sistemas On Grid y Off Grid en Córdoba con los mejores paneles solares del mercado. Nuestros proyectos de eficiencia energética garantizan ahorros significativos y retorno de inversión en menos de 5 años.</p>
+                            <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-2">
+                                <a href="consultoria-tecnica.html"
+                                   class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Consultoría técnica</a>
+                                <a href="https://wa.me/5493513994184"
+                                   class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Contáctanos</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -192,54 +214,58 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <span class="section-title fs-5">Sustentabilidad</span>
                 <h2 class="display-5 mb-4 fs-1">Trabajamos con energía solar</h2>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                    eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <p class="mb-4">Ofrecemos soluciones energéticas limpias y renovables para hogares y empresas,
+                    utilizando tecnología de última generación. Nuestros sistemas solares garantizan ahorro económico y
+                    contribuyen a la reducción de la huella de carbono.</p>
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="d-flex align-items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
                                  class="bi bi-patch-check-fill text-primary" viewBox="0 0 16 16">
                                 <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
                             </svg>
                             <div class="ms-4">
-                                <h3>Design Approach</h3>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet diam sed stet.</p>
+                                <h3>Calidad certificada</h3>
+                                <p class="mb-0">Brindamos soluciones sustentables con los más altos estándares de
+                                    calidad del mercado y certificación de seguridad funcional.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="d-flex align-items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
                                  class="bi bi-brightness-alt-high-fill text-primary" viewBox="0 0 16 16">
                                 <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5m-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4"/>
                             </svg>
                             <div class="ms-4">
-                                <h3>Innovative Solutions</h3>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet diam sed stet.</p>
+                                <h3>Sistemas solares</h3>
+                                <p class="mb-0">Implementamos sistemas ON Grid, OFF Grid, Parking Solar y Agro Solar,
+                                    adaptados a las necesidades específicas de cada cliente.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="d-flex align-items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
                                  class="bi bi-people-fill text-primary" viewBox="0 0 16 16">
                                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
                             </svg>
                             <div class="ms-4">
-                                <h3>Project Management</h3>
-                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                    stet diam sed stet.</p>
+                                <h3>Soporte personalizado</h3>
+                                <p class="mb-0">Acompañamos a nuestros clientes en todo el proceso con asesoramiento,
+                                    instalación, monitoreo y mantenimiento continuo.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <a class="btn btn-noFill py-3 px-5 rounded mt-4" href="energia-solar.html">Sobre energía solar</a>
+
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="feature-img">
-                    <img class="img-fluid" src="img/about-2.jpg" alt="">
-                    <img class="img-fluid" src="img/about-1.jpg" alt="">
+                    <img class="img-fluid" src="img/energia-solar-2.jpg" alt="Energía residencial ">
+                    <img class="img-fluid" src="img/energia-solar.jpg"
+                         alt="Energía comercial para empresas y pymes con muchos paneles solares en vertical">
                 </div>
             </div>
         </div>
@@ -261,15 +287,17 @@
         <div class="row g-5 align-items-center mb-5">
             <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="position-relative">
-                    <img src="img/carousel-2.jpg" class="img-fluid rounded-3 shadow" alt="Consultoría Sustentable">
+                    <img src="img/footprint.jpg" class="img-fluid rounded-3 shadow" alt="Consultoría Sustentable">
 
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
                 <h3 class="mb-4">Transformamos tu empresa con soluciones sostenibles</h3>
-                <p class="lead mb-4">Ofrecemos un enfoque integral para la sustentabilidad empresarial, combinando innovación y responsabilidad ambiental para lograr resultados medibles.</p>
-                <p class="mb-4">Nuestro equipo de expertos te acompaña en cada paso del proceso para implementar prácticas sustentables que beneficien tanto a tu negocio como al planeta.</p>
-                <a href="#" class="btn btn-primary py-3 px-5 rounded">
+                <p class="lead mb-4">Ofrecemos un enfoque integral para la sustentabilidad empresarial, combinando
+                    innovación y responsabilidad ambiental para lograr resultados medibles.</p>
+                <p class="mb-4">Nuestro equipo de expertos te acompaña en cada paso del proceso para implementar
+                    prácticas sustentables que beneficien tanto a tu negocio como al planeta.</p>
+                <a href="sustentabilidad.html" class="btn btn-primary py-3 px-5 rounded">
                     Conoce más
                     <i class="fa fa-arrow-right ms-2"></i>
                 </a>
@@ -284,7 +312,8 @@
                         <i class="fa fa-leaf fa-3x text-primary"></i>
                     </div>
                     <h3 class="mb-3">Medición de huella de carbono</h3>
-                    <p class="mb-4">Calculamos el impacto ambiental de tu empresa y te proporcionamos estrategias concretas para reducir emisiones.</p>
+                    <p class="mb-4">Calculamos el impacto ambiental de tu empresa y te proporcionamos estrategias
+                        concretas para reducir emisiones.</p>
                     <div class="service-overlay"></div>
                 </div>
             </div>
@@ -294,7 +323,8 @@
                         <i class="fa fa-chart-line fa-3x text-primary"></i>
                     </div>
                     <h3 class="mb-3">Plan de reducción de emisiones</h3>
-                    <p class="mb-4">Desarrollamos estrategias personalizadas para minimizar tu impacto ambiental y optimizar recursos energéticos.</p>
+                    <p class="mb-4">Desarrollamos estrategias personalizadas para minimizar tu impacto ambiental y
+                        optimizar recursos energéticos.</p>
                     <div class="service-overlay"></div>
                 </div>
             </div>
@@ -304,25 +334,15 @@
                         <i class="fa fa-award fa-3x text-primary"></i>
                     </div>
                     <h3 class="mb-3">Evaluaciones ESG</h3>
-                    <p class="mb-4">Analizamos los factores ambientales, sociales y de gobierno corporativo para mejorar la sostenibilidad de tu empresa.</p>
+                    <p class="mb-4">Analizamos los factores ambientales, sociales y de gobierno corporativo para mejorar
+                        la sostenibilidad de tu empresa.</p>
                     <div class="service-overlay"></div>
                 </div>
             </div>
         </div>
 
-        <!-- Botón Ver Más centralizado y mejorado -->
-        <div class="text-center mt-5 pt-3 wow fadeInUp" data-wow-delay="0.6s">
-            <a href="#" class="btn btn-primary py-3 px-5 rounded d-inline-flex align-items-center">
-                Ver todos nuestros servicios
-                <i class="fa fa-long-arrow-alt-right ms-3"></i>
-            </a>
-        </div>
     </div>
 
-    <!-- Elemento decorativo de fondo -->
-    <div class="position-absolute bottom-0 end-0 d-none d-lg-block">
-        <img src="img/icons/icon-1.png" class="img-fluid opacity-10" style="max-width: 200px;" alt="">
-    </div>
 </section>
 <!-- Consultoría sustentable termina -->
 
@@ -393,26 +413,28 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="about-img">
-                    <img class="img-fluid" src="img/about-1.jpg" alt="">
-                    <img class="img-fluid" src="img/about-2.jpg" alt="">
+                    <img class="img-fluid" src="img/productos-servicios.jpg" alt="Servicios de mantenimiento solar">
+                    <img class="img-fluid" src="img/productos-servicios-2.jpg" alt="Equipo de consultoría técnica">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <span class="section-title fs-5">Productos y servicios</span>
-                <h1 class="display-5 mb-4">Nuestros productos y servicios</h1>
-                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
-                    ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet
-                    diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet
-                    diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-                <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet
-                    diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
+                <h2 class="display-5 mb-4">Nuestros productos y servicios</h2>
+                <p>En Ecorise ofrecemos una amplia gama de soluciones técnicas especializadas para garantizar el
+                    funcionamiento óptimo y la durabilidad de sus instalaciones sostenibles. Nuestro enfoque integral
+                    asegura que cada proyecto mantenga su eficiencia a largo plazo.</p>
+                <p class="mb-4">Nuestros servicios de mantenimiento e inspección permiten detectar y solucionar
+                    problemas antes de que afecten el rendimiento de sus sistemas. Contamos con técnicos certificados y
+                    equipos de última generación para realizar diagnósticos precisos y mantenimiento preventivo.</p>
+                <p class="mb-4">La consultoría técnica que brindamos se basa en años de experiencia en el sector de
+                    energías renovables. Analizamos cada aspecto de su proyecto para optimizar el diseño, seleccionar
+                    los mejores componentes y maximizar la eficiencia energética según sus necesidades específicas.</p>
+                <p class="mb-4">Complementamos estos servicios con un soporte continuo post-instalación y monitoreo
+                    remoto de sistemas. Nuestro objetivo es crear relaciones duraderas
+                    con nuestros clientes, acompañándolos en todo el ciclo de vida de sus proyectos sustentables.</p>
 
-                <a class="btn btn-primary py-3 px-5 rounded" href="">Agendá tu reunión</a>
-                <a class="btn btn-noFill py-3 px-5 rounded" href="">Nuestros servicios</a>
-
-
+                <a class="btn btn-primary py-3 px-5 rounded" href="mantenimiento.html">Mantenimiento</a>
+                <a class="btn btn-noFill py-3 px-5 rounded" href="consultoria-tecnica.html">Consultoría técnica</a>
             </div>
         </div>
     </div>
@@ -420,466 +442,528 @@
 <!-- Productos y Servicios End -->
 
 <!-- Project Start -->
-<div class="container-xxl project py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h4 class="section-title">Our Projects</h4>
-            <h1 class="display-5 mb-4">Visit Our Latest Projects And Our Innovative Works</h1>
-        </div>
-        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="col-lg-4">
-                <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
-                            data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                        <h3 class="m-0">01. Modern Complex</h3>
-                    </button>
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill"
-                            data-bs-target="#tab-pane-2" type="button">
-                        <h3 class="m-0">02. Royal Hotel</h3>
-                    </button>
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill"
-                            data-bs-target="#tab-pane-3" type="button">
-                        <h3 class="m-0">03. Mexwel Buiding</h3>
-                    </button>
-                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill"
-                            data-bs-target="#tab-pane-4" type="button">
-                        <h3 class="m-0">04. Shopping Complex</h3>
-                    </button>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="tab-content w-100">
-                    <div class="tab-pane fade show active" id="tab-pane-1">
-                        <div class="row g-4">
-                            <div class="col-md-6" style="min-height: 350px;">
-                                <div class="position-relative h-100">
-                                    <img class="position-absolute img-fluid w-100 h-100" src="img/project-1.jpg"
-                                         style="object-fit: cover;" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
-                                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo
-                                    justo magna dolore erat amet</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab-pane-2">
-                        <div class="row g-4">
-                            <div class="col-md-6" style="min-height: 350px;">
-                                <div class="position-relative h-100">
-                                    <img class="position-absolute img-fluid w-100 h-100" src="img/project-2.jpg"
-                                         style="object-fit: cover;" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
-                                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo
-                                    justo magna dolore erat amet</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab-pane-3">
-                        <div class="row g-4">
-                            <div class="col-md-6" style="min-height: 350px;">
-                                <div class="position-relative h-100">
-                                    <img class="position-absolute img-fluid w-100 h-100" src="img/project-3.jpg"
-                                         style="object-fit: cover;" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
-                                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo
-                                    justo magna dolore erat amet</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab-pane-4">
-                        <div class="row g-4">
-                            <div class="col-md-6" style="min-height: 350px;">
-                                <div class="position-relative h-100">
-                                    <img class="position-absolute img-fluid w-100 h-100" src="img/project-4.jpg"
-                                         style="object-fit: cover;" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <h1 class="mb-3">25 Years Of Experience In Architecture Industry</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
-                                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo
-                                    justo magna dolore erat amet</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
-                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="container-xxl project py-5">-->
+<!--    <div class="container">-->
+<!--        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">-->
+<!--            <span class="section-title fs-5">Nuestros proyectos</span>-->
+<!--            <h2 class="display-1 mb-4">Nuestros últimos proyectos sustentables</h2>-->
+<!--        </div>-->
+<!--        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">-->
+<!--            <div class="col-lg-4">-->
+<!--                <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">-->
+<!--                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"-->
+<!--                            data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">-->
+<!--                        <h3 class="m-0">01. Modern Complex</h3>-->
+<!--                    </button>-->
+<!--                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill"-->
+<!--                            data-bs-target="#tab-pane-2" type="button">-->
+<!--                        <h3 class="m-0">02. Royal Hotel</h3>-->
+<!--                    </button>-->
+<!--                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill"-->
+<!--                            data-bs-target="#tab-pane-3" type="button">-->
+<!--                        <h3 class="m-0">03. Mexwel Buiding</h3>-->
+<!--                    </button>-->
+<!--                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill"-->
+<!--                            data-bs-target="#tab-pane-4" type="button">-->
+<!--                        <h3 class="m-0">04. Shopping Complex</h3>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-8">-->
+<!--                <div class="tab-content w-100">-->
+<!--                    <div class="tab-pane fade show active" id="tab-pane-1">-->
+<!--                        <div class="row g-4">-->
+<!--                            <div class="col-md-6" style="min-height: 350px;">-->
+<!--                                <div class="position-relative h-100">-->
+<!--                                    <img class="position-absolute img-fluid w-100 h-100" src="img/project-1.jpg"-->
+<!--                                         style="object-fit: cover;" alt="">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6">-->
+<!--                                <h4 class="mb-3 fs-2">Título de un proyecto</h4>-->
+<!--                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam-->
+<!--                                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo-->
+<!--                                    justo magna dolore erat amet</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>-->
+<!--                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="tab-pane fade" id="tab-pane-2">-->
+<!--                        <div class="row g-4">-->
+<!--                            <div class="col-md-6" style="min-height: 350px;">-->
+<!--                                <div class="position-relative h-100">-->
+<!--                                    <img class="position-absolute img-fluid w-100 h-100" src="img/project-2.jpg"-->
+<!--                                         style="object-fit: cover;" alt="">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6">-->
+<!--                                <h4 class="mb-3 fs-2">Algún buen título</h4>-->
+<!--                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam-->
+<!--                                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo-->
+<!--                                    justo magna dolore erat amet</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>-->
+<!--                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="tab-pane fade" id="tab-pane-3">-->
+<!--                        <div class="row g-4">-->
+<!--                            <div class="col-md-6" style="min-height: 350px;">-->
+<!--                                <div class="position-relative h-100">-->
+<!--                                    <img class="position-absolute img-fluid w-100 h-100" src="img/project-3.jpg"-->
+<!--                                         style="object-fit: cover;" alt="">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6">-->
+<!--                                <h4 class="mb-3 fs-2">Un poco de texto por acá</h4>-->
+<!--                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam-->
+<!--                                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo-->
+<!--                                    justo magna dolore erat amet</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>-->
+<!--                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="tab-pane fade" id="tab-pane-4">-->
+<!--                        <div class="row g-4">-->
+<!--                            <div class="col-md-6" style="min-height: 350px;">-->
+<!--                                <div class="position-relative h-100">-->
+<!--                                    <img class="position-absolute img-fluid w-100 h-100" src="img/project-4.jpg"-->
+<!--                                         style="object-fit: cover;" alt="">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6">-->
+<!--                                <h4 class="mb-3 fs-2">Otro proyecto más</h4>-->
+<!--                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam-->
+<!--                                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo-->
+<!--                                    justo magna dolore erat amet</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>-->
+<!--                                <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>-->
+<!--                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!-- Project End -->
 
+<!-- Sobre Nosotros Start -->
+<section class="container-xxl py-5" id="sobre-nosotros">
+    <div class="container">
+        <!-- Encabezado de la sección -->
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <span class="section-title fs-5">Conoce a Ecorise</span>
+            <h2 class="display-5 mb-4">Nuestra Historia y Valores</h2>
+        </div>
+
+        <!-- Presentación de la empresa -->
+        <div class="row g-5 align-items-center mb-5">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="position-relative overflow-hidden rounded">
+                    <img src="img/prefactibilidad.jpg" alt="Equipo de Ecorise en Córdoba" class="img-fluid w-100">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                <h3 class="mb-4">Transformando la energía en Córdoba desde 2018</h3>
+                <p class="lead">Somos un equipo multidisciplinario de profesionales comprometidos con la transición energética y el desarrollo sostenible en Argentina.</p>
+                <p>Fundada en Córdoba, Ecorise nació con la visión de transformar el panorama energético regional mediante soluciones innovadoras y accesibles. Combinamos la experiencia técnica con un profundo conocimiento del mercado local para ofrecer servicios personalizados que respondan a las necesidades específicas de cada cliente.</p>
+                <p>Nuestro equipo está formado por ingenieros, consultores ambientales y especialistas en energías renovables, todos unidos por la pasión de construir un futuro más sostenible para nuestra comunidad.</p>
+                <div class="d-flex align-items-center mt-4">
+                    <a href="#" class="text-body ps-4 ">
+                        <i class="fa fa-play text-primary me-2"></i>
+                        Ver video corporativo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Misión y Visión con cards -->
+        <div class="row g-4">
+            <!-- Misión -->
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-light rounded-3 h-100 p-5 position-relative overflow-hidden border-top border-5 border-primary shadow-hover">
+
+                    <h3 class="mt-4 mb-3 text-center">Nuestra Misión</h3>
+                    <p class="mb-4">Crear un futuro sostenible, brindando soluciones prácticas y confiables en energías renovables en Córdoba y en todas partes de Argentina.  Con un enfoque técnico, vanguardista y personalizado, ayudamos a transformar la energía y la gestión ambiental en oportunidades de impacto positivo.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> Democratizar el acceso a energías limpias</li>
+                        <li class="mb-2"><i class="fa fa-check-circle text-primary me-2"></i> Reducir la huella de carbono empresarial</li>
+                        <li><i class="fa fa-check-circle text-primary me-2"></i> Impulsar prácticas sustentables</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Visión -->
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="bg-light rounded-3 h-100 p-5 position-relative overflow-hidden border-top border-5 border-primary shadow-hover">
+
+                    <h3 class="mt-4 mb-3 text-center">Nuestra Visión</h3>
+                    <p class="mb-4">Ser referentes energéticos, realizando cambios positivos mediante la innovación, sustentabilidad y excelencia técnica en energías renovables como líderes en la transformación energética de Córdoba y referentes nacionales en soluciones sustentables, contribuyendo a un futuro donde las energías renovables sean la norma y la eficiencia energética sea parte integral de toda actividad económica.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fa fa-lightbulb text-primary me-2"></i> Innovar constantemente en tecnologías limpias</li>
+                        <li class="mb-2"><i class="fa fa-globe-americas text-primary me-2"></i> Expandir nuestro impacto positivo a nivel nacional</li>
+                        <li><i class="fa fa-handshake text-primary me-2"></i> Crear alianzas estratégicas para la sustentabilidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Valores corporativos -->
+        <div class="row mt-5 pt-3">
+            <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="mb-5">Nuestros Valores</h3>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="d-flex flex-column align-items-center text-center mb-5">
+                    <div class="p-4 mb-4 rounded-circle bg-primary">
+                        <i class="fa fa-leaf fa-2x text-white"></i>
+                    </div>
+                    <h4>Sostenibilidad</h4>
+                    <p class="px-3">Todo lo que hacemos busca generar un impacto positivo y duradero en el ambiente y la sociedad.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="d-flex flex-column align-items-center text-center mb-5">
+                    <div class="p-4 mb-4 rounded-circle bg-primary">
+                        <i class="fa fa-cogs fa-2x text-white"></i>
+                    </div>
+                    <h4>Innovación</h4>
+                    <p class="px-3">Usamos tecnología y conocimiento actualizado para ofrecer soluciones eficientes y de vanguardia.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="d-flex flex-column align-items-center text-center mb-5">
+                    <div class="p-4 mb-4 rounded-circle bg-primary">
+                        <i class="fa fa-handshake fa-2x text-white"></i>
+                    </div>
+                    <h4>Transparencia</h4>
+                    <p class="px-3">Medimos, informamos y actuamos con claridad y honestidad en cada etapa del proceso.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="d-flex flex-column align-items-center text-center mb-5">
+                    <div class="p-4 mb-4 rounded-circle bg-primary">
+                        <i class="fa fa-chart-line fa-2x text-white"></i>
+                    </div>
+                    <h4>Excelencia técnica</h4>
+                    <p class="px-3">Nuestro equipo brinda asesoramiento confiable y soluciones adaptadas a cada necesidad.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+<!-- Sobre Nosotros End -->
+
+
 <!-- Service Start -->
+<!-- News & Updates Section -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h4 class="section-title">Our Services</h4>
-            <h1 class="display-5 mb-4">We Focused On Modern Architecture And Interior Design</h1>
+            <span class="section-title fs-5">Novedades</span>
+            <h2 class="display-1">Enterate de las últimas novedades</h2>
         </div>
         <div class="row g-4">
+            <!-- News Card 1 -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item d-flex position-relative text-center h-100">
-                    <img class="bg-img" src="img/service-1.jpg" alt="">
-                    <div class="service-text p-5">
-                        <img class="mb-4" src="img/icons/icon-5.png" alt="Icon">
-                        <h3 class="mb-3">Architecture</h3>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                            diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                <div class="news-card">
+                    <div class="news-card-inner">
+                        <!-- Front Face -->
+                        <div class="news-card-front">
+                            <div class="service-item d-flex position-relative text-center h-100">
+                                <img class="bg-img" src="img/eficiencia-energetica.png" alt="News Image">
+                                <div class="service-text p-5">
+                                    <div class="news-date">
+                                        <span class="day">15</span>
+                                        <span class="month">JUN</span>
+                                    </div>
+                                    <h3 class="mb-3">Nuevas tecnologías <br> sustentables</h3>
+                                    <p class="mb-4">Descubre cómo las nuevas tecnologías están transformando el sector
+                                        sustentable en Argentina.</p>
+                                    <div class="image-container">
+                                        <img src="https://impact.economist.com/perspectives/sites/default/files/Mazars%20-%20Cover%20Images.jpg"
+                                             alt="Tecnologías sustentables" class="news-img">
+                                    </div>
+                                    <button class="btn btn-flip mt-3"><i class="fa fa-plus text-primary me-2"></i>Leer
+                                        más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Back Face -->
+                        <div class="news-card-back">
+                            <div class="p-5">
+                                <h3 class="mb-3">Nuevas tecnologías sustentables</h3>
+                                <div class="news-meta mb-3">
+                                    <span><i class="far fa-calendar-alt text-primary me-2"></i>15 Jun, 2023</span>
+                                    <span><i class="far fa-user text-primary me-2"></i>Admin</span>
+                                </div>
+                                <div class="image-container">
+                                    <img src="https://impact.economist.com/perspectives/sites/default/files/Mazars%20-%20Cover%20Images.jpg"
+                                         alt="Detalle tecnologías" class="news-img">
+                                </div>
+                                <p>La implementación de nuevas tecnologías sustentables está revolucionando el mercado
+                                    energético en Argentina. Empresas de todos los sectores están adoptando prácticas
+                                    innovadoras para reducir su huella de carbono.</p>
+                                <p>Entre estas tecnologías destacan los sistemas avanzados de paneles solares con mayor
+                                    eficiencia y menor costo, así como soluciones de almacenamiento de energía que
+                                    optimizan el uso de recursos renovables.</p>
+                                <button class="btn btn-primary mt-3 btn-flip-back"><i class="fa fa-arrow-left me-2"></i>Volver
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- News Card 2 -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item d-flex position-relative text-center h-100">
-                    <img class="bg-img" src="img/service-2.jpg" alt="">
-                    <div class="service-text p-5">
-                        <img class="mb-4" src="img/icons/icon-6.png" alt="Icon">
-                        <h3 class="mb-3">3D Animation</h3>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                            diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                <div class="news-card">
+                    <div class="news-card-inner">
+                        <div class="news-card-front">
+                            <div class="service-item d-flex position-relative text-center h-100">
+                                <img class="bg-img" src="img/project-4.jpg" alt="News Image">
+                                <div class="service-text p-5">
+                                    <div class="news-date">
+                                        <span class="day">23</span>
+                                        <span class="month">MAY</span>
+                                    </div>
+                                    <h3 class="mb-3">Certificación ambiental</h3>
+                                    <p class="mb-4">Nueva certificación ambiental obligatoria para empresas del sector
+                                        industrial.</p>
+                                    <div class="image-container">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpptj_Sbi17yPPHEoAJsOvvRISqmUD1JJOfQ&s"
+                                             alt="Certificación ambiental" class="news-img">
+                                    </div>
+                                    <button class="btn btn-flip mt-3"><i class="fa fa-plus text-primary me-2"></i>Leer
+                                        más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-card-back">
+                            <div class="p-5">
+                                <h3 class="mb-3">Certificación ambiental</h3>
+                                <div class="news-meta mb-3">
+                                    <span><i class="far fa-calendar-alt text-primary me-2"></i>23 May, 2023</span>
+                                    <span><i class="far fa-user text-primary me-2"></i>Staff</span>
+                                </div>
+                                <div class="image-container">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpptj_Sbi17yPPHEoAJsOvvRISqmUD1JJOfQ&s"
+                                         alt="Proceso de certificación" class="news-img">
+                                </div>
+                                <p>El gobierno anunció la implementación de una nueva certificación ambiental
+                                    obligatoria para empresas del sector industrial a partir de enero 2024.</p>
+                                <p>Esta certificación evaluará el cumplimiento de estándares internacionales en
+                                    eficiencia energética, gestión de residuos y emisiones de carbono.</p>
+                                <button class="btn btn-primary mt-3 btn-flip-back"><i class="fa fa-arrow-left me-2"></i>Volver
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- News Card 3 -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item d-flex position-relative text-center h-100">
-                    <img class="bg-img" src="img/service-3.jpg" alt="">
-                    <div class="service-text p-5">
-                        <img class="mb-4" src="img/icons/icon-7.png" alt="Icon">
-                        <h3 class="mb-3">House Planning</h3>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                            diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item d-flex position-relative text-center h-100">
-                    <img class="bg-img" src="img/service-4.jpg" alt="">
-                    <div class="service-text p-5">
-                        <img class="mb-4" src="img/icons/icon-8.png" alt="Icon">
-                        <h3 class="mb-3">Interior Design</h3>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                            diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item d-flex position-relative text-center h-100">
-                    <img class="bg-img" src="img/service-5.jpg" alt="">
-                    <div class="service-text p-5">
-                        <img class="mb-4" src="img/icons/icon-9.png" alt="Icon">
-                        <h3 class="mb-3">Renovation</h3>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                            diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item d-flex position-relative text-center h-100">
-                    <img class="bg-img" src="img/service-6.jpg" alt="">
-                    <div class="service-text p-5">
-                        <img class="mb-4" src="img/icons/icon-10.png" alt="Icon">
-                        <h3 class="mb-3">Construction</h3>
-                        <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                            diam sed stet.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                <div class="news-card">
+                    <div class="news-card-inner">
+                        <div class="news-card-front">
+                            <div class="service-item d-flex position-relative text-center h-100">
+                                <img class="bg-img" src="img/energia-solar.jpg" alt="News Image">
+                                <div class="service-text p-5">
+                                    <div class="news-date">
+                                        <span class="day">10</span>
+                                        <span class="month">ABR</span>
+                                    </div>
+                                    <h3 class="mb-3">Economía circular</h3>
+                                    <p class="mb-4">Ventajas competitivas de implementar modelos de economía circular en
+                                        tu empresa.</p>
+                                    <div class="image-container">
+                                        <img src="https://knowhow.distrelec.com/wp-content/uploads/2023/05/circular-economy.png?w=1920&h=800&crop=1"
+                                             alt="Economía circular" class="news-img">
+                                    </div>
+                                    <button class="btn btn-flip mt-3"><i class="fa fa-plus text-primary me-2"></i>Leer
+                                        más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-card-back">
+                            <div class="p-5">
+                                <h3 class="mb-3">Economía circular</h3>
+                                <div class="news-meta mb-3">
+                                    <span><i class="far fa-calendar-alt text-primary me-2"></i>10 Abr, 2023</span>
+                                    <span><i class="far fa-user text-primary me-2"></i>Consultor</span>
+                                </div>
+                                <div class="image-container">
+                                    <img src="https://knowhow.distrelec.com/wp-content/uploads/2023/05/circular-economy.png?w=1920&h=800&crop=1"
+                                         alt="Detalle economía circular" class="news-img">
+                                </div>
+                                <p>La economía circular se está posicionando como un modelo de negocio esencial para las
+                                    empresas que buscan ser competitivas y sostenibles a largo plazo.</p>
+                                <p>Estudios demuestran que las empresas con modelos circulares logran reducir costos de
+                                    materia prima hasta en un 40%, además de mejorar su imagen corporativa.</p>
+                                <button class="btn btn-primary mt-3 btn-flip-back"><i class="fa fa-arrow-left me-2"></i>Volver
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Service End -->
-
-
-
-
-
-<!-- Team Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h4 class="section-title">Team Members</h4>
-            <h1 class="display-5 mb-4">We Are Creative Architecture Team For Your Dream Home</h1>
-        </div>
-        <div class="row g-0 team-items">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item position-relative">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        <div class="team-social text-center">
-                            <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="bg-light text-center p-4">
-                        <h3 class="mt-2">Architect Name</h3>
-                        <span class="text-primary">Designation</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item position-relative">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        <div class="team-social text-center">
-                            <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="bg-light text-center p-4">
-                        <h3 class="mt-2">Architect Name</h3>
-                        <span class="text-primary">Designation</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item position-relative">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        <div class="team-social text-center">
-                            <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="bg-light text-center p-4">
-                        <h3 class="mt-2">Architect Name</h3>
-                        <span class="text-primary">Designation</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item position-relative">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        <div class="team-social text-center">
-                            <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="bg-light text-center p-4">
-                        <h3 class="mt-2">Architect Name</h3>
-                        <span class="text-primary">Designation</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Team End -->
-
-
-<!-- Appointment Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h4 class="section-title">Appointment</h4>
-                <h1 class="display-5 mb-4">Make An Appointment To Start Your Dream Project</h1>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                    eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                <span class="section-title fs-5">Sustentabilidad</span>
+                <h2 class="display-2 mb-4">Somos una empresa de sustentabilidad</h2>
+                <p class="mb-4">En Ecorise, nos dedicamos a transformar negocios a través de soluciones sostenibles.
+                    Nuestro enfoque integral combina innovación tecnológica y responsabilidad ambiental para crear un
+                    impacto positivo en su empresa y en el planeta. Trabajamos con cada cliente para desarrollar
+                    estrategias personalizadas que optimicen recursos y reduzcan su huella ecológica.</p>
                 <div class="row g-4">
                     <div class="col-12">
-                        <div class="d-flex">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
-                                 style="width: 65px; height: 65px;">
-                                <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                        <div class="d-flex align-items-start">
+                            <div class="icon-fixed flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                     class="bi bi-patch-check-fill text-primary">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                                </svg>
                             </div>
                             <div class="ms-4">
-                                <p class="mb-2">Call Us Now</p>
-                                <h3 class="mb-0">+012 345 6789</h3>
+                                <h3>Enfoque Personalizado</h3>
+                                <p class="mb-0">Diseñamos soluciones a medida para cada cliente, analizando sus
+                                    necesidades específicas y creando estrategias que se alineen con sus objetivos de
+                                    sostenibilidad y crecimiento empresarial.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="d-flex">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
-                                 style="width: 65px; height: 65px;">
-                                <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                        <div class="d-flex align-items-start">
+                            <div class="icon-fixed flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                     class="bi bi-brightness-alt-high-fill text-primary">
+                                    <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5m-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4"/>
+                                </svg>
                             </div>
                             <div class="ms-4">
-                                <p class="mb-2">Mail Us Now</p>
-                                <h3 class="mb-0">info@example.com</h3>
+                                <h3>Soluciones Innovadoras</h3>
+                                <p class="mb-0">Implementamos tecnologías avanzadas y métodos innovadores que reducen el
+                                    consumo energético, optimizan recursos y generan ahorros significativos mientras
+                                    disminuyen el impacto ambiental.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="icon-fixed flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                     class="bi bi-people-fill text-primary">
+                                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                                </svg>
+                            </div>
+                            <div class="ms-4">
+                                <h3>Gestión Integral</h3>
+                                <p class="mb-0">Coordinamos cada aspecto de su proyecto sustentable, desde la evaluación
+                                    inicial hasta la implementación y seguimiento, asegurando resultados medibles y
+                                    cumplimiento de normativas ambientales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5 pt-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="sustentabilidad.html"
+                           class="btn btn-primary py-3 px-5 rounded d-inline-flex align-items-center">
+                            Ver más sobre sustentabilidad
+                            <i class="fa fa-long-arrow-alt-right ms-3"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="row g-3">
-                    <div class="col-12 col-sm-6">
-                        <input type="text" class="form-control" placeholder="Your Name" style="height: 55px;">
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <input type="email" class="form-control" placeholder="Your Email" style="height: 55px;">
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <input type="text" class="form-control" placeholder="Your Mobile" style="height: 55px;">
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <select class="form-select" style="height: 55px;">
-                            <option selected>Choose Service</option>
-                            <option value="1">Service 1</option>
-                            <option value="2">Service 2</option>
-                            <option value="3">Service 3</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <div class="date" id="date" data-target-input="nearest">
-                            <input type="text"
-                                   class="form-control datetimepicker-input"
-                                   placeholder="Choose Date" data-target="#date" data-toggle="datetimepicker"
-                                   style="height: 55px;">
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <div class="time" id="time" data-target-input="nearest">
-                            <input type="text"
-                                   class="form-control datetimepicker-input"
-                                   placeholder="Choose Date" data-target="#time" data-toggle="datetimepicker"
-                                   style="height: 55px;">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
-                    </div>
+                <div class="feature-img">
+                    <img class="img-fluid" src="img/sustentabilidad-home-1.jpg" alt="">
+                    <img class="img-fluid" src="img/sustentabilidad-home-2.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Appointment End -->
-
-
-<!-- Testimonial Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h4 class="section-title">Testimonial</h4>
-            <h1 class="display-5 mb-4">Thousands Of Customers Who Trust Us And Our Services</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-            <div class="testimonial-item text-center"
-                 data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
-                <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed.
-                    Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea
-                    clita.</p>
-                <h3>Client Name</h3>
-                <span class="text-primary">Profession</span>
-            </div>
-            <div class="testimonial-item text-center"
-                 data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
-                <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed.
-                    Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea
-                    clita.</p>
-                <h3>Client Name</h3>
-                <span class="text-primary">Profession</span>
-            </div>
-            <div class="testimonial-item text-center"
-                 data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
-                <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed.
-                    Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea
-                    clita.</p>
-                <h3>Client Name</h3>
-                <span class="text-primary">Profession</span>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
 
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-light mb-4">Address</h3>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
+            <div class="col-lg-4 col-md-6">
+                <h3 class="text-light mb-4">Contacto</h3>
+                <p class="mb-2 text-white"><i class="fa fa-map-marker-alt text-primary me-3"></i>Córdoba Capital,
+                    Argentina</p>
+                <p class="mb-2 text-white"><i class="fa fa-phone-alt text-primary me-3"></i>+54 351 12345678</p>
+                <p class="mb-2 text-white"><i class="fa fa-envelope text-primary me-3"></i>info@ecorise.com.ar</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square btn-outline-light me-2" href="https://linkedin.com/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square btn-outline-light" href="https://wa.me/5493513994184" target="_blank"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-light mb-4">Services</h3>
-                <a class="btn btn-link" href="">Architecture</a>
-                <a class="btn btn-link" href="">3D Animation</a>
-                <a class="btn btn-link" href="">House Planning</a>
-                <a class="btn btn-link" href="">Interior Design</a>
-                <a class="btn btn-link" href="">Construction</a>
+            <div class="col-lg-4 col-md-6">
+                <h3 class="text-light mb-4">Servicios</h3>
+                <a class="btn btn-link text-body" href="energia-solar.html">Energía Solar</a>
+                <a class="btn btn-link text-body" href="sustentabilidad.html">Consultoría Sustentable</a>
+                <a class="btn btn-link text-body" href="mantenimiento.html">Mantenimiento e Inspección</a>
+                <a class="btn btn-link text-body" href="consultoria-tecnica.html">Consultoría técnica</a>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-light mb-4">Quick Links</h3>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Our Services</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">Support</a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-light mb-4">Newsletter</h3>
-                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                           placeholder="Your email">
-                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp
-                    </button>
+            <div class="col-lg-4 col-md-12">
+                <h3 class="text-light mb-4">Enlaces Rápidos</h3>
+                <div class="row">
+                    <div class="col-6">
+                        <a class="btn btn-link text-body" href="index.html">Inicio</a>
+                        <a class="btn btn-link text-body" href="#">Sobre Nosotros</a>
+                    </div>
+                    <div class="col-6">
+                        <a class="btn btn-link text-body" href="#"
+                           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
+                            Reunión</a>
+                        <a class="btn btn-link text-body" href="#">Blog</a>
+                        <a class="btn btn-link text-body" href="#">Contacto</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid copyright">
+    <div class="container-fluid copyright py-4 border-top border-secondary">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                    &copy; <a class="fw-semi-bold" href="#">Ecorise</a>, 2025. Todos los derechos reservados.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                    <br> Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    <a href="#" class="text-body me-3">Política de Privacidad</a>
+                    <a href="#" class="text-body">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
@@ -890,6 +974,11 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/5493513994184" class="btn btn-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text">Chateá con nosotros</span>
+</a>
 
 
 <!-- JavaScript Libraries -->
@@ -903,6 +992,8 @@
 <script src="lib/tempusdominus/js/moment.min.js"></script>
 <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
 <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
