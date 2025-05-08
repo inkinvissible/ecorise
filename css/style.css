@@ -1092,3 +1092,38 @@ h6,
         border-left: none !important;
     }
 }
+
+/* Corrección para el header en dispositivos móviles */
+@media (max-width: 767.98px) {
+    /* Ajustar posición inicial del navbar */
+    .navbar.sticky-top {
+        top: 0 !important;
+    }
+
+    /* Reducir tamaño del logo en móviles */
+    .navbar-brand img {
+        max-width: 140px;
+    }
+
+    /* Ajustar el padding vertical */
+    .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /* Evitar que el logo se corte */
+    .navbar-brand {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        overflow: visible;
+    }
+}
+
+/* Evitar scroll horizontal */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}

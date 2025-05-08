@@ -16,12 +16,22 @@
     new WOW().init();
 
 
-    // Sticky Navbar
+    // Sticky Navbar - modificar la función existente
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+        if ($(window).width() > 767) {
+            // Comportamiento original solo para desktop
+            if ($(this).scrollTop() > 300) {
+                $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+            } else {
+                $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
+            }
         } else {
-            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
+            // Comportamiento simplificado para móviles
+            if ($(this).scrollTop() > 50) {
+                $('.sticky-top').addClass('shadow-sm');
+            } else {
+                $('.sticky-top').removeClass('shadow-sm');
+            }
         }
     });
     
