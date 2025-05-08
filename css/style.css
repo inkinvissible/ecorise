@@ -1083,7 +1083,7 @@ h6,
 
     #sobre-nosotros .d-flex.align-items-center {
         flex-direction: column;
-        align-items: flex-start !important;
+
     }
 
     #sobre-nosotros .text-body.ps-4 {
