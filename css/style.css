@@ -1121,9 +1121,3 @@ h6,
     }
 }
 
-/* Evitar scroll horizontal */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-}
