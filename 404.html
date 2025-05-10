@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
-    <title>Arkitektur - Architecture HTML Template</title>
+    <title>ECORISE - 404 No se ha encontrado</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -30,165 +30,282 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Estilos para la animación solar mejorada y bonita */
+        .error-solar-system {
+            position: relative; /* Contenedor principal para elementos posicionados absolutamente */
+            width: 300px;       /* Ancho del área de animación */
+            height: 300px;      /* Alto del área de animación */
+            margin: 60px auto;  /* Margen superior/inferior aumentado y centrado horizontal */
+        }
+
+        /* Centrado común para los elementos principales de la animación */
+        .sun, .sun-rays-container, .earth-orbit-path {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Técnica de centrado */
+        }
+
+        .sun {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(ellipse at center, #fff59d 0%, #ffc107 60%, #ffa000 100%); /* Gradiente solar vibrante */
+            border-radius: 50%;
+            box-shadow:
+                    0 0 25px rgba(255, 235, 59, 0.75), /* Brillo amarillo primario */
+                    0 0 45px rgba(255, 160, 0, 0.55), /* Brillo naranja secundario */
+                    0 0 70px rgba(255, 109, 0, 0.35), /* Aura naranja oscura más amplia */
+                    inset 0 0 15px rgba(255, 248, 225, 0.6); /* Brillo sutil interno */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10; /* El sol está por encima de los rayos */
+            animation: sunPulse 3s infinite ease-in-out;
+        }
+
+        .number-404 {
+            color: #2c3e50; /* Un color oscuro y neutro para el texto, legible sobre el sol */
+            font-family: 'Teko', sans-serif;
+            font-size: 38px;
+            font-weight: 600;
+            text-align: center;
+            text-shadow:
+                    0 0 6px rgba(255, 255, 255, 0.7), /* Aura blanca suave para destacar */
+                    1px 1px 8px rgba(255, 224, 130, 0.5); /* Sombra de brillo sutil del color del sol */
+            z-index: 1; /* Relativo al sol, para asegurar que esté visible */
+        }
+
+        .sun-rays-container {
+            width: 100px; /* Mismo tamaño que el sol para centrar los rayos */
+            height: 100px;
+            z-index: 9; /* Los rayos están detrás del sol */
+            animation: rotateRaysContainer 30s linear infinite; /* Rotación más lenta y suave de los rayos */
+        }
+
+        .sun-ray {
+            position: absolute;
+            bottom: 50%; /* Se origina desde el centro vertical del contenedor de rayos */
+            left: 50%;   /* Se origina desde el centro horizontal del contenedor de rayos */
+            width: 4px;  /* Rayos más finos y elegantes */
+            height: 130px; /* Longitud total del rayo: 50px "ocultos" por el sol + 80px visibles */
+            transform: translateX(-50%); /* Centra el rayo antes de su rotación individual */
+            transform-origin: 50% 100%; /* Rota alrededor de su base (que está en el centro del sol) */
+            /* Gradiente para que el rayo comience transparente (bajo el sol) y se materialice */
+            background: linear-gradient(to top,
+            transparent 0%,                          /* Base del rayo, totalmente transparente */
+            transparent 38.4%,                       /* (50px / 130px) = 38.46% - Transparente dentro del sol */
+            rgba(255, 224, 130, 0.9) 38.5%,         /* Comienzo del color justo en el borde del sol */
+            rgba(255, 245, 157, 0.4) 85%,           /* Desvanecimiento hacia el extremo */
+            transparent 100%                        /* Extremo exterior, totalmente transparente */
+            );
+            border-radius: 2px; /* Puntas de los rayos ligeramente redondeadas */
+        }
+
+        /* Distribución de los 12 rayos alrededor del sol */
+        .sun-ray:nth-child(1)  { transform: translateX(-50%) rotate(0deg); }
+        .sun-ray:nth-child(2)  { transform: translateX(-50%) rotate(30deg); }
+        .sun-ray:nth-child(3)  { transform: translateX(-50%) rotate(60deg); }
+        .sun-ray:nth-child(4)  { transform: translateX(-50%) rotate(90deg); }
+        .sun-ray:nth-child(5)  { transform: translateX(-50%) rotate(120deg); }
+        .sun-ray:nth-child(6)  { transform: translateX(-50%) rotate(150deg); }
+        .sun-ray:nth-child(7)  { transform: translateX(-50%) rotate(180deg); }
+        .sun-ray:nth-child(8)  { transform: translateX(-50%) rotate(210deg); }
+        .sun-ray:nth-child(9)  { transform: translateX(-50%) rotate(240deg); }
+        .sun-ray:nth-child(10) { transform: translateX(-50%) rotate(270deg); }
+        .sun-ray:nth-child(11) { transform: translateX(-50%) rotate(300deg); }
+        .sun-ray:nth-child(12) { transform: translateX(-50%) rotate(330deg); }
+
+        .earth-orbit-path {
+            width: 250px; /* Diámetro de la órbita de la Tierra */
+            height: 250px;
+            z-index: 8; /* La órbita y la Tierra están detrás de los rayos */
+            animation: orbitPathRotation 15s linear infinite; /* Rotación de la trayectoria orbital */
+            /* border: 1px dashed rgba(42, 211, 197, 0.2); /* Descomentar para visualizar la órbita */
+        }
+
+        .earth {
+            width: 35px;
+            height: 35px;
+            background: radial-gradient(ellipse at 35% 35%, #bbe1fa 0%, #3282b8 60%, #0f4c75 100%); /* Tonos azules para la Tierra */
+            border-radius: 50%;
+            position: absolute;
+            top: 0px; /* La Tierra se sitúa en el "borde superior" de su path orbital */
+            left: 50%;
+            /* El transform inicial es solo para centrarlo horizontalmente en su punto de partida */
+            transform: translateX(-50%);
+            box-shadow:
+                    0 0 12px rgba(77, 182, 247, 0.5), /* Aura azulada */
+                    inset 0 0 8px rgba(187, 225, 250, 0.7); /* Brillo interno sutil */
+            animation: earthSelfSpin 5s linear infinite; /* Rotación de la Tierra sobre su propio eje */
+        }
+
+        /* Animaciones Keyframes */
+        @keyframes sunPulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                box-shadow:
+                        0 0 25px rgba(255, 235, 59, 0.75),
+                        0 0 45px rgba(255, 160, 0, 0.55),
+                        0 0 70px rgba(255, 109, 0, 0.35),
+                        inset 0 0 15px rgba(255, 248, 225, 0.6);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.07); /* Pulsación más sutil */
+                box-shadow:
+                        0 0 35px rgba(255, 235, 59, 0.9),  /* Brillo más intenso en el pulso */
+                        0 0 55px rgba(255, 160, 0, 0.7),
+                        0 0 90px rgba(255, 109, 0, 0.45),
+                        inset 0 0 20px rgba(255, 248, 225, 0.8);
+            }
+        }
+
+        @keyframes rotateRaysContainer {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes orbitPathRotation { /* Rota el contenedor de la órbita */
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes earthSelfSpin { /* Rota la Tierra sobre su eje, manteniendo su posición relativa */
+            from { transform: translateX(-50%) rotate(0deg); }
+            to { transform: translateX(-50%) rotate(360deg); }
+        }
+
+        /* Estilos para las tarjetas de opciones (mantener del original o ajustar si es necesario) */
+        .error-option-card {
+            background-color: #f8f9fa; /* Fondo claro */
+            transition: all 0.3s ease-in-out; /* Transición suave */
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #e9ecef; /* Borde sutil */
+            border-radius: 8px; /* Bordes más redondeados */
+        }
+
+        .error-option-card:hover {
+            transform: translateY(-8px) scale(1.03); /* Efecto de elevación y ligero zoom */
+            box-shadow: 0 12px 25px rgba(37, 139, 130, 0.12); /* Sombra más pronunciada */
+            border-top: 4px solid #258b82; /* Borde superior acentuado con color primario */
+        }
+        .error-option-card i {
+            transition: transform 0.3s ease-in-out;
+        }
+        .error-option-card:hover i {
+            transform: scale(1.1); /* Icono se agranda un poco */
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
-    </div>
-    <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+0123456789"><i class="fa fa-phone-alt text-primary me-2"></i>+012 345 6789</a>
-                    <a class="text-body px-2" href="mailto:info@example.com"><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</a>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+        <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Inicio</a>
+            <a href="energia-solar.html" class="nav-item nav-link">Energía solar</a>
+            <a href="sustentabilidad.html" class="nav-item nav-link">Sustentabilidad</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros servicios</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="mantenimiento.html" class="dropdown-item">Mantenimiento e inspección</a>
+                    <a href="consultoria-tecnica.html" class="dropdown-item">Consultoría técnica</a>
                 </div>
             </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                    <a class="text-body px-2" href="">Terms</a>
-                    <a class="text-body px-2" href="">Privacy</a>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
+                    <a href="https://wa.me/5493513994184" class="dropdown-item">Teléfono</a>
                 </div>
             </div>
+            <a href=""
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+               class="nav-item nav-link btn btn-primary text-white my-2 d-lg-none">Agendar reunión</a>
         </div>
+        <a href=""
+           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+           class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
     </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="text-primary m-0"><img class="me-3" src="img/icons/icon-1.png" alt="Icon">Arkitektur</h1>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu border-0 m-0">
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                        <a href="project.html" class="dropdown-item">Our Projects</a>
-                        <a href="team.html" class="dropdown-item">Team Members</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Appointment</a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
+</nav>
+<!-- Navbar End -->
 
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h1 class="display-1 text-white animated slideInDown">404 Error</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">404 Error</li>
-                </ol>
-            </nav>
+
         </div>
     </div>
     <!-- Page Header End -->
 
 
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary py-3 px-5" href="">Go Back To Home</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 404 End -->
-        
+<!-- 404 Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Address</h3>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                <div class="error-solar-system mb-5">
+                    <div class="sun-rays-container">
+                        <div class="sun-ray"></div> <div class="sun-ray"></div> <div class="sun-ray"></div>
+                        <div class="sun-ray"></div> <div class="sun-ray"></div> <div class="sun-ray"></div>
+                        <div class="sun-ray"></div> <div class="sun-ray"></div> <div class="sun-ray"></div>
+                        <div class="sun-ray"></div> <div class="sun-ray"></div> <div class="sun-ray"></div>
+                    </div>
+                    <div class="sun">
+                        <span class="number-404">404</span>
+                    </div>
+                    <div class="earth-orbit-path">
+                        <div class="earth"></div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Services</h3>
-                    <a class="btn btn-link" href="">Architecture</a>
-                    <a class="btn btn-link" href="">3D Animation</a>
-                    <a class="btn btn-link" href="">House Planning</a>
-                    <a class="btn btn-link" href="">Interior Design</a>
-                    <a class="btn btn-link" href="">Construction</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Quick Links</h3>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-light mb-4">Newsletter</h3>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+
+                <h2 class="display-4 mb-3">¡Ups! La energía no llegó a esta página</h2>
+                <p class="fs-5 mb-4">Parece que el panel solar que alimenta esta página necesita mantenimiento. Mientras nuestros técnicos lo arreglan, te invitamos a explorar otras áreas de nuestro sitio.</p>
+
+                <div class="error-options py-4">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-4">
+                            <a href="index.html" class="error-option-card h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                                <i class="bi bi-house-door fs-1 text-primary mb-3"></i>
+                                <h5 class="mb-2">Volver al inicio</h5>
+                                <p class="text-muted small mb-0">Regresa a nuestra página principal</p>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="energia-solar.html" class="error-option-card h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                                <i class="bi bi-sun fs-1 text-primary mb-3"></i>
+                                <h5 class="mb-2">Energía Solar</h5>
+                                <p class="text-muted small mb-0">Conoce nuestras soluciones</p>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="sustentabilidad.html" class="error-option-card h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                                <i class="bi bi-brightness-high fs-1 text-primary mb-3"></i>
+                                <h5 class="mb-2">Sustentabilidad</h5>
+                                <p class="text-muted small mb-0">Descubre nuestros servicios ECO</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+
 
 
     <!-- Back to Top -->

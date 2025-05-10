@@ -1126,11 +1126,11 @@ h6,
     background-color: #f8f9fa;
 }
 
-.carousel, .carousel-inner, .carousel-item {
+.carousel-proyectos, .carousel-inner-proyectos, .carousel-item-proyectos {
     height: 100%;
 }
 
-.carousel-img-container {
+.carousel-img-container-proyectos {
     width: 100%;
     height: 500px;
     display: flex;
