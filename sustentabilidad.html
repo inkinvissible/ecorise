@@ -55,7 +55,22 @@
         gtag('config', 'AW-17629078632');
     </script>
     <script> gtag('config', 'AW-17629078632/hyAcCLzU36gbEOjImdZB', { 'phone_conversion_number': '3515177298' }); </script>
-
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17629078632/kC_VCIqAhagbEOjImdZB',
+                'value': 1.0,
+                'currency': 'ARS',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
 </head>
 
 
@@ -98,7 +113,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
                 <div class="dropdown-menu border-0 m-0">
                     <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
-                    <a href="https://wa.me/5493515177298" class="dropdown-item">Teléfono</a>
+                    <a href="https://wa.me/5493515177298" class="dropdown-item" onclick="gtag_report_conversion('https://wa.me/5493515177298')">Teléfono</a>
                 </div>
             </div>
             <a href=""
@@ -434,7 +449,7 @@
                 <p class="mb-2 text-white"><i class="fa fa-phone-alt text-primary me-3"></i>+54 351 517-7298</p>
                 <p class="mb-2 text-white"><i class="fa fa-envelope text-primary me-3"></i>info@ecorise.com.ar</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-light me-2" href="https://wa.me/5493515177298" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-square btn-outline-light me-2" href="https://wa.me/5493515177298" target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')"><i class="fab fa-whatsapp"></i></a>
                     <a class="btn btn-square btn-outline-light" href="https://www.linkedin.com/company/er-ecorise/about/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
@@ -456,7 +471,7 @@
                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
                             Reunión</a>
 
-                        <a class="btn btn-link text-body" href="https://wa.me/+5493515177298">Contacto</a>
+                        <a class="btn btn-link text-body" href="https://wa.me/+5493515177298" onclick="gtag_report_conversion('https://wa.me/+5493515177298')">Contacto</a>
                     </div>
                 </div>
             </div>
@@ -489,7 +504,10 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-<a href="https://wa.me/5493515177298" class="btn btn-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text">Chateá con nosotros</span>
+</a>
+<a href="https://wa.me/5493515177298" class="btn btn-whatsapp" target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')">
     <i class="fab fa-whatsapp"></i>
     <span class="whatsapp-text">Chateá con nosotros</span>
 </a>
