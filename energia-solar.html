@@ -3,18 +3,22 @@
 
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5Q7XKBN5');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5Q7XKBN5');</script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <title>ECORISE - Energía Solar</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ON Grid, Off Grid, Parking Solar, Agro Solar" name="keywords">
-    <meta content="Somos EcoRise y contamos con sistemas fotovoltaicos ON/OFF Grid, Parking y Agro Solar en Córdoba. Soluciones de energía renovable para hogares y empresas."
-          name="description">
+    <meta
+        content="Somos EcoRise y contamos con sistemas fotovoltaicos ON/OFF Grid, Parking y Agro Solar en Córdoba. Soluciones de energía renovable para hogares y empresas."
+        name="description">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
@@ -25,8 +29,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -35,7 +40,7 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +67,7 @@
     <script>
         function gtag_report_conversion(url) {
             var callback = function () {
-                if (typeof(url) != 'undefined') {
+                if (typeof (url) != 'undefined') {
                     window.location = url;
                 }
             };
@@ -75,689 +80,739 @@
             return false;
         }
     </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2521676828246674');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=2521676828246674&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
 </head>
 
 
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q7XKBN5"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!-- Spinner Start -->
-<div id="spinner"
-     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-    <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-loader.png"
-         style="width: 3rem; border-radius: 1rem" alt="Icon">
-</div>
-<!-- Spinner End -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q7XKBN5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status">
+        </div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-loader.png"
+            style="width: 3rem; border-radius: 1rem" alt="Icon">
+    </div>
+    <!-- Spinner End -->
 
 
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-        <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;">
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Inicio</a>
-            <a href="energia-solar.html" class="nav-item nav-link active">Energía solar</a>
-            <a href="sustentabilidad.html" class="nav-item nav-link">Sustentabilidad</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros servicios</a>
-                <div class="dropdown-menu border-0 m-0">
-                    <a href="mantenimiento.html" class="dropdown-item">Mantenimiento e inspección</a>
-                    <a href="consultoria-tecnica.html" class="dropdown-item">Consultoría técnica</a>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                <a href="energia-solar.html" class="nav-item nav-link active">Energía solar</a>
+                <a href="sustentabilidad.html" class="nav-item nav-link">Sustentabilidad</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros servicios</a>
+                    <div class="dropdown-menu border-0 m-0">
+                        <a href="mantenimiento.html" class="dropdown-item">Mantenimiento e inspección</a>
+                        <a href="consultoria-tecnica.html" class="dropdown-item">Consultoría técnica</a>
+                    </div>
                 </div>
-            </div>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
-                <div class="dropdown-menu border-0 m-0">
-                    <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
-                    <a href="https://wa.me/5493515177298" class="dropdown-item" onclick="gtag_report_conversion('https://wa.me/5493515177298')">Teléfono</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
+                    <div class="dropdown-menu border-0 m-0">
+                        <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
+                        <a href="https://wa.me/5493515177298" class="dropdown-item"
+                            onclick="gtag_report_conversion('https://wa.me/5493515177298')">Teléfono</a>
+                    </div>
                 </div>
+                <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                    class="nav-item nav-link btn btn-primary text-white my-2 d-lg-none">Agendar reunión</a>
             </div>
             <a href=""
-               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
-               class="nav-item nav-link btn btn-primary text-white my-2 d-lg-none">Agendar reunión</a>
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
         </div>
-        <a href=""
-           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
-           class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
-    </div>
-</nav>
-<!-- Navbar End -->
+    </nav>
+    <!-- Navbar End -->
 
 
-<!-- Page Header Start -->
-<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
-     style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/solar-banner.jpg) center center no-repeat; background-size: cover;">
-    <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-7">
-                <h1 class="display-1 text-white animated slideInDown">Energía solar</h1>
-                <p class="text-white animated slideInDown mb-4 pb-2">Soluciones energéticas limpias y renovables para
-                    hogares y empresas con tecnología de última generación</p>
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb text-uppercase mb-0">
-                        <li class="breadcrumb-item"><a class="text-white" href="index.html">Inicio</a></li>
-                        <li class="breadcrumb-item text-primary active" aria-current="page">Energía solar</li>
-                    </ol>
-                </nav>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Page Header End -->
-
-
-<!-- Beneficios Energía Solar Mejorado Start -->
-<section class="container-xxl py-5" aria-label="Beneficios de la energía solar">
-    <div class="container">
-        <header class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h2 class="display-1 mb-4">Beneficios</h2>
-            <p class="fs-5 fw-medium text-primary">Ventajas estratégicas para su hogar o empresa</p>
-        </header>
-        <ul class="row g-4 list-unstyled wow fadeInUp" data-wow-delay="0.3s">
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
-                          aria-hidden="true">
-                        <i class="fas fa-bolt fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Independencia energética</h4>
-                        <p class="mb-0">Genere su propia energía limpia y reduzca la dependencia de la red eléctrica
-                            convencional, protegiéndose de cortes de suministro y aumentos de tarifas.</p>
-                    </div>
-                </article>
-            </li>
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
-                          aria-hidden="true">
-                        <i class="fas fa-chart-line fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Inversión estratégica</h4>
-                        <p class="mb-0">Aumente el valor de su propiedad o instalación con una solución que incrementa
-                            el capital edilicio y representa una inversión con beneficios a largo plazo.</p>
-                    </div>
-                </article>
-            </li>
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
-                          aria-hidden="true">
-                        <i class="fas fa-solar-panel fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Versatilidad de instalación</h4>
-                        <p class="mb-0">Aproveche múltiples espacios como parkings, techos, pérgolas o terrenos
-                            disponibles para maximizar la generación de energía solar adaptándose a sus necesidades
-                            específicas.</p>
-                    </div>
-                </article>
-            </li>
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
-                          aria-hidden="true">
-                        <i class="fas fa-dollar-sign fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Retorno de inversión</h4>
-                        <p class="mb-0">Disfrute de una reducción significativa en sus costos energéticos con un retorno
-                            de inversión a mediano plazo, generando ahorros sustanciales durante toda la vida útil del
-                            sistema.</p>
-                    </div>
-                </article>
-            </li>
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
-                          aria-hidden="true">
-                        <i class="fas fa-leaf fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Sostenibilidad y responsabilidad social</h4>
-                        <p class="mb-0">Contribuya activamente a la reducción de la huella de carbono y mejore la imagen
-                            de su empresa demostrando compromiso con el medio ambiente y las futuras generaciones.</p>
-                    </div>
-                </article>
-            </li>
-        </ul>
-        <div class="text-center mt-5 pt-3 wow fadeInUp" data-wow-delay="0.5s">
-            <a href="#"
-               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
-               class="btn btn-primary py-3 px-5 rounded d-inline-flex align-items-center">
-                Consulta por tu proyecto
-                <i class="fa fa-long-arrow-alt-right ms-3" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Beneficios Energía Solar Mejorado End -->
-
-
-<!-- Services Process Start -->
-<div class="container process-section py-5">
-    <div class="text-center mx-auto mb-5" style="max-width:600px;">
-        <h2 class="display-4 mb-4">Proceso de Adquisición</h2>
-        <p class="fs-5 fw-medium text-primary">Soluciones integrales de energía solar en 6 pasos</p>
-    </div>
-    <div class="process-timeline">
-        <div class="step" data-step="1">
-            <div class="step-icon"><i class="fas fa-comments"></i></div>
-            <h5 class="mt-3">Asesoramiento</h5>
-            <p>Asesoramiento y acompañamiento para definir el proyecto</p>
-        </div>
-        <div class="step" data-step="2">
-            <div class="step-icon"><i class="fas fa-cogs"></i></div>
-            <h5 class="mt-3">Soluciones</h5>
-            <p>Soluciones llave en mano, diseño e ingeniería del proyecto</p>
-        </div>
-        <div class="step" data-step="3">
-            <div class="step-icon"><i class="fas fa-users"></i></div>
-            <h5 class="mt-3">Equipos</h5>
-            <p>Provisión de los equipos, instalación y puesta en marcha</p>
-        </div>
-        <div class="step" data-step="4">
-            <div class="step-icon"><i class="fas fa-certificate"></i></div>
-            <h5 class="mt-3">Puesta en marcha</h5>
-            <p>Puesta en marcha del proyecto de energía solar</p>
-        </div>
-        <div class="step" data-step="5">
-            <div class="step-icon"><i class="fas fa-chart-line"></i></div>
-            <h5 class="mt-3">Monitoreo</h5>
-            <p>Monitoreo, post venta y mantenimiento anual</p>
-        </div>
-        <div class="step" data-step="6">
-            <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
-            <h5 class="mt-3">Reportes</h5>
-            <p>Reporte de compensación de emisiones y análisis de eficiencia</p>
-        </div>
-    </div>
-</div>
-<!-- Services Process End -->
-
-<!-- Soluciones Solares Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h2 class="display-1 mb-4">Soluciones de Energía Solar</h2>
-            <p class="fs-5 fw-medium text-primary">Soluciones personalizadas para cada necesidad</p>
-        </div>
-
-        <!-- ON Grid Solar -->
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-                <div class="position-relative h-100">
-                    <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img" src="img/on-grid.png"
-                         alt="ON Grid Solar">
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/solar-banner.jpg) center center no-repeat; background-size: cover;">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-1 text-white animated slideInDown">Energía solar</h1>
+                    <p class="text-white animated slideInDown mb-4 pb-2">Soluciones energéticas limpias y renovables
+                        para
+                        hogares y empresas con tecnología de última generación</p>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb text-uppercase mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Inicio</a></li>
+                            <li class="breadcrumb-item text-primary active" aria-current="page">Energía solar</li>
+                        </ol>
+                    </nav>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="h-100 d-flex flex-column justify-content-center p-4">
-                    <h3 class="fs-2 mb-3">Sistema ON Grid</h3>
-                    <p class="mb-4">Soluciones conectadas a la red eléctrica que permiten ahorrar en consumo y vender
-                        excedentes de energía a la compañía distribuidora.</p>
-                    <div class="bg-light p-4 rounded">
-                        <h5 class="mb-3 text-primary">Características</h5>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Conexión bidireccional a la red eléctrica</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Máximo aprovechamiento de la energía</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Sin necesidad de baterías</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Menor inversión inicial</p>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- OFF Grid Solar -->
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="col-lg-6 order-lg-2">
-                <div class="position-relative h-100">
-                    <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img"
-                         src="img/off-grid-solar.png" alt="OFF Grid Solar">
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="h-100 d-flex flex-column justify-content-center p-4">
-                    <h3 class="fs-2 mb-3">Sistema OFF Grid</h3>
-                    <p class="mb-4">Sistemas autónomos que funcionan independientemente de la red eléctrica, ideales
-                        para zonas remotas o como respaldo energético.</p>
-                    <div class="bg-light p-4 rounded">
-                        <h5 class="mb-3 text-primary">Características</h5>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Independencia energética total</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Sistema de almacenamiento en baterías</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Ideal para zonas sin acceso a red</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Energía constante 24/7</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Parking Solar -->
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="col-lg-6">
-                <div class="position-relative h-100">
-                    <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img"
-                         src="img/parking-solar.jpg" alt="Parking Solar">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="h-100 d-flex flex-column justify-content-center p-4">
-                    <h3 class="fs-2 mb-3">Parking Solar</h3>
-                    <p class="mb-4">Estructuras de estacionamiento con paneles solares integrados que aprovechan
-                        espacios de aparcamiento para generar energía limpia.</p>
-                    <div class="bg-light p-4 rounded">
-                        <h5 class="mb-3 text-primary">Características</h5>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Doble funcionalidad: sombra y energía</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Aprovechamiento de espacios existentes</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Compatible con estaciones de carga EV</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Estructuras modulares personalizables</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Agro Solar -->
-        <div class="row g-5 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="col-lg-6 order-lg-2">
-                <div class="position-relative h-100">
-                    <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img" src="img/agro-solar.jpg"
-                         alt="Agro Solar">
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="h-100 d-flex flex-column justify-content-center p-4">
-                    <h3 class="fs-2 mb-3">Agro Solar</h3>
-                    <p class="mb-4">Soluciones específicas para el sector agrícola que permiten combinar producción de
-                        energía con actividades agropecuarias.</p>
-                    <div class="bg-light p-4 rounded">
-                        <h5 class="mb-3 text-primary">Características</h5>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Alimentación de sistemas de riego</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Uso dual del terreno (agrivoltaica)</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Bombeo solar para extracción de agua</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Sistemas adaptados a necesidades del campo</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Soluciones Solares End -->
+    <!-- Page Header End -->
 
-<!-- Proyecto Destacado Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h2 class="display-4 mb-4">Proyecto Destacado</h2>
-            <p class="fs-5 fw-medium text-primary">Instalación fotovoltaica residencial en Orlando</p>
-        </div>
 
-        <!-- Información principal del proyecto -->
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">
-            <!-- Slider principal -->
-            <div class="col-lg-7">
-                <div id="proyectoCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#proyectoCarousel" data-bs-slide-to="0" class="active"
-                                aria-current="true"></button>
-                        <button type="button" data-bs-target="#proyectoCarousel" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#proyectoCarousel" data-bs-slide-to="2"></button>
-                    </div>
-                    <div class="carousel-inner rounded overflow-hidden">
-                        <div class="carousel-item active">
-                            <img src="img/proyecto-solar-usa3.png" class="d-block w-100"
-                                 alt="Vista principal del proyecto">
+    <!-- Beneficios Energía Solar Mejorado Start -->
+    <section class="container-xxl py-5" aria-label="Beneficios de la energía solar">
+        <div class="container">
+            <header class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-1 mb-4">Beneficios</h2>
+                <p class="fs-5 fw-medium text-primary">Ventajas estratégicas para su hogar o empresa</p>
+            </header>
+            <ul class="row g-4 list-unstyled wow fadeInUp" data-wow-delay="0.3s">
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-bolt fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Independencia energética</h4>
+                            <p class="mb-0">Genere su propia energía limpia y reduzca la dependencia de la red eléctrica
+                                convencional, protegiéndose de cortes de suministro y aumentos de tarifas.</p>
                         </div>
-                        <div class="carousel-item">
-                            <img src="img/proyecto-solar-usa2.png" class="d-block w-100" alt="Instalación de paneles">
+                    </article>
+                </li>
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-chart-line fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Inversión estratégica</h4>
+                            <p class="mb-0">Aumente el valor de su propiedad o instalación con una solución que
+                                incrementa
+                                el capital edilicio y representa una inversión con beneficios a largo plazo.</p>
                         </div>
-                        <div class="carousel-item">
-                            <img src="img/proyecto-solar-usa1.png" class="d-block w-100" alt="Sistema completo">
+                    </article>
+                </li>
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-solar-panel fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Versatilidad de instalación</h4>
+                            <p class="mb-0">Aproveche múltiples espacios como parkings, techos, pérgolas o terrenos
+                                disponibles para maximizar la generación de energía solar adaptándose a sus necesidades
+                                específicas.</p>
                         </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#proyectoCarousel"
-                            data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#proyectoCarousel"
-                            data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-                </div>
+                    </article>
+                </li>
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-dollar-sign fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Retorno de inversión</h4>
+                            <p class="mb-0">Disfrute de una reducción significativa en sus costos energéticos con un
+                                retorno
+                                de inversión a mediano plazo, generando ahorros sustanciales durante toda la vida útil
+                                del
+                                sistema.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-leaf fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Sostenibilidad y responsabilidad social</h4>
+                            <p class="mb-0">Contribuya activamente a la reducción de la huella de carbono y mejore la
+                                imagen
+                                de su empresa demostrando compromiso con el medio ambiente y las futuras generaciones.
+                            </p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+            <div class="text-center mt-5 pt-3 wow fadeInUp" data-wow-delay="0.5s">
+                <a href="#"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                    class="btn btn-primary py-3 px-5 rounded d-inline-flex align-items-center">
+                    Consulta por tu proyecto
+                    <i class="fa fa-long-arrow-alt-right ms-3" aria-hidden="true"></i>
+                </a>
             </div>
+        </div>
+    </section>
+    <!-- Beneficios Energía Solar Mejorado End -->
 
-            <!-- Detalles del proyecto -->
-            <div class="col-lg-5">
-                <div class="h-100 d-flex flex-column justify-content-center p-4 bg-light rounded">
-                    <h3 class="fs-3 mb-3">Residencia Kissimmee</h3>
-                    <p class="mb-4">Sistema fotovoltaico ON Grid de 11,6kW instalado en techo inclinado orientado al
-                        norte, permitiendo un ahorro del 85% en la factura eléctrica mensual.</p>
 
-                    <div class="row g-4 mb-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-calendar-check text-primary me-2 fs-4"></i>
-                                <span>Completado: Enero 2024</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-lightning-charge text-primary me-2 fs-4"></i>
-                                <span>Capacidad: 11,6kW</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-geo-alt text-primary me-2 fs-4"></i>
-                                <span>Orlando, Florida, Estados Unidos</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-arrow-return-right text-primary me-2 fs-4"></i>
-                                <span>ROI: 4 años</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="border-top pt-4">
-                        <h5 class="mb-3">Componentes instalados:</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> 29 paneles de
-                                400W Silfab Prime
-                            </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Inversor Enphase
-                                IQ8 plus-72-2-USx29
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- Services Process Start -->
+    <div class="container process-section py-5">
+        <div class="text-center mx-auto mb-5" style="max-width:600px;">
+            <h2 class="display-4 mb-4">Proceso de Adquisición</h2>
+            <p class="fs-5 fw-medium text-primary">Soluciones integrales de energía solar en 6 pasos</p>
+        </div>
+        <div class="process-timeline">
+            <div class="step" data-step="1">
+                <div class="step-icon"><i class="fas fa-comments"></i></div>
+                <h5 class="mt-3">Asesoramiento</h5>
+                <p>Asesoramiento y acompañamiento para definir el proyecto</p>
+            </div>
+            <div class="step" data-step="2">
+                <div class="step-icon"><i class="fas fa-cogs"></i></div>
+                <h5 class="mt-3">Soluciones</h5>
+                <p>Soluciones llave en mano, diseño e ingeniería del proyecto</p>
+            </div>
+            <div class="step" data-step="3">
+                <div class="step-icon"><i class="fas fa-users"></i></div>
+                <h5 class="mt-3">Equipos</h5>
+                <p>Provisión de los equipos, instalación y puesta en marcha</p>
+            </div>
+            <div class="step" data-step="4">
+                <div class="step-icon"><i class="fas fa-certificate"></i></div>
+                <h5 class="mt-3">Puesta en marcha</h5>
+                <p>Puesta en marcha del proyecto de energía solar</p>
+            </div>
+            <div class="step" data-step="5">
+                <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                <h5 class="mt-3">Monitoreo</h5>
+                <p>Monitoreo, post venta y mantenimiento anual</p>
+            </div>
+            <div class="step" data-step="6">
+                <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
+                <h5 class="mt-3">Reportes</h5>
+                <p>Reporte de compensación de emisiones y análisis de eficiencia</p>
             </div>
         </div>
-
     </div>
-</div>
-<!-- Proyecto Destacado End -->
+    <!-- Services Process End -->
 
-<!-- Proyecto Destacado Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h2 class="display-4 mb-4">Proyecto Estación General Paz</h2>
-            <p class="fs-5 fw-medium text-primary">Instalación fotovoltaica residencial en Estación General Paz</p>
-        </div>
+    <!-- Soluciones Solares Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-1 mb-4">Soluciones de Energía Solar</h2>
+                <p class="fs-5 fw-medium text-primary">Soluciones personalizadas para cada necesidad</p>
+            </div>
 
-        <!-- Información principal del proyecto -->
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">
-            <!-- Detalles del proyecto -->
-            <div class="col-lg-5">
-                <div class="h-100 d-flex flex-column justify-content-center p-4 bg-light rounded">
-                    <h3 class="fs-3 mb-3">Residencia Estación General Paz</h3>
-                    <p class="mb-4">Sistema fotovoltaico OFF Grid de 3,5kW instalado en techo con paneles de 450 W de
-                        Talesun</p>
-
-                    <div class="row g-4 mb-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-calendar-check text-primary me-2 fs-4"></i>
-                                <span>Completado: Marzo 2024</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-lightning-charge text-primary me-2 fs-4"></i>
-                                <span>Capacidad: 3,5kW</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-geo-alt text-primary me-2 fs-4"></i>
-                                <span>Córdoba, Argentina</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-arrow-return-right text-primary me-2 fs-4"></i>
-                                <span>ROI: 4 años</span>
-                            </div>
-                        </div>
+            <!-- ON Grid Solar -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img" src="img/on-grid.png"
+                            alt="ON Grid Solar">
                     </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4">
+                        <h3 class="fs-2 mb-3">Sistema ON Grid</h3>
+                        <p class="mb-4">Soluciones conectadas a la red eléctrica que permiten ahorrar en consumo y
+                            vender
+                            excedentes de energía a la compañía distribuidora.</p>
+                        <div class="bg-light p-4 rounded">
+                            <h5 class="mb-3 text-primary">Características</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Conexión bidireccional a la red eléctrica</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Máximo aprovechamiento de la energía</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Sin necesidad de baterías</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Menor inversión inicial</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="border-top pt-4">
-                        <h5 class="mb-3">Componentes instalados:</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> 6 paneles de 450W
-                                Talesun
-                            </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Inversor Must
-                                3500W
-                            </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> 2 Baterías 250Ah
-                                GEL – KBG 2500012
-                            </li>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Carrusel del proyecto -->
-            <div class="col-lg-7">
-                <div class="proyecto-carousel">
-                    <div id="carouselProyecto" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- OFF Grid Solar -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img"
+                            src="img/off-grid-solar.png" alt="OFF Grid Solar">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4">
+                        <h3 class="fs-2 mb-3">Sistema OFF Grid</h3>
+                        <p class="mb-4">Sistemas autónomos que funcionan independientemente de la red eléctrica, ideales
+                            para zonas remotas o como respaldo energético.</p>
+                        <div class="bg-light p-4 rounded">
+                            <h5 class="mb-3 text-primary">Características</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Independencia energética total</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Sistema de almacenamiento en baterías</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Ideal para zonas sin acceso a red</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Energía constante 24/7</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parking Solar -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-6">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img"
+                            src="img/parking-solar.jpg" alt="Parking Solar">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4">
+                        <h3 class="fs-2 mb-3">Parking Solar</h3>
+                        <p class="mb-4">Estructuras de estacionamiento con paneles solares integrados que aprovechan
+                            espacios de aparcamiento para generar energía limpia.</p>
+                        <div class="bg-light p-4 rounded">
+                            <h5 class="mb-3 text-primary">Características</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Doble funcionalidad: sombra y energía</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Aprovechamiento de espacios existentes</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Compatible con estaciones de carga EV</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Estructuras modulares personalizables</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agro Solar -->
+            <div class="row g-5 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img"
+                            src="img/agro-solar.jpg" alt="Agro Solar">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4">
+                        <h3 class="fs-2 mb-3">Agro Solar</h3>
+                        <p class="mb-4">Soluciones específicas para el sector agrícola que permiten combinar producción
+                            de
+                            energía con actividades agropecuarias.</p>
+                        <div class="bg-light p-4 rounded">
+                            <h5 class="mb-3 text-primary">Características</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Alimentación de sistemas de riego</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Uso dual del terreno (agrivoltaica)</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Bombeo solar para extracción de agua</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Sistemas adaptados a necesidades del campo</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Soluciones Solares End -->
+
+    <!-- Proyecto Destacado Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-4 mb-4">Proyecto Destacado</h2>
+                <p class="fs-5 fw-medium text-primary">Instalación fotovoltaica residencial en Orlando</p>
+            </div>
+
+            <!-- Información principal del proyecto -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                <!-- Slider principal -->
+                <div class="col-lg-7">
+                    <div id="proyectoCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselProyecto" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                            <button type="button" data-bs-target="#carouselProyecto" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#proyectoCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true"></button>
+                            <button type="button" data-bs-target="#proyectoCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#proyectoCarousel" data-bs-slide-to="2"></button>
                         </div>
-                        <div class="carousel-inner">
+                        <div class="carousel-inner rounded overflow-hidden">
                             <div class="carousel-item active">
-                                <div class="carousel-img-container">
-                                    <img src="img/proyecto-solar-cordoba1.png" alt="Vista de paneles solares">
-                                </div>
+                                <img src="img/proyecto-solar-usa3.png" class="d-block w-100"
+                                    alt="Vista principal del proyecto">
                             </div>
                             <div class="carousel-item">
-                                <div class="carousel-img-container">
-                                    <img src="img/proyecto-solar-cordoba2.png" alt="Sistema fotovoltaico">
-                                </div>
+                                <img src="img/proyecto-solar-usa2.png" class="d-block w-100"
+                                    alt="Instalación de paneles">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/proyecto-solar-usa1.png" class="d-block w-100" alt="Sistema completo">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#proyectoCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Anterior</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#proyectoCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Siguiente</span>
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
 
+                <!-- Detalles del proyecto -->
+                <div class="col-lg-5">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4 bg-light rounded">
+                        <h3 class="fs-3 mb-3">Residencia Kissimmee</h3>
+                        <p class="mb-4">Sistema fotovoltaico ON Grid de 11,6kW instalado en techo inclinado orientado al
+                            norte, permitiendo un ahorro del 85% en la factura eléctrica mensual.</p>
 
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row ">
-            <div class="col-lg-4 col-md-6">
-                <h3 class="text-light mb-4 mt-4">Contacto</h3>
-                <p class="mb-2 text-white"><i class="fa fa-map-marker-alt text-primary me-3"></i>Córdoba Capital,
-                    Argentina</p>
-                <p class="mb-2 text-white"><i class="fa fa-phone-alt text-primary me-3"></i>+54 351 517-7298</p>
-                <p class="mb-2 text-white"><i class="fa fa-envelope text-primary me-3"></i>info@ecorise.com.ar</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-light me-2" href="https://wa.me/5493515177298" target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')"><i class="fab fa-whatsapp"></i></a>
-                    <a class="btn btn-square btn-outline-light" href="https://www.linkedin.com/company/er-ecorise/about/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-calendar-check text-primary me-2 fs-4"></i>
+                                    <span>Completado: Enero 2024</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-lightning-charge text-primary me-2 fs-4"></i>
+                                    <span>Capacidad: 11,6kW</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-geo-alt text-primary me-2 fs-4"></i>
+                                    <span>Orlando, Florida, Estados Unidos</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-arrow-return-right text-primary me-2 fs-4"></i>
+                                    <span>ROI: 4 años</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-top pt-4">
+                            <h5 class="mb-3">Componentes instalados:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> 29 paneles de
+                                    400W Silfab Prime
+                                </li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Inversor
+                                    Enphase
+                                    IQ8 plus-72-2-USx29
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mt-4">
-                <h3 class="text-light mb-4">Servicios</h3>
-                <a class="btn btn-link text-body" href="energia-solar.html">Energía Solar</a>
-                <a class="btn btn-link text-body" href="sustentabilidad.html">Consultoría Sustentable</a>
-                <a class="btn btn-link text-body" href="mantenimiento.html">Mantenimiento e Inspección</a>
-                <a class="btn btn-link text-body" href="consultoria-tecnica.html">Consultoría técnica</a>
-            </div>
-            <div class="col-lg-4 col-md-12 mt-4">
-                <h3 class="text-light mb-4">Enlaces Rápidos</h3>
-                <div class="row">
-                    <div class="col-6">
-                        <a class="btn btn-link text-body" href="index.html">Inicio</a>
-                    </div>
-                    <div class="col-6">
-                        <a class="btn btn-link text-body" href="#"
-                           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
-                            Reunión</a>
 
-                        <a class="btn btn-link text-body" href="https://wa.me/+5493515177298" onclick="gtag_report_conversion('https://wa.me/+5493515177298')">Contacto</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    <div class="container-fluid copyright py-6 border-top border-bottom border-secondary">
+    <!-- Proyecto Destacado End -->
+
+    <!-- Proyecto Destacado Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center  mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="index.html">Ecorise</a>, 2025. Todos los derechos reservados.
-                </div>
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-4 mb-4">Proyecto Estación General Paz</h2>
+                <p class="fs-5 fw-medium text-primary">Instalación fotovoltaica residencial en Estación General Paz</p>
             </div>
-            <div class="row">
 
-                <div class="col-md-12 text-center  mb-3 mb-md-0">
-                    Creado por: <a class="fw-semi-bold" href="https://wa.me/+549351334646">Candelaria Piña</a> y <a
-                        class="fw-semi-bold" href="https://wa.me/+5493512050889">Agustín Martin</a>
+            <!-- Información principal del proyecto -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                <!-- Detalles del proyecto -->
+                <div class="col-lg-5">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4 bg-light rounded">
+                        <h3 class="fs-3 mb-3">Residencia Estación General Paz</h3>
+                        <p class="mb-4">Sistema fotovoltaico OFF Grid de 3,5kW instalado en techo con paneles de 450 W
+                            de
+                            Talesun</p>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-calendar-check text-primary me-2 fs-4"></i>
+                                    <span>Completado: Marzo 2024</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-lightning-charge text-primary me-2 fs-4"></i>
+                                    <span>Capacidad: 3,5kW</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-geo-alt text-primary me-2 fs-4"></i>
+                                    <span>Córdoba, Argentina</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-arrow-return-right text-primary me-2 fs-4"></i>
+                                    <span>ROI: 4 años</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-top pt-4">
+                            <h5 class="mb-3">Componentes instalados:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> 6 paneles de
+                                    450W
+                                    Talesun
+                                </li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Inversor Must
+                                    3500W
+                                </li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> 2 Baterías
+                                    250Ah
+                                    GEL – KBG 2500012
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Carrusel del proyecto -->
+                <div class="col-lg-7">
+                    <div class="proyecto-carousel">
+                        <div id="carouselProyecto" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselProyecto" data-bs-slide-to="0"
+                                    class="active" aria-current="true"></button>
+                                <button type="button" data-bs-target="#carouselProyecto" data-bs-slide-to="1"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-img-container">
+                                        <img src="img/proyecto-solar-cordoba1.png" alt="Vista de paneles solares">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-img-container">
+                                        <img src="img/proyecto-solar-cordoba2.png" alt="Sistema fotovoltaico">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-</div>
-<!-- Footer End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row ">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-light mb-4 mt-4">Contacto</h3>
+                    <p class="mb-2 text-white"><i class="fa fa-map-marker-alt text-primary me-3"></i>Córdoba Capital,
+                        Argentina</p>
+                    <p class="mb-2 text-white"><i class="fa fa-phone-alt text-primary me-3"></i>+54 351 517-7298</p>
+                    <p class="mb-2 text-white"><i class="fa fa-envelope text-primary me-3"></i>info@ecorise.com.ar</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light me-2" href="https://wa.me/5493515177298"
+                            target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-square btn-outline-light"
+                            href="https://www.linkedin.com/company/er-ecorise/about/?viewAsMember=true"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <h3 class="text-light mb-4">Servicios</h3>
+                    <a class="btn btn-link text-body" href="energia-solar.html">Energía Solar</a>
+                    <a class="btn btn-link text-body" href="sustentabilidad.html">Consultoría Sustentable</a>
+                    <a class="btn btn-link text-body" href="mantenimiento.html">Mantenimiento e Inspección</a>
+                    <a class="btn btn-link text-body" href="consultoria-tecnica.html">Consultoría técnica</a>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-4">
+                    <h3 class="text-light mb-4">Enlaces Rápidos</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="btn btn-link text-body" href="index.html">Inicio</a>
+                        </div>
+                        <div class="col-6">
+                            <a class="btn btn-link text-body" href="#"
+                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
+                                Reunión</a>
+
+                            <a class="btn btn-link text-body" href="https://wa.me/+5493515177298"
+                                onclick="gtag_report_conversion('https://wa.me/+5493515177298')">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright py-6 border-top border-bottom border-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center  mb-3 mb-md-0">
+                        &copy; <a class="fw-semi-bold" href="index.html">Ecorise</a>, 2025. Todos los derechos
+                        reservados.
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12 text-center  mb-3 mb-md-0">
+                        Creado por: <a class="fw-semi-bold" href="https://wa.me/+549351334646">Candelaria Piña</a> y <a
+                            class="fw-semi-bold" href="https://wa.me/+5493512050889">Agustín Martin</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer End -->
 
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-<a href="https://wa.me/5493515177298" class="btn btn-whatsapp" target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')">
-    <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-text">Chateá con nosotros</span>
-</a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="https://wa.me/5493515177298" class="btn btn-whatsapp" target="_blank"
+        onclick="gtag_report_conversion('https://wa.me/5493515177298')">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Chateá con nosotros</span>
+    </a>
 
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/tempusdominus/js/moment.min.js"></script>
-<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- GLightbox CSS -->
-<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
-<!-- GLightbox JS -->
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script>
-    // Inicializar GLightbox
-    const lightbox = GLightbox({
-        selector: '.gallery-item',
-        touchNavigation: true,
-        loop: true,
-        autoplayVideos: true
-    });
-</script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- GLightbox CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Inicializar GLightbox
+        const lightbox = GLightbox({
+            selector: '.gallery-item',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+    </script>
 </body>
 
 </html>

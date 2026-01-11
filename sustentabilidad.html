@@ -3,17 +3,22 @@
 
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5Q7XKBN5');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5Q7XKBN5');</script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <title>ECORISE - Sustentabilidad</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ODS, Medición, Huelle, Carbono, ESG" name="keywords">
-    <meta content="En EcoRise somos líderes de soluciones sustentables, medición de huella de carbono y eficiencia energética para empresas en Córdoba. Consultoría ESG y ODS." name="description">
+    <meta
+        content="En EcoRise somos líderes de soluciones sustentables, medición de huella de carbono y eficiencia energética para empresas en Córdoba. Consultoría ESG y ODS."
+        name="description">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
@@ -24,8 +29,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -34,7 +40,7 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +54,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4TLBRV3SH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-G4TLBRV3SH');
@@ -58,7 +64,7 @@
     <script>
         function gtag_report_conversion(url) {
             var callback = function () {
-                if (typeof(url) != 'undefined') {
+                if (typeof (url) != 'undefined') {
                     window.location = url;
                 }
             };
@@ -71,460 +77,522 @@
             return false;
         }
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2521676828246674');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=2521676828246674&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 
 
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q7XKBN5"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!-- Spinner Start -->
-<div id="spinner"
-     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-    <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-loader.png" style="width: 3rem; border-radius: 1rem" alt="Icon">
-</div>
-<!-- Spinner End -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q7XKBN5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status">
+        </div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-loader.png"
+            style="width: 3rem; border-radius: 1rem" alt="Icon">
+    </div>
+    <!-- Spinner End -->
 
 
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-        <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;">
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Inicio</a>
-            <a href="energia-solar.html" class="nav-item nav-link">Energía solar</a>
-            <a href="sustentabilidad.html" class="nav-item nav-link active">Sustentabilidad</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros servicios</a>
-                <div class="dropdown-menu border-0 m-0">
-                    <a href="mantenimiento.html" class="dropdown-item">Mantenimiento e inspección</a>
-                    <a href="consultoria-tecnica.html" class="dropdown-item">Consultoría técnica</a>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                <a href="energia-solar.html" class="nav-item nav-link">Energía solar</a>
+                <a href="sustentabilidad.html" class="nav-item nav-link active">Sustentabilidad</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Otros servicios</a>
+                    <div class="dropdown-menu border-0 m-0">
+                        <a href="mantenimiento.html" class="dropdown-item">Mantenimiento e inspección</a>
+                        <a href="consultoria-tecnica.html" class="dropdown-item">Consultoría técnica</a>
+                    </div>
                 </div>
-            </div>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
-                <div class="dropdown-menu border-0 m-0">
-                    <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
-                    <a href="https://wa.me/5493515177298" class="dropdown-item" onclick="gtag_report_conversion('https://wa.me/5493515177298')">Teléfono</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
+                    <div class="dropdown-menu border-0 m-0">
+                        <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
+                        <a href="https://wa.me/5493515177298" class="dropdown-item"
+                            onclick="gtag_report_conversion('https://wa.me/5493515177298')">Teléfono</a>
+                    </div>
                 </div>
+                <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                    class="nav-item nav-link btn btn-primary text-white my-2 d-lg-none">Agendar reunión</a>
             </div>
             <a href=""
-               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
-               class="nav-item nav-link btn btn-primary text-white my-2 d-lg-none">Agendar reunión</a>
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
         </div>
-        <a href=""
-           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
-           class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
-    </div>
-</nav>
-<!-- Navbar End -->
+    </nav>
+    <!-- Navbar End -->
 
-<!-- Page Header Start -->
-<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.santanderopenacademy.com/es/blog/sustentabilidad-y-sostenibilidad/_jcr_content/root/container/responsivegrid/image_178300913.coreimg.jpeg/1711966203502/sustentabilidad-y-sostenibilidad-3.jpeg) center center no-repeat; background-size: cover;">
-    <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-7">
-                <h1 class="display-1 text-white animated slideInDown">Sustentabilidad</h1>
-                <p class="text-white animated slideInDown mb-4 pb-2">Soluciones de desarrollo sostenible para empresas comprometidas con el futuro del planeta y las próximas generaciones</p>
-                <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb text-uppercase mb-0">
-                        <li class="breadcrumb-item"><a class="text-white" href="index.html">Inicio</a></li>
-                        <li class="breadcrumb-item text-primary active" aria-current="page">Sustentabilidad</li>
-                    </ol>
-                </nav>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Page Header End -->
-
-
-<!-- Beneficios Sustentabilidad Start -->
-<section class="container-xxl py-5" aria-label="Beneficios de la sustentabilidad">
-    <div class="container">
-        <header class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h2 class="display-1 mb-4">Beneficios</h2>
-            <p class="fs-5 fw-medium text-primary">Ventajas estratégicas para empresas sustentables</p>
-        </header>
-        <ul class="row g-4 list-unstyled wow fadeInUp" data-wow-delay="0.3s">
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3" aria-hidden="true">
-                        <i class="fas fa-clipboard-list fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Inventario efectivo</h4>
-                        <p class="mb-0">Inventario efectivo de consumos, eficiencia energética y costos ocultos.</p>
-                    </div>
-                </article>
-            </li>
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3" aria-hidden="true">
-                        <i class="fas fa-chart-line fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Planificación de reducciones</h4>
-                        <p class="mb-0">Planificación de reducciones de costos e inversiones para la reducción de emisiones.</p>
-                    </div>
-                </article>
-            </li>
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3" aria-hidden="true">
-                        <i class="fas fa-lightbulb fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Prácticas estratégicas</h4>
-                        <p class="mb-0">Prácticas estratégicas para el posicionamiento de empresas bajo los nuevos lineamientos de sustentabilidad.</p>
-                    </div>
-                </article>
-            </li>
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3" aria-hidden="true">
-                        <i class="fas fa-eye fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Aumento de visibilidad</h4>
-                        <p class="mb-0">Aumento de visibilidad para nuevos clientes en búsqueda de empresas sustentables.</p>
-                    </div>
-                </article>
-            </li>
-            <li class="col-lg-6">
-                <article class="d-flex align-items-start mb-4" role="listitem">
-                    <span class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3" aria-hidden="true">
-                        <i class="fas fa-leaf fs-3"></i>
-                    </span>
-                    <div>
-                        <h4>Impacto positivo</h4>
-                        <p class="mb-0">Impacto positivo en sostenibilidad, responsabilidad social y en objetivos sustentables.</p>
-                    </div>
-                </article>
-            </li>
-        </ul>
-        <div class="text-center mt-5 pt-3 wow fadeInUp" data-wow-delay="0.5s">
-            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;" class="btn btn-primary py-3 px-5 rounded d-inline-flex align-items-center">
-                Consulta por tu proyecto
-                <i class="fa fa-long-arrow-alt-right ms-3" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- Beneficios Sustentabilidad End -->
-
-
-<!-- Services Process Start -->
-<div class="container process-section py-5">
-    <div class="text-center mx-auto mb-5" style="max-width:600px;">
-        <h2 class="display-4 mb-4">Proceso de consultoría</h2>
-        <p class="fs-5 fw-medium text-primary">Soluciones integrales de energía solar en 5 pasos</p>
-    </div>
-
-    <div class="process-timeline">
-        <div class="step" data-step="1">
-            <div class="step-icon"><i class="fas fa-comments"></i></div>
-            <h5 class="mt-3">Asesoramiento</h5>
-            <p>Asesoramiento y acompañamiento para definir el proyecto</p>
-        </div>
-        <div class="step" data-step="2">
-            <div class="step-icon"><i class="fas fa-cogs"></i></div>
-            <h5 class="mt-3">Dimensionamiento del trabajo</h5>
-            <p>Definimos los objetivos a alcanzar para el éxito</p>
-        </div>
-        <div class="step" data-step="3">
-            <div class="step-icon"><i class="fas fa-users"></i></div>
-            <h5 class="mt-3">Consultoría técnica</h5>
-            <p>Un experto realiza la consultoría técnica para el cliente</p>
-        </div>
-        <div class="step" data-step="4">
-            <div class="step-icon"><i class="fas fa-file"></i></div>
-            <h5 class="mt-3">Reportes</h5>
-            <p>Comunicamos los resultados constantemente</p>
-        </div>
-        <div class="step" data-step="4">
-            <div class="step-icon"><i class="fas fa-certificate"></i></div>
-            <h5 class="mt-3">Plan de reducción</h5>
-            <p>Establecemos metas de reducción basadas en los resultados del inventario de emisiones</p>
-        </div>
-        <div class="step" data-step="5">
-            <div class="step-icon"><i class="fas fa-chart-line"></i></div>
-            <h5 class="mt-3">Proyecto de reducción</h5>
-            <p>Se proponen distintos proyectos para la reducción de emisiones</p>
-        </div>
-
-    </div>
-</div>
-<!-- Services Process End -->
-<!-- Soluciones Sustentables Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h2 class="display-1 mb-4">Soluciones Sustentables</h2>
-            <p class="fs-5 fw-medium text-primary">Soluciones personalizadas para cada necesidad</p>
-        </div>
-
-        <!-- Medición de huella de carbono -->
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-                <div class="position-relative h-100">
-                    <img class="img-fluid rounded w-100 h-100 object-fit-cover" src="https://i.pcmag.com/imagery/articles/01dITSJznwNhfew5UYscn3c-2..v1693581778.jpg" alt="Medición de huella de carbono">
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.santanderopenacademy.com/es/blog/sustentabilidad-y-sostenibilidad/_jcr_content/root/container/responsivegrid/image_178300913.coreimg.jpeg/1711966203502/sustentabilidad-y-sostenibilidad-3.jpeg) center center no-repeat; background-size: cover;">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-1 text-white animated slideInDown">Sustentabilidad</h1>
+                    <p class="text-white animated slideInDown mb-4 pb-2">Soluciones de desarrollo sostenible para
+                        empresas comprometidas con el futuro del planeta y las próximas generaciones</p>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb text-uppercase mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Inicio</a></li>
+                            <li class="breadcrumb-item text-primary active" aria-current="page">Sustentabilidad</li>
+                        </ol>
+                    </nav>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="h-100 d-flex flex-column justify-content-center p-4">
-                    <h3 class="fs-2 mb-3">Medición de huella de carbono</h3>
-                    <p class="mb-4">Evaluamos y cuantificamos las emisiones de gases de efecto invernadero generadas por su organización, identificando las principales fuentes y estableciendo una línea base para futuras acciones.</p>
-                    <div class="bg-light p-4 rounded">
-                        <h5 class="mb-3 text-primary">Características</h5>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Análisis de alcances 1, 2 y 3</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Metodología GHG Protocol</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Informes detallados por área</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Benchmarking sectorial</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Plan de reducción de emisiones -->
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="col-lg-6 order-lg-2">
-                <div class="position-relative h-100">
-                    <img class="img-fluid rounded w-100 h-100 object-fit-cover" src="img/reduccion-emisiones.png" alt="Plan de reducción de emisiones">
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="h-100 d-flex flex-column justify-content-center p-4">
-                    <h3 class="fs-2 mb-3">Plan de reducción de emisiones</h3>
-                    <p class="mb-4">Desarrollamos estrategias personalizadas para reducir la huella de carbono de su empresa, estableciendo objetivos alcanzables y medibles con un enfoque en la eficiencia y la sostenibilidad.</p>
-                    <div class="bg-light p-4 rounded">
-                        <h5 class="mb-3 text-primary">Características</h5>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Objetivos basados en ciencia (SBTi)</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Identificación de oportunidades clave</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Análisis costo-beneficio</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Seguimiento de resultados</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Evaluaciones ESG -->
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="col-lg-6">
-                <div class="position-relative h-100">
-                    <img class="img-fluid rounded w-100 h-100 object-fit-cover" src="https://doinglobal.com/wp-content/uploads/2023/06/Criterios-ESG-scaled.jpg" alt="Evaluaciones ESG">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="h-100 d-flex flex-column justify-content-center p-4">
-                    <h3 class="fs-2 mb-3">Evaluaciones ESG</h3>
-                    <p class="mb-4">Analizamos el desempeño ambiental, social y de gobernanza de su organización, proporcionando una visión integral que permite identificar fortalezas y áreas de mejora.</p>
-                    <div class="bg-light p-4 rounded">
-                        <h5 class="mb-3 text-primary">Características</h5>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Evaluación integral 360°</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Alineamiento con estándares GRI</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Recomendaciones accionables</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Reporte para inversionistas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Objetivos de desarrollo sustentable -->
-        <div class="row g-5 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="col-lg-6 order-lg-2">
-                <div class="position-relative h-100">
-                    <img class="img-fluid rounded w-100 h-100 object-fit-cover" src="https://foromdc.org/wp-content/uploads/2023/01/ods_foto_2020_0-1-1024x686-1.jpg" alt="Objetivos de desarrollo sustentable">
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="h-100 d-flex flex-column justify-content-center p-4">
-                    <h3 class="fs-2 mb-3">Objetivos de desarrollo sustentable</h3>
-                    <p class="mb-4">Implementamos estrategias para alinear las operaciones de su empresa con los ODS de la ONU, integrando la sostenibilidad en su modelo de negocio y cadena de valor.</p>
-                    <div class="bg-light p-4 rounded">
-                        <h5 class="mb-3 text-primary">Características</h5>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Diagnóstico de alineamiento con ODS</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Planes de acción específicos</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Métricas de impacto cuantificables</p>
-                                </div>
-                                <div class="d-flex align-items-start mb-3">
-                                    <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
-                                    <p class="mb-0">Comunicación de resultados</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Soluciones Sustentables  End -->
+    <!-- Page Header End -->
 
 
-
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row ">
-            <div class="col-lg-4 col-md-6">
-                <h3 class="text-light mb-4 mt-4">Contacto</h3>
-                <p class="mb-2 text-white"><i class="fa fa-map-marker-alt text-primary me-3"></i>Córdoba Capital,
-                    Argentina</p>
-                <p class="mb-2 text-white"><i class="fa fa-phone-alt text-primary me-3"></i>+54 351 517-7298</p>
-                <p class="mb-2 text-white"><i class="fa fa-envelope text-primary me-3"></i>info@ecorise.com.ar</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-light me-2" href="https://wa.me/5493515177298" target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')"><i class="fab fa-whatsapp"></i></a>
-                    <a class="btn btn-square btn-outline-light" href="https://www.linkedin.com/company/er-ecorise/about/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-4">
-                <h3 class="text-light mb-4">Servicios</h3>
-                <a class="btn btn-link text-body" href="energia-solar.html">Energía Solar</a>
-                <a class="btn btn-link text-body" href="sustentabilidad.html">Consultoría Sustentable</a>
-                <a class="btn btn-link text-body" href="mantenimiento.html">Mantenimiento e Inspección</a>
-                <a class="btn btn-link text-body" href="consultoria-tecnica.html">Consultoría técnica</a>
-            </div>
-            <div class="col-lg-4 col-md-12 mt-4">
-                <h3 class="text-light mb-4">Enlaces Rápidos</h3>
-                <div class="row">
-                    <div class="col-6">
-                        <a class="btn btn-link text-body" href="index.html">Inicio</a>
-                    </div>
-                    <div class="col-6">
-                        <a class="btn btn-link text-body" href="#"
-                           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
-                            Reunión</a>
-
-                        <a class="btn btn-link text-body" href="https://wa.me/+5493515177298" onclick="gtag_report_conversion('https://wa.me/+5493515177298')">Contacto</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid copyright py-6 border-top border-bottom border-secondary">
+    <!-- Beneficios Sustentabilidad Start -->
+    <section class="container-xxl py-5" aria-label="Beneficios de la sustentabilidad">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center  mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="index.html">Ecorise</a>, 2025. Todos los derechos reservados.
+            <header class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-1 mb-4">Beneficios</h2>
+                <p class="fs-5 fw-medium text-primary">Ventajas estratégicas para empresas sustentables</p>
+            </header>
+            <ul class="row g-4 list-unstyled wow fadeInUp" data-wow-delay="0.3s">
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-clipboard-list fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Inventario efectivo</h4>
+                            <p class="mb-0">Inventario efectivo de consumos, eficiencia energética y costos ocultos.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-chart-line fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Planificación de reducciones</h4>
+                            <p class="mb-0">Planificación de reducciones de costos e inversiones para la reducción de
+                                emisiones.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-lightbulb fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Prácticas estratégicas</h4>
+                            <p class="mb-0">Prácticas estratégicas para el posicionamiento de empresas bajo los nuevos
+                                lineamientos de sustentabilidad.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-eye fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Aumento de visibilidad</h4>
+                            <p class="mb-0">Aumento de visibilidad para nuevos clientes en búsqueda de empresas
+                                sustentables.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="col-lg-6">
+                    <article class="d-flex align-items-start mb-4" role="listitem">
+                        <span
+                            class="icon-fixed rounded bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                            aria-hidden="true">
+                            <i class="fas fa-leaf fs-3"></i>
+                        </span>
+                        <div>
+                            <h4>Impacto positivo</h4>
+                            <p class="mb-0">Impacto positivo en sostenibilidad, responsabilidad social y en objetivos
+                                sustentables.</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+            <div class="text-center mt-5 pt-3 wow fadeInUp" data-wow-delay="0.5s">
+                <a href="#"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                    class="btn btn-primary py-3 px-5 rounded d-inline-flex align-items-center">
+                    Consulta por tu proyecto
+                    <i class="fa fa-long-arrow-alt-right ms-3" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Beneficios Sustentabilidad End -->
+
+
+    <!-- Services Process Start -->
+    <div class="container process-section py-5">
+        <div class="text-center mx-auto mb-5" style="max-width:600px;">
+            <h2 class="display-4 mb-4">Proceso de consultoría</h2>
+            <p class="fs-5 fw-medium text-primary">Soluciones integrales de energía solar en 5 pasos</p>
+        </div>
+
+        <div class="process-timeline">
+            <div class="step" data-step="1">
+                <div class="step-icon"><i class="fas fa-comments"></i></div>
+                <h5 class="mt-3">Asesoramiento</h5>
+                <p>Asesoramiento y acompañamiento para definir el proyecto</p>
+            </div>
+            <div class="step" data-step="2">
+                <div class="step-icon"><i class="fas fa-cogs"></i></div>
+                <h5 class="mt-3">Dimensionamiento del trabajo</h5>
+                <p>Definimos los objetivos a alcanzar para el éxito</p>
+            </div>
+            <div class="step" data-step="3">
+                <div class="step-icon"><i class="fas fa-users"></i></div>
+                <h5 class="mt-3">Consultoría técnica</h5>
+                <p>Un experto realiza la consultoría técnica para el cliente</p>
+            </div>
+            <div class="step" data-step="4">
+                <div class="step-icon"><i class="fas fa-file"></i></div>
+                <h5 class="mt-3">Reportes</h5>
+                <p>Comunicamos los resultados constantemente</p>
+            </div>
+            <div class="step" data-step="4">
+                <div class="step-icon"><i class="fas fa-certificate"></i></div>
+                <h5 class="mt-3">Plan de reducción</h5>
+                <p>Establecemos metas de reducción basadas en los resultados del inventario de emisiones</p>
+            </div>
+            <div class="step" data-step="5">
+                <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                <h5 class="mt-3">Proyecto de reducción</h5>
+                <p>Se proponen distintos proyectos para la reducción de emisiones</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Services Process End -->
+    <!-- Soluciones Sustentables Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-1 mb-4">Soluciones Sustentables</h2>
+                <p class="fs-5 fw-medium text-primary">Soluciones personalizadas para cada necesidad</p>
+            </div>
+
+            <!-- Medición de huella de carbono -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover"
+                            src="https://i.pcmag.com/imagery/articles/01dITSJznwNhfew5UYscn3c-2..v1693581778.jpg"
+                            alt="Medición de huella de carbono">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4">
+                        <h3 class="fs-2 mb-3">Medición de huella de carbono</h3>
+                        <p class="mb-4">Evaluamos y cuantificamos las emisiones de gases de efecto invernadero generadas
+                            por su organización, identificando las principales fuentes y estableciendo una línea base
+                            para futuras acciones.</p>
+                        <div class="bg-light p-4 rounded">
+                            <h5 class="mb-3 text-primary">Características</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Análisis de alcances 1, 2 y 3</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Metodología GHG Protocol</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Informes detallados por área</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Benchmarking sectorial</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
 
-                <div class="col-md-12 text-center  mb-3 mb-md-0">
-                    Creado por: <a class="fw-semi-bold" href="https://wa.me/+549351334646">Candelaria Piña</a> y <a
-                        class="fw-semi-bold" href="https://wa.me/+5493512050889">Agustín Martin</a>
+            <!-- Plan de reducción de emisiones -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover" src="img/reduccion-emisiones.png"
+                            alt="Plan de reducción de emisiones">
+                    </div>
                 </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4">
+                        <h3 class="fs-2 mb-3">Plan de reducción de emisiones</h3>
+                        <p class="mb-4">Desarrollamos estrategias personalizadas para reducir la huella de carbono de su
+                            empresa, estableciendo objetivos alcanzables y medibles con un enfoque en la eficiencia y la
+                            sostenibilidad.</p>
+                        <div class="bg-light p-4 rounded">
+                            <h5 class="mb-3 text-primary">Características</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Objetivos basados en ciencia (SBTi)</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Identificación de oportunidades clave</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Análisis costo-beneficio</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Seguimiento de resultados</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Evaluaciones ESG -->
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-6">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover"
+                            src="https://doinglobal.com/wp-content/uploads/2023/06/Criterios-ESG-scaled.jpg"
+                            alt="Evaluaciones ESG">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4">
+                        <h3 class="fs-2 mb-3">Evaluaciones ESG</h3>
+                        <p class="mb-4">Analizamos el desempeño ambiental, social y de gobernanza de su organización,
+                            proporcionando una visión integral que permite identificar fortalezas y áreas de mejora.</p>
+                        <div class="bg-light p-4 rounded">
+                            <h5 class="mb-3 text-primary">Características</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Evaluación integral 360°</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Alineamiento con estándares GRI</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Recomendaciones accionables</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Reporte para inversionistas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Objetivos de desarrollo sustentable -->
+            <div class="row g-5 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover"
+                            src="https://foromdc.org/wp-content/uploads/2023/01/ods_foto_2020_0-1-1024x686-1.jpg"
+                            alt="Objetivos de desarrollo sustentable">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="h-100 d-flex flex-column justify-content-center p-4">
+                        <h3 class="fs-2 mb-3">Objetivos de desarrollo sustentable</h3>
+                        <p class="mb-4">Implementamos estrategias para alinear las operaciones de su empresa con los ODS
+                            de la ONU, integrando la sostenibilidad en su modelo de negocio y cadena de valor.</p>
+                        <div class="bg-light p-4 rounded">
+                            <h5 class="mb-3 text-primary">Características</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Diagnóstico de alineamiento con ODS</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Planes de acción específicos</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Métricas de impacto cuantificables</p>
+                                    </div>
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="bi bi-check-circle-fill text-primary me-2 fs-5"></i>
+                                        <p class="mb-0">Comunicación de resultados</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-</div>
-<!-- Footer End -->
+    <!-- Soluciones Sustentables  End -->
 
 
 
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row ">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-light mb-4 mt-4">Contacto</h3>
+                    <p class="mb-2 text-white"><i class="fa fa-map-marker-alt text-primary me-3"></i>Córdoba Capital,
+                        Argentina</p>
+                    <p class="mb-2 text-white"><i class="fa fa-phone-alt text-primary me-3"></i>+54 351 517-7298</p>
+                    <p class="mb-2 text-white"><i class="fa fa-envelope text-primary me-3"></i>info@ecorise.com.ar</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light me-2" href="https://wa.me/5493515177298"
+                            target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-square btn-outline-light"
+                            href="https://www.linkedin.com/company/er-ecorise/about/?viewAsMember=true"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <h3 class="text-light mb-4">Servicios</h3>
+                    <a class="btn btn-link text-body" href="energia-solar.html">Energía Solar</a>
+                    <a class="btn btn-link text-body" href="sustentabilidad.html">Consultoría Sustentable</a>
+                    <a class="btn btn-link text-body" href="mantenimiento.html">Mantenimiento e Inspección</a>
+                    <a class="btn btn-link text-body" href="consultoria-tecnica.html">Consultoría técnica</a>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-4">
+                    <h3 class="text-light mb-4">Enlaces Rápidos</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="btn btn-link text-body" href="index.html">Inicio</a>
+                        </div>
+                        <div class="col-6">
+                            <a class="btn btn-link text-body" href="#"
+                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
+                                Reunión</a>
+
+                            <a class="btn btn-link text-body" href="https://wa.me/+5493515177298"
+                                onclick="gtag_report_conversion('https://wa.me/+5493515177298')">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright py-6 border-top border-bottom border-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center  mb-3 mb-md-0">
+                        &copy; <a class="fw-semi-bold" href="index.html">Ecorise</a>, 2025. Todos los derechos
+                        reservados.
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12 text-center  mb-3 mb-md-0">
+                        Creado por: <a class="fw-semi-bold" href="https://wa.me/+549351334646">Candelaria Piña</a> y <a
+                            class="fw-semi-bold" href="https://wa.me/+5493512050889">Agustín Martin</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer End -->
 
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-<a href="https://wa.me/5493515177298" class="btn btn-whatsapp" target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')">
-    <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-text">Chateá con nosotros</span>
-</a>
 
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/tempusdominus/js/moment.min.js"></script>
-<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <a href="https://wa.me/5493515177298" class="btn btn-whatsapp" target="_blank"
+        onclick="gtag_report_conversion('https://wa.me/5493515177298')">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Chateá con nosotros</span>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -3,17 +3,22 @@
 
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5Q7XKBN5');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5Q7XKBN5');</script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <title>ECORISE - Mantenimiento e Inspección</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Mantenimiento, inspección, energía, renovable" name="keywords">
-    <meta content="Mantenimiento e inspección de sistemas solares en Córdoba. Servicio técnico, diagnóstico y soporte para energía renovables." name="description">
+    <meta
+        content="Mantenimiento e inspección de sistemas solares en Córdoba. Servicio técnico, diagnóstico y soporte para energía renovables."
+        name="description">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
@@ -24,7 +29,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -48,7 +55,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4TLBRV3SH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-G4TLBRV3SH');
@@ -58,7 +65,7 @@
     <script>
         function gtag_report_conversion(url) {
             var callback = function () {
-                if (typeof(url) != 'undefined') {
+                if (typeof (url) != 'undefined') {
                     window.location = url;
                 }
             };
@@ -71,69 +78,95 @@
             return false;
         }
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2521676828246674');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=2521676828246674&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q7XKBN5"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!-- Spinner Start -->
-<div id="spinner"
-     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-    <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-loader.png" style="width: 3rem; border-radius: 1rem" alt="Icon">
-</div>
-<!-- Spinner End -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q7XKBN5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status">
+        </div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-loader.png"
+            style="width: 3rem; border-radius: 1rem" alt="Icon">
+    </div>
+    <!-- Spinner End -->
 
 
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-        <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;">
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Inicio</a>
-            <a href="energia-solar.html" class="nav-item nav-link">Energía solar</a>
-            <a href="sustentabilidad.html" class="nav-item nav-link">Sustentabilidad</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Otros servicios</a>
-                <div class="dropdown-menu border-0 m-0">
-                    <a href="mantenimiento.html" class="dropdown-item">Mantenimiento e inspección</a>
-                    <a href="consultoria-tecnica.html" class="dropdown-item">Consultoría técnica</a>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                <a href="energia-solar.html" class="nav-item nav-link">Energía solar</a>
+                <a href="sustentabilidad.html" class="nav-item nav-link">Sustentabilidad</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Otros servicios</a>
+                    <div class="dropdown-menu border-0 m-0">
+                        <a href="mantenimiento.html" class="dropdown-item">Mantenimiento e inspección</a>
+                        <a href="consultoria-tecnica.html" class="dropdown-item">Consultoría técnica</a>
+                    </div>
                 </div>
-            </div>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
-                <div class="dropdown-menu border-0 m-0">
-                    <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
-                    <a href="https://wa.me/5493515177298" class="dropdown-item" onclick="gtag_report_conversion('https://wa.me/5493515177298')">Teléfono</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contacto</a>
+                    <div class="dropdown-menu border-0 m-0">
+                        <a href="mailto:info@ecorise.com.ar" class="dropdown-item">Email</a>
+                        <a href="https://wa.me/5493515177298" class="dropdown-item"
+                            onclick="gtag_report_conversion('https://wa.me/5493515177298')">Teléfono</a>
+                    </div>
                 </div>
+                <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                    class="nav-item nav-link btn btn-primary text-white my-2 d-lg-none">Agendar reunión</a>
             </div>
             <a href=""
-               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
-               class="nav-item nav-link btn btn-primary text-white my-2 d-lg-none">Agendar reunión</a>
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
         </div>
-        <a href=""
-           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
-           class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
-    </div>
-</nav>
-<!-- Navbar End -->
+    </nav>
+    <!-- Navbar End -->
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.enelx.com/content/dam/local-colombia/articulos-personas/banners/2022/07/sistema-fotovoltaico--conoce-c%C3%B3mo-tu-empresa-puede-reducir-el-impacto-ambiental/sistema-solar-fotovoltaico-desktop.webp) center center no-repeat; background-size: cover;">
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.enelx.com/content/dam/local-colombia/articulos-personas/banners/2022/07/sistema-fotovoltaico--conoce-c%C3%B3mo-tu-empresa-puede-reducir-el-impacto-ambiental/sistema-solar-fotovoltaico-desktop.webp) center center no-repeat; background-size: cover;">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-7">
                     <h1 class="display-1 text-white animated slideInDown">Mantenimiento e inspección</h1>
-                    <p class="text-white animated slideInDown mb-4 pb-2">Servicios profesionales para maximizar el rendimiento y extender la vida útil de su sistema de energía solar</p>
+                    <p class="text-white animated slideInDown mb-4 pb-2">Servicios profesionales para maximizar el
+                        rendimiento y extender la vida útil de su sistema de energía solar</p>
                     <nav aria-label="breadcrumb animated slideInDown">
                         <ol class="breadcrumb text-uppercase mb-0">
                             <li class="breadcrumb-item"><a class="text-white" href="index.html">Inicio</a></li>
@@ -156,7 +189,9 @@
             </div>
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="mb-4">El mantenimiento preventivo y correctivo es esencial para garantizar la eficiencia y longevidad de sus sistemas de energía renovable. Nuestros especialistas certificados aseguran que sus instalaciones funcionen de manera óptima durante todo su ciclo de vida.</p>
+                    <p class="mb-4">El mantenimiento preventivo y correctivo es esencial para garantizar la eficiencia y
+                        longevidad de sus sistemas de energía renovable. Nuestros especialistas certificados aseguran
+                        que sus instalaciones funcionen de manera óptima durante todo su ciclo de vida.</p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
@@ -171,12 +206,14 @@
                             </div>
                         </div>
                     </div>
-                    <p class="mb-4">Ofrecemos planes de mantenimiento adaptados a sus necesidades, con monitoreo constante y respuesta rápida ante cualquier eventualidad.</p>
+                    <p class="mb-4">Ofrecemos planes de mantenimiento adaptados a sus necesidades, con monitoreo
+                        constante y respuesta rápida ante cualquier eventualidad.</p>
                     <a class="btn btn-primary py-3 px-5" href="">Solicitar presupuesto</a>
                 </div>
                 <div class="col-lg-6">
                     <div class="position-relative rounded overflow-hidden h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/mantenimiento-inspeccion.png" alt="Mantenimiento" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/mantenimiento-inspeccion.png"
+                            alt="Mantenimiento" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -194,33 +231,40 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light overflow-hidden h-100">
                         <div class="service-img-container">
-                            <img class="service-img" src="https://dam-assets.fluke.com/s3fs-public/F-393fc_43a_c.jpg" alt="Mantenimiento preventivo">
+                            <img class="service-img" src="https://dam-assets.fluke.com/s3fs-public/F-393fc_43a_c.jpg"
+                                alt="Mantenimiento preventivo">
                         </div>
                         <div class="service-text position-relative text-center h-100 p-4">
                             <h5 class="mb-3">Servicios post-obra: mantenimiento, diagnósticos, eficiencia</h5>
-                            <p>Inspecciones programadas para identificar y corregir problemas antes de que afecten el rendimiento.</p>
+                            <p>Inspecciones programadas para identificar y corregir problemas antes de que afecten el
+                                rendimiento.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-light overflow-hidden h-100">
                         <div class="service-img-container">
-                            <img class="service-img" src="img/mantenimiento-inspeccion-2.jpg" alt="Mantenimiento correctivo">
+                            <img class="service-img" src="img/mantenimiento-inspeccion-2.jpg"
+                                alt="Mantenimiento correctivo">
                         </div>
                         <div class="service-text position-relative text-center h-100 p-4">
                             <h5 class="mb-3">Diagnóstico integral de instalaciones y equipos</h5>
-                            <p>Solución rápida y eficaz para restablecer el funcionamiento óptimo de sus sistemas sostenibles.</p>
+                            <p>Solución rápida y eficaz para restablecer el funcionamiento óptimo de sus sistemas
+                                sostenibles.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-light overflow-hidden h-100">
                         <div class="service-img-container">
-                            <img class="service-img" src="https://djiacademy.com.my/wp-content/uploads/2023/12/1711356a9ac-min.jpg" alt="Monitoreo">
+                            <img class="service-img"
+                                src="https://djiacademy.com.my/wp-content/uploads/2023/12/1711356a9ac-min.jpg"
+                                alt="Monitoreo">
                         </div>
                         <div class="service-text position-relative text-center h-100 p-4">
                             <h5 class="mb-3">Plan de mantenimiento preventivo y correctivo</h5>
-                            <p>Supervisión permanente del rendimiento de sus instalaciones para asegurar su máxima eficiencia.</p>
+                            <p>Supervisión permanente del rendimiento de sus instalaciones para asegurar su máxima
+                                eficiencia.</p>
                         </div>
                     </div>
                 </div>
@@ -231,7 +275,8 @@
                         </div>
                         <div class="service-text position-relative text-center h-100 p-4">
                             <h5 class="mb-3">Soporte técnico mensual (bonificado por horas o visitas)</h5>
-                            <p>Supervisión permanente del rendimiento de sus instalaciones para asegurar su máxima eficiencia.</p>
+                            <p>Supervisión permanente del rendimiento de sus instalaciones para asegurar su máxima
+                                eficiencia.</p>
                         </div>
                     </div>
                 </div>
@@ -249,7 +294,8 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-light text-center p-4 rounded">
-                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 90px; height: 90px;">
+                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 90px; height: 90px;">
                             <i class="fa fa-search fa-2x text-primary"></i>
                         </div>
                         <h5 class="mb-3">Diagnóstico</h5>
@@ -258,7 +304,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="bg-light text-center p-4 rounded">
-                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 90px; height: 90px;">
+                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 90px; height: 90px;">
                             <i class="fa fa-clipboard-list fa-2x text-primary"></i>
                         </div>
                         <h5 class="mb-3">Planificación</h5>
@@ -267,7 +314,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-light text-center p-4 rounded">
-                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 90px; height: 90px;">
+                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 90px; height: 90px;">
                             <i class="fa fa-tools fa-2x text-primary"></i>
                         </div>
                         <h5 class="mb-3">Ejecución</h5>
@@ -276,7 +324,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="bg-light text-center p-4 rounded">
-                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 90px; height: 90px;">
+                        <div class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 90px; height: 90px;">
                             <i class="fa fa-chart-line fa-2x text-primary"></i>
                         </div>
                         <h5 class="mb-3">Seguimiento</h5>
@@ -288,72 +337,79 @@
     </div>
     <!-- Process End -->
 
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row ">
-            <div class="col-lg-4 col-md-6">
-                <h3 class="text-light mb-4 mt-4">Contacto</h3>
-                <p class="mb-2 text-white"><i class="fa fa-map-marker-alt text-primary me-3"></i>Córdoba Capital,
-                    Argentina</p>
-                <p class="mb-2 text-white"><i class="fa fa-phone-alt text-primary me-3"></i>+54 351 517-7298</p>
-                <p class="mb-2 text-white"><i class="fa fa-envelope text-primary me-3"></i>info@ecorise.com.ar</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-light me-2" href="https://wa.me/5493515177298" target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')"><i class="fab fa-whatsapp"></i></a>
-                    <a class="btn btn-square btn-outline-light" href="https://www.linkedin.com/company/er-ecorise/about/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row ">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-light mb-4 mt-4">Contacto</h3>
+                    <p class="mb-2 text-white"><i class="fa fa-map-marker-alt text-primary me-3"></i>Córdoba Capital,
+                        Argentina</p>
+                    <p class="mb-2 text-white"><i class="fa fa-phone-alt text-primary me-3"></i>+54 351 517-7298</p>
+                    <p class="mb-2 text-white"><i class="fa fa-envelope text-primary me-3"></i>info@ecorise.com.ar</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light me-2" href="https://wa.me/5493515177298"
+                            target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-square btn-outline-light"
+                            href="https://www.linkedin.com/company/er-ecorise/about/?viewAsMember=true"
+                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <h3 class="text-light mb-4">Servicios</h3>
+                    <a class="btn btn-link text-body" href="energia-solar.html">Energía Solar</a>
+                    <a class="btn btn-link text-body" href="sustentabilidad.html">Consultoría Sustentable</a>
+                    <a class="btn btn-link text-body" href="mantenimiento.html">Mantenimiento e Inspección</a>
+                    <a class="btn btn-link text-body" href="consultoria-tecnica.html">Consultoría técnica</a>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-4">
+                    <h3 class="text-light mb-4">Enlaces Rápidos</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="btn btn-link text-body" href="index.html">Inicio</a>
+                            <a class="btn btn-link text-body" href="#">Sobre Nosotros</a>
+                        </div>
+                        <div class="col-6">
+                            <a class="btn btn-link text-body" href="#"
+                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
+                                Reunión</a>
+
+                            <a class="btn btn-link text-body" href="https://wa.me/+5493515177298"
+                                onclick="gtag_report_conversion('https://wa.me/+5493515177298')">Contacto</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mt-4">
-                <h3 class="text-light mb-4">Servicios</h3>
-                <a class="btn btn-link text-body" href="energia-solar.html">Energía Solar</a>
-                <a class="btn btn-link text-body" href="sustentabilidad.html">Consultoría Sustentable</a>
-                <a class="btn btn-link text-body" href="mantenimiento.html">Mantenimiento e Inspección</a>
-                <a class="btn btn-link text-body" href="consultoria-tecnica.html">Consultoría técnica</a>
-            </div>
-            <div class="col-lg-4 col-md-12 mt-4">
-                <h3 class="text-light mb-4">Enlaces Rápidos</h3>
+        </div>
+        <div class="container-fluid copyright py-6 border-top border-bottom border-secondary">
+            <div class="container">
                 <div class="row">
-                    <div class="col-6">
-                        <a class="btn btn-link text-body" href="index.html">Inicio</a>
-                        <a class="btn btn-link text-body" href="#">Sobre Nosotros</a>
+                    <div class="col-md-12 text-center  mb-3 mb-md-0">
+                        &copy; <a class="fw-semi-bold" href="index.html">Ecorise</a>, 2025. Todos los derechos
+                        reservados.
                     </div>
-                    <div class="col-6">
-                        <a class="btn btn-link text-body" href="#"
-                           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
-                            Reunión</a>
+                </div>
+                <div class="row">
 
-                        <a class="btn btn-link text-body" href="https://wa.me/+5493515177298" onclick="gtag_report_conversion('https://wa.me/+5493515177298')">Contacto</a>
+                    <div class="col-md-12 text-center  mb-3 mb-md-0">
+                        Creado por: <a class="fw-semi-bold" href="https://wa.me/+549351334646">Candelaria Piña</a> y <a
+                            class="fw-semi-bold" href="https://wa.me/+5493512050889">Agustín Martin</a>
                     </div>
+
                 </div>
             </div>
         </div>
+
     </div>
-    <div class="container-fluid copyright py-6 border-top border-bottom border-secondary">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center  mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="index.html">Ecorise</a>, 2025. Todos los derechos reservados.
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-12 text-center  mb-3 mb-md-0">
-                    Creado por: <a class="fw-semi-bold" href="https://wa.me/+549351334646">Candelaria Piña</a> y <a
-                        class="fw-semi-bold" href="https://wa.me/+5493512050889">Agustín Martin</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</div>
-<!-- Footer End -->
+    <!-- Footer End -->
 
 
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    <a href="https://wa.me/5493515177298" class="btn btn-whatsapp" target="_blank" onclick="gtag_report_conversion('https://wa.me/5493515177298')">
+    <a href="https://wa.me/5493515177298" class="btn btn-whatsapp" target="_blank"
+        onclick="gtag_report_conversion('https://wa.me/5493515177298')">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-text">Chateá con nosotros</span>
     </a>
