@@ -13,7 +13,9 @@
     
     
     // Initiate the wowjs
-    new WOW().init();
+    if (typeof WOW !== 'undefined') {
+        new WOW().init();
+    }
 
 
     // Sticky Navbar - modificar la función existente
@@ -45,49 +47,61 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        if ($.easing && $.easing.easeInOutExpo) {
+            $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        } else {
+            $('html, body').animate({ scrollTop: 0 }, 1500);
+        }
         return false;
     });
 
 
     // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
-    });
+    if ($.fn.counterUp) {
+        $('[data-toggle="counter-up"]').counterUp({
+            delay: 10,
+            time: 2000
+        });
+    }
 
 
     // Date and time picker
-    $('.date').datetimepicker({
-        format: 'L'
-    });
-    $('.time').datetimepicker({
-        format: 'LT'
-    });
+    if ($.fn.datetimepicker) {
+        $('.date').datetimepicker({
+            format: 'L'
+        });
+        $('.time').datetimepicker({
+            format: 'LT'
+        });
+    }
 
 
     // Header carousel
-    $(".header-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        loop: true,
-        nav: false,
-        dots: true,
-        items: 1,
-        dotsData: true,
-    });
+    if ($.fn.owlCarousel) {
+        $(".header-carousel").owlCarousel({
+            autoplay: true,
+            smartSpeed: 1500,
+            loop: true,
+            nav: false,
+            dots: true,
+            items: 1,
+            dotsData: true,
+        });
+    }
 
 
     // Testimonials carousel
-    $('.testimonial-carousel').owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        loop: true,
-        nav: false,
-        dots: true,
-        items: 1,
-        dotsData: true,
-    });
+    if ($.fn.owlCarousel) {
+        $('.testimonial-carousel').owlCarousel({
+            autoplay: true,
+            smartSpeed: 1000,
+            loop: true,
+            nav: false,
+            dots: true,
+            items: 1,
+            dotsData: true,
+        });
+    }
 
     
 })(jQuery);

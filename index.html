@@ -2,16 +2,6 @@
 <html lang="es">
 
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5Q7XKBN5');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <title>ECORISE - Consultoría, Energía Renovable y Sustentabilidad</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -29,18 +19,24 @@
     <link rel="manifest" href="img/icons/site.webmanifest">
 
     <!-- Preload LCP hero image -->
-    <link rel="preload" as="image" href="img/carousel-start1.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="img/carousel-start1.webp" fetchpriority="high" type="image/webp">
+    <link rel="preload" as="image" href="img/carousel-start1.jpg" fetchpriority="high" type="image/jpeg">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://assets.calendly.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="css/bootstrap.min.css" rel="stylesheet"></noscript>
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="css/style.css" rel="stylesheet"></noscript>
 
     <!-- Non-critical CSS loaded asynchronously -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -51,21 +47,9 @@
     <noscript><link rel="stylesheet" href="lib/animate/animate.min.css"></noscript>
     <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css"></noscript>
-    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4TLBRV3SH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-G4TLBRV3SH');
-        gtag('config', 'AW-17629078632');
-    </script>
-    <script> gtag('config', 'AW-17629078632/hyAcCLzU36gbEOjImdZB', { 'phone_conversion_number': '3515177298' }); </script>
-    <script>
         function gtag_report_conversion(url) {
             var callback = function () {
                 if (typeof (url) != 'undefined') {
@@ -80,26 +64,39 @@
             });
             return false;
         }
-    </script>
-    <!-- Meta Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        window.openCalendlyPopup = function (event) {
+            if (event && event.preventDefault) event.preventDefault();
+            var openPopup = function () {
+                if (window.Calendly && window.Calendly.initPopupWidget) {
+                    window.Calendly.initPopupWidget({ url: 'https://calendly.com/ecoriserenewable/30min' });
+                }
             };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2521676828246674');
-        fbq('track', 'PageView');
+            if (!window.ecoriseCalendlyStylesLoaded) {
+                var calendlyStyles = document.createElement('link');
+                calendlyStyles.id = 'calendly-widget-styles';
+                calendlyStyles.rel = 'stylesheet';
+                calendlyStyles.href = 'https://assets.calendly.com/assets/external/widget.css';
+                document.head.appendChild(calendlyStyles);
+                window.ecoriseCalendlyStylesLoaded = true;
+            }
+            if (window.Calendly) {
+                openPopup();
+                return false;
+            }
+            if (!window.ecoriseCalendlyPromise) {
+                window.ecoriseCalendlyPromise = new Promise(function (resolve, reject) {
+                    var calendlyScript = document.createElement('script');
+                    calendlyScript.src = 'https://assets.calendly.com/assets/external/widget.js';
+                    calendlyScript.async = true;
+                    calendlyScript.onload = resolve;
+                    calendlyScript.onerror = reject;
+                    document.body.appendChild(calendlyScript);
+                });
+            }
+            window.ecoriseCalendlyPromise.then(openPopup);
+            return false;
+        };
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=2521676828246674&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 
 
@@ -116,7 +113,7 @@
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status">
         </div>
         <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-loader.png"
-            style="width: 3rem; border-radius: 1rem" alt="Icon">
+            style="width: 3rem; border-radius: 1rem" alt="Icon" width="48" height="48">
     </div>
     <!-- Spinner End -->
 
@@ -125,7 +122,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
         data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;">
+            <img src="img/logo.png" alt="Ecorise Logo" style="max-width: 180px; height: auto;" width="180" height="55">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -154,11 +151,11 @@
                     </div>
                 </div>
                 <a href=""
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                    onclick="openCalendlyPopup(event)"
                     class="nav-item nav-link btn btn-primary text-white my-2 d-lg-none">Agendar reunión</a>
             </div>
             <a href=""
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                onclick="openCalendlyPopup(event)"
                 class="btn btn-primary py-2 px-4 d-none d-lg-block">Agendar reunión</a>
         </div>
     </nav>
@@ -170,9 +167,12 @@
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-start1.jpg'>">
                 <div class="carousel-img-container">
-                    <img class="img-fluid w-100 h-100 object-fit-cover" src="img/carousel-start1.jpg"
-                        fetchpriority="high" decoding="async"
-                        alt="Paneles solares en Córdoba Argentina - Ecorise energía renovable">
+                    <picture>
+                        <source srcset="img/carousel-start1.webp" type="image/webp">
+                        <img class="img-fluid w-100 h-100 object-fit-cover" src="img/carousel-start1.jpg"
+                            fetchpriority="high" decoding="async" width="1920" height="1080"
+                            alt="Paneles solares en Córdoba Argentina - Ecorise energía renovable">
+                    </picture>
                 </div>
                 <div class="owl-carousel-inner">
                     <div class="container">
@@ -190,7 +190,7 @@
                                         class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Energía
                                         Solar</a>
                                     <a href="#"
-                                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                                        onclick="openCalendlyPopup(event)"
                                         class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Agenda
                                         una Consulta</a>
                                 </div>
@@ -202,7 +202,7 @@
             <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-start2.jpg'>">
                 <div class="carousel-img-container">
                     <img class="img-fluid w-100 h-100 object-fit-cover" src="img/carousel-start2.jpg"
-                        loading="lazy" decoding="async"
+                        loading="lazy" decoding="async" width="1920" height="1080"
                         alt="Consultoría de sustentabilidad empresarial en Córdoba - Ecorise">
                 </div>
                 <div class="owl-carousel-inner">
@@ -222,7 +222,7 @@
                                     <a href="sustentabilidad.html"
                                         class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Sustentabilidad</a>
                                     <a href="#"
-                                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;"
+                                        onclick="openCalendlyPopup(event)"
                                         class="btn btn-primary py-md-3 py-2 px-md-5 px-4 animated slideInLeft rounded">Asesoría
                                         Gratuita</a>
                                 </div>
@@ -234,7 +234,7 @@
             <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-start3.jpg'>">
                 <div class="carousel-img-container">
                     <img class="img-fluid w-100 h-100 object-fit-cover" src="img/carousel-start3.jpg"
-                        loading="lazy" decoding="async"
+                        loading="lazy" decoding="async" width="1920" height="1080"
                         alt="Sistemas fotovoltaicos y energía renovable en Córdoba Argentina">
                 </div>
                 <div class="owl-carousel-inner">
@@ -386,10 +386,10 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="feature-img">
-                        <img class="img-fluid" src="img/energia-solar-2.jpeg" alt="Energía residencial " loading="lazy">
+                        <img class="img-fluid" src="img/energia-solar-2.jpeg" alt="Energía residencial " loading="lazy" decoding="async">
                         <img class="img-fluid" src="img/energia-solar.jpg"
                             alt="Energía comercial para empresas y pymes con muchos paneles solares en vertical"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
                 <!-- Cards con mejor diseño y animación hover -->
@@ -452,7 +452,7 @@
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                     <div class="position-relative">
                         <img src="img/footprint.jpg" class="img-fluid rounded-3 shadow" alt="Consultoría Sustentable"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
 
                     </div>
                 </div>
@@ -575,9 +575,9 @@
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img">
                         <img class="img-fluid" src="img/productos-servicios.jpg" alt="Servicios de mantenimiento solar"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                         <img class="img-fluid" src="img/productos-servicios-2.jpg" alt="Equipo de consultoría técnica"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -745,7 +745,7 @@
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="position-relative overflow-hidden rounded">
                         <img src="img/prefactibilidad.jpg" alt="Equipo de Ecorise en Córdoba" class="img-fluid w-100"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
@@ -899,7 +899,7 @@
                             <div class="news-card-front">
                                 <div class="service-item d-flex position-relative text-center h-100">
                                     <img class="bg-img" src="img/eficiencia-energetica.jpg" alt="News Image"
-                                        loading="lazy">
+                                        loading="lazy" decoding="async">
                                     <div class="service-text p-5">
                                         <div class="news-date">
                                             <span class="day">9</span>
@@ -911,7 +911,7 @@
                                             préstamos para instalar energía renovable.</p>
                                         <div class="image-container">
                                             <img src="img//newscard1img.jpg" alt="Tecnologías sustentables"
-                                                class="news-img" loading="lazy">
+                                                class="news-img" loading="lazy" decoding="async">
                                         </div>
                                         <button class="btn btn-flip mt-3"><i
                                                 class="fa fa-plus text-primary me-2"></i>Leer
@@ -931,7 +931,7 @@
                                     </div>
                                     <div class="image-container">
                                         <img src="img/newscard1img.jpg" alt="Detalle tecnologías" class="news-img"
-                                            loading="lazy">
+                                            loading="lazy" decoding="async">
                                     </div>
                                     <p>En Argentina, varios bancos han comenzado a ofrecer líneas de crédito destinadas
                                         a la
@@ -959,7 +959,7 @@
                         <div class="news-card-inner">
                             <div class="news-card-front">
                                 <div class="service-item d-flex position-relative text-center h-100">
-                                    <img class="bg-img" src="img/project-4.jpg" alt="News Image" loading="lazy">
+                                    <img class="bg-img" src="img/project-4.jpg" alt="News Image" loading="lazy" decoding="async">
                                     <div class="service-text p-5">
                                         <div class="news-date">
                                             <span class="day">9</span>
@@ -971,7 +971,7 @@
                                             industrial.</p>
                                         <div class="image-container">
                                             <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Perovskite_-_Perovskite_Hill%2C_Magnet_Cove%2C_Hot_Spring_Co%2C_Arkansas%2C_USA.jpg"
-                                                alt="Certificación ambiental" class="news-img" loading="lazy">
+                                                alt="Certificación ambiental" class="news-img" loading="lazy" decoding="async">
                                         </div>
                                         <button class="btn btn-flip mt-3"><i
                                                 class="fa fa-plus text-primary me-2"></i>Leer
@@ -989,7 +989,7 @@
                                     </div>
                                     <div class="image-container">
                                         <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Perovskite_-_Perovskite_Hill%2C_Magnet_Cove%2C_Hot_Spring_Co%2C_Arkansas%2C_USA.jpg"
-                                            alt="Proceso de certificación" class="news-img" loading="lazy">
+                                            alt="Proceso de certificación" class="news-img" loading="lazy" decoding="async">
                                     </div>
                                     <p>La tecnología de células solares de perovskita está emergiendo como una
                                         prometedora
@@ -1014,7 +1014,7 @@
                         <div class="news-card-inner">
                             <div class="news-card-front">
                                 <div class="service-item d-flex position-relative text-center h-100">
-                                    <img class="bg-img" src="img/energia-solar.jpg" alt="News Image" loading="lazy">
+                                    <img class="bg-img" src="img/energia-solar.jpg" alt="News Image" loading="lazy" decoding="async">
                                     <div class="service-text p-5">
                                         <div class="news-date">
                                             <span class="day">10</span>
@@ -1026,7 +1026,7 @@
                                             Certificados de Carbono Desplazado </p>
                                         <div class="image-container">
                                             <img src="https://knowhow.distrelec.com/wp-content/uploads/2023/05/circular-economy.png?w=1920&h=800&crop=1"
-                                                alt="Economía circular" class="news-img" loading="lazy">
+                                                alt="Economía circular" class="news-img" loading="lazy" decoding="async">
                                         </div>
                                         <button class="btn btn-flip mt-3"><i
                                                 class="fa fa-plus text-primary me-2"></i>Leer
@@ -1044,7 +1044,7 @@
                                     </div>
                                     <div class="image-container">
                                         <img src="https://knowhow.distrelec.com/wp-content/uploads/2023/05/circular-economy.png?w=1920&h=800&crop=1"
-                                            alt="Detalle economía circular" class="news-img" loading="lazy">
+                                            alt="Detalle economía circular" class="news-img" loading="lazy" decoding="async">
                                     </div>
                                     <p>El Decreto 1444/2022 establece la exención del Impuesto sobre los Ingresos Brutos
                                         para los ingresos obtenidos por la transferencia de Certificados de Carbono
@@ -1078,7 +1078,7 @@
                             <div class="news-card-front">
                                 <div class="service-item d-flex position-relative text-center h-100">
                                     <img class="bg-img" src="img/eficiencia-energetica.jpg" alt="News Image"
-                                        loading="lazy">
+                                        loading="lazy" decoding="async">
                                     <div class="service-text p-5">
                                         <div class="news-date">
                                             <span class="day">9</span>
@@ -1088,7 +1088,7 @@
                                         <p class="mb-4">La nueva regulación que impulsa el autoconsumo energético</p>
                                         <div class="image-container">
                                             <img src="img/newscard4img.jpg" alt="Tecnologías sustentables"
-                                                class="news-img" loading="lazy">
+                                                class="news-img" loading="lazy" decoding="async">
                                         </div>
                                         <button class="btn btn-flip mt-3"><i
                                                 class="fa fa-plus text-primary me-2"></i>Leer
@@ -1110,7 +1110,7 @@
                                     </div>
                                     <div class="image-container">
                                         <img src="img/newscard4img.jpg" alt="Detalle tecnologías" class="news-img"
-                                            loading="lazy">
+                                            loading="lazy" decoding="async">
                                     </div>
                                     <p>El 4 de julio de 2025 se publicó en el Boletín Oficial la Resolución N.º
                                         287/2025, que actualiza el régimen de Generación Distribuida creado por la Ley
@@ -1188,7 +1188,7 @@
                             <div class="news-card-front">
                                 <div class="service-item d-flex position-relative text-center h-100">
                                     <img class="bg-img" src="img/eficiencia-energetica.jpg" alt="News Image"
-                                        loading="lazy">
+                                        loading="lazy" decoding="async">
                                     <div class="service-text p-5">
                                         <div class="news-date">
                                             <span class="day">9</span>
@@ -1204,7 +1204,7 @@
 
                                         <div class="image-container">
                                             <img src="img//noticia5.jpg" alt="Tecnologías sustentables" class="news-img"
-                                                loading="lazy">
+                                                loading="lazy" decoding="async">
                                         </div>
 
                                         <button class="btn btn-flip mt-3"><i
@@ -1226,7 +1226,7 @@
                                     </div>
                                     <div class="image-container">
                                         <img src="img/noticia5.jpg" alt="Detalle tecnologías" class="news-img"
-                                            loading="lazy">
+                                            loading="lazy" decoding="async">
                                     </div>
                                     <p><strong>Organismos involucrados:</strong> ISO (International Organization for
                                         Standardization) GHG
@@ -1401,9 +1401,9 @@
                     <div class="feature-img">
                         <img class="img-fluid" src="img/sustentabilidad-home-1.jpg"
                             alt="Hoja con espacio negativo que tiene dentro un símbolo de Co2 rodeado de un bosque"
-                            loading="lazy">
+                            loading="lazy" decoding="async">
                         <img class="img-fluid" src="img/sustentabilidad-home-2.jpg"
-                            alt="Evaluaciónes ESG formada por cubos de madera" loading="lazy">
+                            alt="Evaluaciónes ESG formada por cubos de madera" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -1451,7 +1451,7 @@
                         </div>
                         <div class="col-6">
                             <a class="btn btn-link text-body" href="#"
-                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ecoriserenewable/30min'});return false;">Agendar
+                                onclick="openCalendlyPopup(event)">Agendar
                                 Reunión</a>
 
                             <a class="btn btn-link text-body"
@@ -1498,7 +1498,50 @@
     <script src="lib/waypoints/waypoints.min.js" defer></script>
     <script src="lib/counterup/counterup.min.js" defer></script>
     <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script defer>
+        window.addEventListener('load', function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0];
+                var j = d.createElement(s);
+                var dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5Q7XKBN5');
+
+            var gtagScript = document.createElement('script');
+            gtagScript.async = true;
+            gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-G4TLBRV3SH';
+            gtagScript.onload = function () {
+                gtag('js', new Date());
+                gtag('config', 'G-G4TLBRV3SH');
+                gtag('config', 'AW-17629078632');
+                gtag('config', 'AW-17629078632/hyAcCLzU36gbEOjImdZB', { 'phone_conversion_number': '3515177298' });
+            };
+            document.body.appendChild(gtagScript);
+
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s);
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2521676828246674');
+            fbq('track', 'PageView');
+        });
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js" defer></script>
