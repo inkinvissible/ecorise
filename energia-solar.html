@@ -26,29 +26,31 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
     <link rel="manifest" href="img/icons/site.webmanifest">
 
+    <!-- Preload above-fold hero background image -->
+    <link rel="preload" as="image" href="img/solar-banner.jpg">
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Calendly link widget begin -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"></noscript>
+    <link rel="stylesheet" href="lib/animate/animate.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="lib/animate/animate.min.css"></noscript>
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css"></noscript>
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"></noscript>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4TLBRV3SH"></script>
     <script>
@@ -96,8 +98,8 @@
         fbq('init', '2521676828246674');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=2521676828246674&ev=PageView&noscript=1" /></noscript>
+    <noscript loading="lazy" decoding="async"><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=2521676828246674&ev=PageView&noscript=1" loading="lazy" decoding="async"></noscript>
     <!-- End Meta Pixel Code -->
 
 </head>
@@ -336,8 +338,8 @@
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
                     <div class="position-relative h-100">
-                        <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img" src="img/on-grid.png"
-                            alt="ON Grid Solar">
+                        <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img" src="img/on-grid.jpg"
+                            alt="ON Grid Solar" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -381,7 +383,7 @@
                 <div class="col-lg-6 order-lg-2">
                     <div class="position-relative h-100">
                         <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img"
-                            src="img/off-grid-solar.png" alt="OFF Grid Solar">
+                            src="img/off-grid-solar.jpg" alt="OFF Grid Solar" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
@@ -424,7 +426,7 @@
                 <div class="col-lg-6">
                     <div class="position-relative h-100">
                         <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img"
-                            src="img/parking-solar.jpg" alt="Parking Solar">
+                            src="img/parking-solar.jpg" alt="Parking Solar" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -467,7 +469,7 @@
                 <div class="col-lg-6 order-lg-2">
                     <div class="position-relative h-100">
                         <img class="img-fluid rounded w-100 h-100 object-fit-cover soluciones-img"
-                            src="img/agro-solar.jpg" alt="Agro Solar">
+                            src="img/agro-solar.jpg" alt="Agro Solar" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
@@ -530,15 +532,15 @@
                         </div>
                         <div class="carousel-inner rounded overflow-hidden">
                             <div class="carousel-item active">
-                                <img src="img/proyecto-solar-usa3.png" class="d-block w-100"
-                                    alt="Vista principal del proyecto">
+                                <img src="img/proyecto-solar-usa3.jpg" class="d-block w-100"
+                                    alt="Vista principal del proyecto" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/proyecto-solar-usa2.png" class="d-block w-100"
-                                    alt="Instalación de paneles">
+                                <img src="img/proyecto-solar-usa2.jpg" class="d-block w-100"
+                                    alt="Instalación de paneles" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/proyecto-solar-usa1.png" class="d-block w-100" alt="Sistema completo">
+                                <img src="img/proyecto-solar-usa1.jpg" class="d-block w-100" alt="Sistema completo" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#proyectoCarousel"
@@ -684,12 +686,12 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="carousel-img-container">
-                                        <img src="img/proyecto-solar-cordoba1.png" alt="Vista de paneles solares">
+                                        <img src="img/proyecto-solar-cordoba1.jpg" alt="Vista de paneles solares" loading="lazy" decoding="async">
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="carousel-img-container">
-                                        <img src="img/proyecto-solar-cordoba2.png" alt="Sistema fotovoltaico">
+                                        <img src="img/proyecto-solar-cordoba2.jpg" alt="Sistema fotovoltaico" loading="lazy" decoding="async">
                                     </div>
                                 </div>
                             </div>
@@ -785,30 +787,30 @@
     </a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="lib/wow/wow.min.js" defer></script>
+    <script src="lib/easing/easing.min.js" defer></script>
+    <script src="lib/waypoints/waypoints.min.js" defer></script>
+    <script src="lib/counterup/counterup.min.js" defer></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <!-- GLightbox CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
     <!-- GLightbox JS -->
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
     <script>
         // Inicializar GLightbox
-        const lightbox = GLightbox({
-            selector: '.gallery-item',
-            touchNavigation: true,
-            loop: true,
-            autoplayVideos: true
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightbox = GLightbox({
+                selector: '.gallery-item',
+                touchNavigation: true,
+                loop: true,
+                autoplayVideos: true
+            });
         });
     </script>
 </body>
