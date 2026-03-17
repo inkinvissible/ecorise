@@ -216,6 +216,19 @@ h6,
     }
 }
 
+/* Fallback: keep hero visible before/without Owl initialization */
+.header-carousel:not(.owl-loaded) {
+    display: block;
+}
+
+.header-carousel:not(.owl-loaded) .owl-carousel-item {
+    display: none;
+}
+
+.header-carousel:not(.owl-loaded) .owl-carousel-item:first-child {
+    display: block;
+}
+
 .header-carousel .owl-dots {
     position: absolute;
     width: 60px;
