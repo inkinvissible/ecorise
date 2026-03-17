@@ -65,18 +65,19 @@
             return false;
         }
         window.openCalendlyPopup = function (event) {
-            if (event) event.preventDefault();
+            if (event && event.preventDefault) event.preventDefault();
             var openPopup = function () {
                 if (window.Calendly && window.Calendly.initPopupWidget) {
                     window.Calendly.initPopupWidget({ url: 'https://calendly.com/ecoriserenewable/30min' });
                 }
             };
-            if (!document.getElementById('calendly-widget-styles')) {
+            if (!window.ecoriseCalendlyStylesLoaded) {
                 var calendlyStyles = document.createElement('link');
                 calendlyStyles.id = 'calendly-widget-styles';
                 calendlyStyles.rel = 'stylesheet';
                 calendlyStyles.href = 'https://assets.calendly.com/assets/external/widget.css';
                 document.head.appendChild(calendlyStyles);
+                window.ecoriseCalendlyStylesLoaded = true;
             }
             if (window.Calendly) {
                 openPopup();
@@ -1504,7 +1505,7 @@
                 w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
                 var f = d.getElementsByTagName(s)[0];
                 var j = d.createElement(s);
-                var dl = l !== 'dataLayer' ? '&l=' + l : '';
+                var dl = l != 'dataLayer' ? '&l=' + l : '';
                 j.async = true;
                 j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
                 f.parentNode.insertBefore(j, f);
