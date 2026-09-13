@@ -10,7 +10,7 @@
     "test:seo": "node tests/check-seo.mjs",
     "test:copy": "node tests/check-public-copy.mjs",
     "test:tracking": "node tests/check-tracking.mjs",
-    "test:js": "node --check js/tracking.js && node --check js/motion.js && node --check js/b2b-calculator.js && node --check js/sanity-bitacora.js && node --check js/sanity-articulo.js",
+    "test:js": "node --check js/tracking.js && node --check js/motion.js && node --check js/story.js && node --check js/b2b-calculator.js && node --check js/sanity-bitacora.js && node --check js/sanity-articulo.js",
     "test:e2e": "playwright test"
   },
   "devDependencies": {
