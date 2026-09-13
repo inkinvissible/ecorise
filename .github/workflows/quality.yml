@@ -33,6 +33,8 @@ jobs:
         run: npm run test:brand
       - name: Check SEO metadata and discovery
         run: npm run test:seo
+      - name: Prevent internal copy from leaking public
+        run: npm run test:copy
       - name: Check JavaScript syntax
         run: npm run test:js
 
