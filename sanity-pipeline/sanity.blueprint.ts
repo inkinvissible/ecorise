@@ -10,7 +10,7 @@ export default defineBlueprint({
       timeout:10,
       event:{
         on:['create','update','delete'],
-        filter:'_type in ["article","category"]',
+        filter:'_type in ["article","articleCategory","caseStudy","solution","product","productCategory","brand"]',
         projection:'{_id,_type}',
         resource:{type:'dataset',id:'8nstak41.production'}
       }
