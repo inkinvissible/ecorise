@@ -1,0 +1,14 @@
+{
+  "result": [
+    {
+      "_id": "article-test-1",
+      "title": "Cómo leer una oportunidad energética antes de invertir",
+      "slug": "oportunidad-energetica",
+      "excerpt": "Una guía de prueba para validar la integración editorial con Sanity.",
+      "publishedAt": "2026-09-13T12:00:00.000Z",
+      "category": "Estrategia",
+      "heroImageUrl": "http://127.0.0.1:4173/img/evaluacion-economica.jpg",
+      "heroAlt": "Evaluación económica de una oportunidad energética"
+    }
+  ]
+}
