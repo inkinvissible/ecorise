@@ -1,80 +1,112 @@
 {
-  "result": [
-    {
-      "_id": "article-static-1",
-      "_updatedAt": "2026-09-13T18:00:00Z",
-      "title": "Cómo evaluar energía solar para una industria",
-      "slug": "energia-solar-industria",
-      "excerpt": "Una guía para ordenar consumo, perfil horario y restricciones antes de dimensionar una inversión solar industrial.",
-      "publishedAt": "2026-09-13T17:00:00Z",
-      "seo": {
-        "title": "Energía solar para industria: cómo evaluarla | Ecorise",
-        "description": "Qué revisar antes de invertir en energía solar industrial: perfil de consumo, superficie, red, continuidad y escenarios técnicos comparables.",
-        "noIndex": false
-      },
-      "categories": [{"title": "Energía solar"}],
-      "body": [
-        {
-          "_key": "b1",
-          "_type": "block",
-          "style": "normal",
-          "markDefs": [],
-          "children": [{"_key": "s1", "_type": "span", "marks": [], "text": "La primera pregunta no es cuántos paneles instalar, sino cómo consume energía la operación."}]
+  "result": {
+    "articles": [
+      {
+        "_id": "article-static-1",
+        "_updatedAt": "2026-09-13T18:00:00Z",
+        "title": "Cómo evaluar energía solar para una industria",
+        "slug": "energia-solar-industria",
+        "excerpt": "Una guía para ordenar consumo, perfil horario y restricciones antes de dimensionar una inversión solar industrial.",
+        "publishedAt": "2026-09-13T17:00:00Z",
+        "seo": {
+          "title": "Energía solar para industria: cómo evaluarla | Ecorise",
+          "description": "Qué revisar antes de invertir en energía solar industrial: perfil de consumo, superficie, red, continuidad y escenarios técnicos comparables.",
+          "noIndex": false
         },
-        {
-          "_key": "b2",
-          "_type": "block",
-          "style": "h2",
-          "markDefs": [],
-          "children": [{"_key": "s2", "_type": "span", "marks": [], "text": "Datos antes que tecnología"}]
-        },
-        {
-          "_key": "b3",
-          "_type": "block",
-          "style": "normal",
-          "markDefs": [],
-          "children": [{"_key": "s3", "_type": "span", "marks": ["strong"], "text": "Consumo, horario, infraestructura"}, {"_key": "s4", "_type": "span", "marks": [], "text": " y continuidad cambian la arquitectura adecuada."}]
-        }
-      ],
-      "faqs": [
-        {
-          "_key": "f1",
-          "question": "¿Alcanza con la factura mensual para dimensionar?",
-          "answer": [
-            {
-              "_key": "fa1",
-              "_type": "block",
-              "style": "normal",
-              "markDefs": [],
-              "children": [{"_key": "fas1", "_type": "span", "marks": [], "text": "No. El perfil horario y las restricciones de la instalación son parte del análisis."}]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_id": "article-static-noindex",
-      "_updatedAt": "2026-09-13T18:01:00Z",
-      "title": "Artículo de prueba no indexable",
-      "slug": "articulo-prueba-noindex",
-      "excerpt": "Contenido de prueba para verificar previews editoriales sin incorporarlo al índice de Google.",
-      "publishedAt": "2026-09-13T17:30:00Z",
-      "seo": {
-        "title": "Artículo de prueba no indexable | Ecorise",
-        "description": "Contenido de prueba de Ecorise generado estáticamente para validar el flujo editorial sin incorporarlo al sitemap público.",
-        "noIndex": true
+        "categories": [{"title": "Energía solar"}],
+        "body": [
+          {
+            "_key": "b1",
+            "_type": "block",
+            "style": "normal",
+            "markDefs": [],
+            "children": [{"_key": "s1", "_type": "span", "marks": [], "text": "La primera pregunta no es cuántos paneles instalar, sino cómo consume energía la operación."}]
+          },
+          {
+            "_key": "b2",
+            "_type": "block",
+            "style": "h2",
+            "markDefs": [],
+            "children": [{"_key": "s2", "_type": "span", "marks": [], "text": "Datos antes que tecnología"}]
+          }
+        ],
+        "faqs": []
       },
-      "categories": [{"title": "Pruebas"}],
-      "body": [
-        {
-          "_key": "n1",
-          "_type": "block",
-          "style": "normal",
-          "markDefs": [],
-          "children": [{"_key": "ns1", "_type": "span", "marks": [], "text": "Esta página debe existir, pero llevar una directiva noindex y quedar fuera del sitemap."}]
-        }
-      ],
-      "faqs": []
-    }
-  ]
+      {
+        "_id": "article-static-noindex",
+        "_updatedAt": "2026-09-13T18:01:00Z",
+        "title": "Artículo de prueba no indexable",
+        "slug": "articulo-prueba-noindex",
+        "excerpt": "Contenido de prueba para verificar previews editoriales sin incorporarlo al índice de Google.",
+        "publishedAt": "2026-09-13T17:30:00Z",
+        "seo": {
+          "title": "Artículo de prueba no indexable | Ecorise",
+          "description": "Contenido de prueba de Ecorise generado estáticamente para validar el flujo editorial sin incorporarlo al sitemap público.",
+          "noIndex": true
+        },
+        "categories": [{"title": "Pruebas"}],
+        "body": [{"_key":"n1","_type":"block","style":"normal","markDefs":[],"children":[{"_key":"ns1","_type":"span","marks":[],"text":"Esta página debe existir, pero llevar una directiva noindex y quedar fuera del sitemap."}]}],
+        "faqs": []
+      }
+    ],
+    "products": [
+      {
+        "_id": "product-static-1",
+        "_updatedAt": "2026-09-13T18:02:00Z",
+        "title": "Inversor Demo 12K",
+        "slug": "inversor-demo-12k",
+        "sku": "DEMO-12K",
+        "summary": "Producto ficticio para probar la generación estática del catálogo.",
+        "availability": "on_request",
+        "seo": {
+          "title": "Inversor Demo 12K | Ecorise",
+          "description": "Producto ficticio para validar fichas técnicas y páginas de catálogo estáticas.",
+          "noIndex": true
+        },
+        "brand": {"title": "Marca Demo"},
+        "category": {"title": "Inversores"},
+        "images": [],
+        "technicalSpecifications": [{"_key":"sp1","label":"Potencia nominal","value":"12","unit":"kW"}],
+        "recommendedFor": ["PyMEs"],
+        "description": [{"_key":"pd1","_type":"block","style":"normal","markDefs":[],"children":[{"_key":"pds1","_type":"span","marks":[],"text":"Ficha de prueba para validar el catálogo."}]}],
+        "faqs": []
+      }
+    ],
+    "solutions": [
+      {
+        "_id": "solution-static-1",
+        "_updatedAt": "2026-09-13T18:03:00Z",
+        "title": "Energía solar para PyMEs — Demo",
+        "slug": "energia-solar-pymes-demo",
+        "audience": "empresa",
+        "summary": "Solución ficticia para probar landings generadas desde Sanity.",
+        "seo": {
+          "title": "Energía solar para PyMEs — Demo | Ecorise",
+          "description": "Landing ficticia para validar soluciones solares orientadas a empresas.",
+          "noIndex": true
+        },
+        "body": [{"_key":"sb1","_type":"block","style":"normal","markDefs":[],"children":[{"_key":"sbs1","_type":"span","marks":[],"text":"Contenido de prueba de una solución energética."}]}],
+        "recommendedProducts": [{"title":"Inversor Demo 12K","slug":"inversor-demo-12k","summary":"Producto ficticio de prueba."}]
+      }
+    ],
+    "cases": [
+      {
+        "_id": "case-static-1",
+        "_updatedAt": "2026-09-13T18:04:00Z",
+        "title": "Proyecto solar comercial de prueba — Demo",
+        "slug": "proyecto-solar-comercial-demo",
+        "clientName": "Cliente Demo",
+        "location": "Córdoba",
+        "segment": "Comercial",
+        "installedPowerKwp": 50,
+        "seo": {
+          "title": "Proyecto solar comercial Demo | Ecorise",
+          "description": "Caso ficticio para validar el diseño de casos de estudio solares de Ecorise.",
+          "noIndex": false
+        },
+        "body": [{"_key":"cb1","_type":"block","style":"normal","markDefs":[],"children":[{"_key":"cbs1","_type":"span","marks":[],"text":"Caso de prueba para validar la página estática."}]}],
+        "products": []
+      }
+    ]
+  }
 }
