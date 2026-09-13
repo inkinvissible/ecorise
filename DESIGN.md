@@ -86,9 +86,19 @@ Agregar contenido para SEO solo cuando responde preguntas reales de búsqueda. E
 
 La web pública nunca debe explicar decisiones internas del proyecto. No mostrar textos como “SEO”, “CMS”, “Sanity”, “fallback”, “contenido para vender mejor”, notas de implementación, comentarios para el equipo o justificaciones del diseño. Esos conceptos pertenecen a documentación interna, no a la experiencia del visitante.
 
-## Motion
+## Motion and narrative flow
 
-Movimiento mínimo y funcional. Un hover o una transición intencional es suficiente. Respetar `prefers-reduced-motion`.
+El movimiento debe ayudar a contar la secuencia de decisión de Ecorise: problema, análisis, criterio, alternativa y acción. No usar animación como decoración independiente.
+
+- Los reveals de scroll son cortos, con poco desplazamiento y stagger limitado.
+- El hero puede introducir texto y acciones en secuencia para marcar el inicio del relato.
+- Procesos y metodologías pueden mostrar avance visual a medida que el usuario recorre la sección.
+- Cards, imágenes, links y CTAs responden al hover con desplazamientos mínimos; nunca deben “flotar” de forma exagerada.
+- Un indicador de progreso de página puede acompañar el recorrido de forma casi imperceptible.
+- El parallax, cuando existe, debe limitarse a pocos píxeles y sólo en elementos visuales de gran escala.
+- No bloquear ni ocultar contenido si JavaScript falla.
+- No introducir dependencias pesadas de animación para efectos que CSS/IntersectionObserver pueden resolver.
+- Respetar siempre `prefers-reduced-motion`; en ese modo el contenido se presenta directamente y sin movimiento innecesario.
 
 ## Responsive behavior
 
