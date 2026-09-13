@@ -27,6 +27,8 @@ jobs:
         run: npm run test:html
       - name: Check internal links and assets
         run: npm run test:links
+      - name: Enforce shared navigation and footer
+        run: npm run test:shell
       - name: Check JavaScript syntax
         run: npm run test:js
 
