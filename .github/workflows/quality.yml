@@ -39,6 +39,8 @@ jobs:
         run: npm run test:tracking
       - name: Check JavaScript syntax
         run: npm run test:js
+      - name: Generate and validate static CMS content
+        run: npm run test:content
 
   browser-smoke:
     name: Browser smoke
