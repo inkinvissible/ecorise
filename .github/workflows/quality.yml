@@ -29,6 +29,10 @@ jobs:
         run: npm run test:links
       - name: Enforce shared navigation and footer
         run: npm run test:shell
+      - name: Enforce Ecorise brand system
+        run: npm run test:brand
+      - name: Check SEO metadata and discovery
+        run: npm run test:seo
       - name: Check JavaScript syntax
         run: npm run test:js
 
