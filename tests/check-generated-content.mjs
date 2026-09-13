@@ -46,16 +46,17 @@ for(const config of configs){
     if(!html.includes(`<link rel="canonical" href="${canonical}">`))failures.push(`${config.route}/${item.slug}: canonical incorrecto o ausente.`);
     if(/api\.sanity\.io|apicdn\.sanity\.io/i.test(html))failures.push(`${config.route}/${item.slug}: la página generada no debe hacer fetch cliente a Sanity.`);
 
+    // Publication and indexing are separate concerns: every published document
+    // must be visible in its collection even when the detail page is noindex.
+    if(!collection.includes(`href="/${config.route}/${item.slug}/"`)){
+      failures.push(`${config.route}/${item.slug}: documento publicado ausente de su colección.`);
+    }
+
     if(item.noIndex){
       if(!/<meta\s+name="robots"\s+content="noindex,follow">/i.test(html))failures.push(`${config.route}/${item.slug}: noIndex=true pero falta meta robots noindex.`);
       if(sitemap.includes(`<loc>${canonical}</loc>`))failures.push(`${config.route}/${item.slug}: noIndex=true pero aparece en sitemap.`);
     }else{
       if(!sitemap.includes(`<loc>${canonical}</loc>`))failures.push(`${config.route}/${item.slug}: contenido indexable ausente del sitemap.`);
-      if(!collection.includes(`href="/${config.route}/${item.slug}/"`))failures.push(`${config.route}/${item.slug}: contenido indexable ausente de su colección.`);
-    }
-
-    if(manifest.includeNoIndex&&item.noIndex&&!collection.includes(`href="/${config.route}/${item.slug}/"`)){
-      failures.push(`${config.route}/${item.slug}: preview pidió incluir noIndex pero no aparece en su colección.`);
     }
   }
 }
@@ -64,6 +65,7 @@ if(!solar.includes('href="/productos/"'))failures.push('energia-solar.html: falt
 if(!solar.includes('href="/soluciones/"'))failures.push('energia-solar.html: falta acceso a soluciones generadas.');
 if(!empresas.includes('href="/casos/"'))failures.push('empresas.html: falta acceso a casos de estudio generados.');
 
+// noIndex demos may be promoted into strong landing pages only in explicit preview builds.
 if(manifest.includeNoIndex){
   if((manifest.products||[]).length&&!solar.includes('/productos/'))failures.push('Preview: Energía solar no enlaza productos.');
   if((manifest.solutions||[]).length&&!solar.includes('/soluciones/'))failures.push('Preview: Energía solar no enlaza soluciones.');
