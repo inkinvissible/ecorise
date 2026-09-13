@@ -44,6 +44,32 @@ test('la capa de motion carga y acompaña el recorrido sin bloquear contenido',a
   await expect.poll(()=>page.locator('.ec-nav').evaluate(el=>el.classList.contains('is-scrolled'))).toBe(true);
 });
 
+test('solar guía la comparación entre on-grid, híbrido y off-grid',async({page})=>{
+  await page.goto('/energia-solar.html');
+  const onGrid=page.locator('[data-story-option="on-grid"]');
+  const hybrid=page.locator('[data-story-option="hibrido"]');
+  const offGrid=page.locator('[data-story-option="off-grid"]');
+  await expect(onGrid).toHaveAttribute('aria-selected','true');
+  await expect(page.locator('[data-story-panel="on-grid"]')).toBeVisible();
+  await expect(page.locator('[data-story-panel="hibrido"]')).toBeHidden();
+  await hybrid.click();
+  await expect(hybrid).toHaveAttribute('aria-selected','true');
+  await expect(page.locator('[data-story-panel="hibrido"]')).toBeVisible();
+  await expect(page.locator('[data-story-panel="on-grid"]')).toBeHidden();
+  await hybrid.press('ArrowRight');
+  await expect(offGrid).toHaveAttribute('aria-selected','true');
+  await expect(page.locator('[data-story-panel="off-grid"]')).toBeVisible();
+});
+
+test('consultoría cambia el foco narrativo a medida que avanza el recorrido',async({page})=>{
+  await page.goto('/consultoria-tecnica.html');
+  await expect(page.locator('[data-consult-story]')).toHaveClass(/ec-story-enhanced/);
+  const thirdStep=page.locator('[data-consult-step="escenarios"]');
+  await thirdStep.scrollIntoViewIfNeeded();
+  await expect.poll(()=>page.locator('[data-consult-marker="escenarios"]').evaluate(el=>el.classList.contains('is-active'))).toBe(true);
+  await expect(thirdStep).toHaveClass(/is-active/);
+});
+
 test('la navegación institucional conecta home, solar e ingeniería',async({page,isMobile})=>{
   test.skip(isMobile,'La interacción del collapse depende del Bootstrap JS externo; mobile se valida con HTML y overflow.');
   await page.goto('/index.html');
