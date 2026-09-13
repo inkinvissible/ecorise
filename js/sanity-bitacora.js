@@ -1,7 +1,6 @@
 (function(){
   const container=document.querySelector('[data-sanity-articles]');
-  const fallback=document.querySelector('[data-editorial-fallback]');
-  const status=document.querySelector('[data-sanity-status]');
+  const emptyState=document.querySelector('[data-editorial-empty]');
   if(!container)return;
 
   const projectId='8nstak41';
@@ -67,7 +66,7 @@
 
   fetch(url,{headers:{Accept:'application/json'}})
     .then(response=>{
-      if(!response.ok)throw new Error(`Sanity respondió ${response.status}`);
+      if(!response.ok)throw new Error('No se pudo cargar la bitácora');
       return response.json();
     })
     .then(payload=>{
@@ -75,13 +74,7 @@
       if(!Array.isArray(articles)||articles.length===0)return;
       container.replaceChildren(...articles.map(createCard));
       container.hidden=false;
-      if(fallback)fallback.hidden=true;
-      if(status){
-        status.textContent='Contenido editorial actualizado desde Ecorise Solar CMS.';
-        status.hidden=false;
-      }
+      if(emptyState)emptyState.hidden=true;
     })
-    .catch(error=>{
-      console.warn('No se pudo actualizar la bitácora desde Sanity; se mantiene el contenido editorial local.',error);
-    });
+    .catch(()=>{});
 })();
