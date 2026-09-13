@@ -1,6 +1,13 @@
 const { test, expect } = require('@playwright/test');
 
 const pages=[
+  ['index.html',/energía/i],
+  ['about.html',/firma energética/i],
+  ['contact.html',/contanos/i],
+  ['energia-solar.html',/energía solar/i],
+  ['sustentabilidad.html',/eficiencia energética/i],
+  ['consultoria-tecnica.html',/ingeniería/i],
+  ['mantenimiento.html',/sistema energético/i],
   ['empresas.html',/energía/i],
   ['industria.html',/industria/i],
   ['agroindustria.html',/agroindustria/i],
@@ -19,6 +26,14 @@ for(const [url,heading] of pages){
     expect(errors).toEqual([]);
   });
 }
+
+test('la navegación institucional conecta home, solar e ingeniería',async({page})=>{
+  await page.goto('/index.html');
+  await page.getByRole('link',{name:'Energía solar',exact:true}).first().click();
+  await expect(page).toHaveURL(/energia-solar\.html$/);
+  await page.getByRole('link',{name:'Ingeniería',exact:true}).first().click();
+  await expect(page).toHaveURL(/consultoria-tecnica\.html$/);
+});
 
 test('navegación B2B principal conecta páginas clave',async({page})=>{
   await page.goto('/empresas.html');
@@ -45,7 +60,7 @@ test('calculadora genera evaluación y evento de analytics sin exponer montos es
   await expect(page.locator('[data-energy-result]')).not.toContainText('$');
 });
 
-test('capa B2B no genera overflow horizontal en viewport móvil',async({page,isMobile})=>{
+test('sitio rediseñado no genera overflow horizontal en viewport móvil',async({page,isMobile})=>{
   test.skip(!isMobile,'Este control aplica al proyecto mobile.');
   for(const [url] of [...pages,['calculadora-energetica.html']]){
     await page.goto(`/${url}`);
