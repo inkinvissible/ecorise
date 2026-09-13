@@ -58,20 +58,33 @@ Solo cambia el estado activo. El footer también debe ser consistente en todas l
 
 ## Components
 
-- **Hero:** fotografía técnica con overlay azul sólido/transparente, una propuesta clara, un CTA primario y como máximo una acción secundaria.
+- **Hero:** fotografía técnica con overlay azul sólido/transparente cuando existe una imagen realmente pertinente; una propuesta clara, un CTA primario y como máximo una acción secundaria.
 - **Buttons:** azul profundo o verde técnico; texto blanco y radio pequeño.
 - **Accent:** verde energía para líneas, indicadores, badges y geometrías.
 - **Cards:** borde fino, radio pequeño, composición estable; no superponer tarjetas.
-- **Sector cards:** fotografía protagonista con overlay institucional y acento superior verde energía.
+- **Sector cards:** pueden usar fotografía cuando la imagen representa de forma clara el sector enlazado.
 - **CTA:** superficie sólida verde técnico o azul profundo con barra/acento verde energía.
 - **Footer:** azul profundo, logo transparente convertido a blanco mediante CSS; nunca colocar el logo dentro de una caja blanca artificial.
-- **Bitácora:** grilla editorial estable, imágenes 16:9, jerarquía clara entre artículo principal y secundarios, sin alturas forzadas que provoquen superposición.
+- **Bitácora:** muestra únicamente artículos reales publicados desde Sanity. No inventar artículos, títulos o imágenes de relleno cuando el CMS está vacío.
 
 ## Imagery and SEO
 
-Las imágenes deben aportar contexto, no decoración. Cada página estratégica debería combinar copy descriptivo con imágenes reales y `alt` específicos del contexto. Priorizar activos existentes de Ecorise antes de recurrir a stock.
+Las imágenes deben aportar contexto verificable, no ocupar espacio. No agregar una galería o una imagen simplemente porque una sección se siente vacía. Si el texto y la jerarquía resuelven la sección, la página puede quedar sin imagen.
+
+Reglas prácticas:
+
+- Preferir una imagen fuerte y pertinente antes que tres imágenes genéricas.
+- No repetir el mismo activo en una misma página salvo que exista una razón editorial clara.
+- No reutilizar una foto técnica para representar un artículo, caso, servicio o proyecto que no corresponde a esa foto.
+- En la Bitácora, las imágenes de tarjetas deben venir del `heroImage` del artículo en Sanity. Si el artículo no tiene imagen, la tarjeta se muestra sin imagen.
+- Los estados vacíos del CMS nunca usan artículos o fotografías ficticias.
+- Priorizar activos existentes de Ecorise únicamente cuando describen correctamente el contenido donde aparecen.
 
 Agregar contenido para SEO solo cuando responde preguntas reales de búsqueda. Evitar keyword stuffing. Las secciones FAQ, metodología, escenarios de uso y criterios de decisión son preferibles a párrafos genéricos de relleno.
+
+## Public copy hygiene
+
+La web pública nunca debe explicar decisiones internas del proyecto. No mostrar textos como “SEO”, “CMS”, “Sanity”, “fallback”, “contenido para vender mejor”, notas de implementación, comentarios para el equipo o justificaciones del diseño. Esos conceptos pertenecen a documentación interna, no a la experiencia del visitante.
 
 ## Motion
 
