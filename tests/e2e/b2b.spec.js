@@ -35,6 +35,15 @@ for(const [url,heading] of pages){
   });
 }
 
+test('la capa de motion carga y acompaña el recorrido sin bloquear contenido',async({page})=>{
+  await page.goto('/index.html');
+  await expect.poll(()=>page.evaluate(()=>document.documentElement.classList.contains('ec-motion'))).toBe(true);
+  await expect(page.locator('.ec-story-progress')).toHaveCount(1);
+  await expect(page.locator('.ec-hero h1')).toHaveClass(/is-revealed/);
+  await page.evaluate(()=>window.scrollTo(0,Math.min(document.body.scrollHeight*0.45,1400)));
+  await expect.poll(()=>page.locator('.ec-nav').evaluate(el=>el.classList.contains('is-scrolled'))).toBe(true);
+});
+
 test('la navegación institucional conecta home, solar e ingeniería',async({page,isMobile})=>{
   test.skip(isMobile,'La interacción del collapse depende del Bootstrap JS externo; mobile se valida con HTML y overflow.');
   await page.goto('/index.html');
