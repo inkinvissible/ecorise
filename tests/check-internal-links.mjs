@@ -2,7 +2,11 @@ import { readFile, access } from 'node:fs/promises';
 import { constants } from 'node:fs';
 import path from 'node:path';
 
-const pages=['empresas.html','industria.html','agroindustria.html','logistica.html','calculadora-energetica.html','bitacora.html','webinar.html'];
+const pages=[
+  'index.html','about.html','contact.html','energia-solar.html','sustentabilidad.html',
+  'consultoria-tecnica.html','mantenimiento.html','empresas.html','industria.html',
+  'agroindustria.html','logistica.html','calculadora-energetica.html','bitacora.html','webinar.html'
+];
 const failures=[];
 const ignored=/^(https?:|mailto:|tel:|#|javascript:|data:)/i;
 
@@ -22,4 +26,4 @@ if(failures.length){
   console.error('Se encontraron enlaces o assets internos rotos:\n'+failures.join('\n'));
   process.exit(1);
 }
-console.log(`OK: enlaces y assets internos verificados en ${pages.length} páginas B2B.`);
+console.log(`OK: enlaces y assets internos verificados en ${pages.length} páginas.`);
