@@ -1,0 +1,9 @@
+{
+  "name": "ecorise-sanity-pipeline",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@sanity/blueprints": "latest",
+    "@sanity/functions": "latest"
+  }
+}
