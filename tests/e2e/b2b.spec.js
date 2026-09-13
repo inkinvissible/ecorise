@@ -1,13 +1,13 @@
 const { test, expect } = require('@playwright/test');
 
 const pages=[
-  ['index.html',/decisión de negocio/i],
+  ['index.html',/consultoría energética/i],
   ['about.html',/firma energética/i],
   ['contact.html',/contanos/i],
-  ['energia-solar.html',/arquitectura correcta/i],
-  ['sustentabilidad.html',/consumir mejor/i],
-  ['consultoria-tecnica.html',/reducir incertidumbre/i],
-  ['mantenimiento.html',/instalar es una etapa/i],
+  ['energia-solar.html',/energía solar para empresas/i],
+  ['sustentabilidad.html',/sustentabilidad y eficiencia energética/i],
+  ['consultoria-tecnica.html',/consultoría energética e ingeniería/i],
+  ['mantenimiento.html',/mantenimiento e inspección/i],
   ['empresas.html',/energía deja de ser/i],
   ['industria.html',/energía impacta/i],
   ['agroindustria.html',/estacionalidad/i],
