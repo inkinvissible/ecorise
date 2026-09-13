@@ -15,9 +15,15 @@ Build fetches published Content Lake data
         ↓
 _site/bitacora.html
 _site/bitacora/<slug>/index.html
+_site/productos/index.html
+_site/productos/<slug>/index.html
+_site/soluciones/index.html
+_site/soluciones/<slug>/index.html
+_site/casos/index.html
+_site/casos/<slug>/index.html
 _site/sitemap.xml
         ↓
-GitHub Pages
+GitHub Pages / preview deployment
 ```
 
 A daily scheduled GitHub Action is kept as a fallback in case an event trigger is missed.
@@ -32,15 +38,18 @@ npm run build
 python -m http.server 8000 --directory _site
 ```
 
-Then open:
+Then open, for example:
 
 ```text
 http://localhost:8000/bitacora.html
+http://localhost:8000/productos/
+http://localhost:8000/soluciones/
+http://localhost:8000/casos/
 ```
 
-`npm run build` only lists indexable articles in the Bitácora. Published documents with `seo.noIndex: true` are still generated as static pages, but are omitted from the listing and sitemap.
+Published documents are materialized into static HTML during the build. Documents with `seo.noIndex: true` remain visible on the site, receive `noindex,follow`, and are excluded from `sitemap.xml`.
 
-For editorial QA, include those pages in the local Bitácora too:
+For editorial QA, `npm run build:preview` may additionally surface `noIndex` content inside stronger promotional landing sections that normally only promote indexable content:
 
 ```bash
 npm run build:preview
@@ -51,27 +60,29 @@ This removes the need to configure localhost CORS in Sanity because the browser 
 
 ## URL model
 
-Articles are generated as clean static routes:
+Published content is generated as clean static routes:
 
 ```text
 /bitacora/<slug>/
+/productos/<slug>/
+/soluciones/<slug>/
+/casos/<slug>/
 ```
 
 The old `articulo.html?slug=...` route remains only as a `noindex` compatibility redirect.
 
 ## SEO behavior
 
-For every published article the build generates:
+The build generates static HTML, unique metadata, self-referencing canonicals, Open Graph metadata and structured data appropriate to each content type.
 
-- HTML body at build time
-- unique `<title>` and description
-- self-referencing canonical
-- Open Graph metadata
-- Article JSON-LD
-- FAQPage JSON-LD when FAQs exist
-- clean URL under `/bitacora/<slug>/`
+- `article` → `Article` JSON-LD and FAQ when available.
+- `product` → `Product` JSON-LD.
+- `solution` → `Service` JSON-LD.
+- `caseStudy` → static case-study page with its own metadata and canonical.
 
-If `seo.noIndex` is true, the page is still generated for QA/direct access but receives `noindex,follow` and is excluded from `sitemap.xml`.
+If `seo.noIndex` is true, the page is still generated and publicly reachable, but receives `noindex,follow` and is excluded from `sitemap.xml`.
+
+Draft or unpublished content is the mechanism for content that must not be publicly visible.
 
 ## GitHub Pages one-time setup
 
@@ -87,6 +98,17 @@ The workflow `.github/workflows/publish-content.yml` deploys `_site` on:
 - `repository_dispatch` with event `sanity-content-changed`
 - manual dispatch
 - daily fallback schedule
+
+## Preview deployments
+
+A separate preview host such as Cloudflare Pages can build this branch with:
+
+```text
+Build command: npm run build
+Build output directory: _site
+```
+
+For the current client preview, the preview project should point to `feat/posicionamiento-b2b-premium`, leaving the production GitHub Pages deployment on `main` untouched.
 
 ## Sanity → GitHub trigger one-time setup
 
@@ -126,7 +148,7 @@ npx sanity@latest blueprints plan
 npx sanity@latest blueprints deploy
 ```
 
-The function reacts only to published `article` and `category` lifecycle events. Draft edits do not rebuild the public site.
+The function rebuilds when published content changes for `article`, `articleCategory`, `caseStudy`, `solution`, `product`, `productCategory` or `brand`. Draft edits do not rebuild the public site.
 
 ## Validation
 
@@ -136,6 +158,6 @@ Deterministic CI tests do not depend on live CMS state:
 npm run test:content
 ```
 
-This builds from `tests/fixtures/sanity-build.json` and verifies clean routes, canonicals, `noindex`, sitemap inclusion/exclusion and absence of browser-side Sanity fetching.
+This builds from `tests/fixtures/sanity-build.json` and verifies clean routes, canonicals, `noindex`, sitemap inclusion/exclusion and absence of browser-side Sanity fetching across articles, products, solutions and cases.
 
 The production publish workflow uses live Sanity data and validates the generated artifact again before deployment.
