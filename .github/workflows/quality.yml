@@ -35,6 +35,8 @@ jobs:
         run: npm run test:seo
       - name: Prevent internal copy from leaking public
         run: npm run test:copy
+      - name: Verify analytics and lead-intent tracking
+        run: npm run test:tracking
       - name: Check JavaScript syntax
         run: npm run test:js
 
