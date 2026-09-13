@@ -14,9 +14,10 @@ for(const file of pages){
 }
 
 const tracking=fs.readFileSync('js/tracking.js','utf8');
-for(const required of ['GTM-5Q7XKBN5','G-G4TLBRV3SH','AW-17629078632','2521676828246674','lead_intent_click','js/motion.js','css/motion.css']){
+for(const required of ['GTM-5Q7XKBN5','G-G4TLBRV3SH','AW-17629078632','2521676828246674','lead_intent_click','/js/motion.js','/css/motion.css']){
   if(!tracking.includes(required)) failures.push(`js/tracking.js: falta ${required}`);
 }
+if(/(?:href|src)=['"]?(?:css\/motion\.css|js\/motion\.js)/i.test(tracking)) failures.push('js/tracking.js: motion debe cargarse con rutas raíz para funcionar en URLs anidadas.');
 
 if(!fs.existsSync('js/motion.js')) failures.push('falta js/motion.js');
 if(!fs.existsSync('css/motion.css')) failures.push('falta css/motion.css');
