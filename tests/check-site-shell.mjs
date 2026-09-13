@@ -14,7 +14,8 @@ const pages = [
   'logistica.html',
   'calculadora-energetica.html',
   'bitacora.html',
-  'webinar.html'
+  'webinar.html',
+  'articulo.html'
 ];
 
 const navItems = [
@@ -31,26 +32,14 @@ const failures = [];
 for (const file of pages) {
   const html = fs.readFileSync(file, 'utf8');
 
-  if (!html.includes('data-site-nav="v1"')) {
-    failures.push(`${file}: falta data-site-nav="v1"`);
-  }
-  if (!html.includes('data-site-footer="v1"')) {
-    failures.push(`${file}: falta data-site-footer="v1"`);
-  }
-  if (!html.includes('href="https://calendly.com/ecoriserenewable/30min"')) {
-    failures.push(`${file}: falta CTA global de diagnóstico`);
-  }
-  if (!html.includes('class="ec-footer-logo"')) {
-    failures.push(`${file}: footer no usa el logo transparente compartido`);
-  }
-  if (/ec-footer-logo[^>]*(bg-white|background)/.test(html)) {
-    failures.push(`${file}: el logo del footer no debe tener fondo artificial`);
-  }
+  if (!html.includes('data-site-nav="v1"')) failures.push(`${file}: falta data-site-nav="v1"`);
+  if (!html.includes('data-site-footer="v1"')) failures.push(`${file}: falta data-site-footer="v1"`);
+  if (!html.includes('href="https://calendly.com/ecoriserenewable/30min"')) failures.push(`${file}: falta CTA global de diagnóstico`);
+  if (!html.includes('class="ec-footer-logo"')) failures.push(`${file}: footer no usa el logo transparente compartido`);
+  if (/ec-footer-logo[^>]*(bg-white|background)/.test(html)) failures.push(`${file}: el logo del footer no debe tener fondo artificial`);
 
   for (const [href, label] of navItems) {
-    if (!html.includes(`href="${href}"`) || !html.includes(`>${label}</a>`)) {
-      failures.push(`${file}: navegación inconsistente, falta ${label} (${href})`);
-    }
+    if (!html.includes(`href="${href}"`) || !html.includes(`>${label}</a>`)) failures.push(`${file}: navegación inconsistente, falta ${label} (${href})`);
   }
 }
 
