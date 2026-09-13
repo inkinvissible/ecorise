@@ -39,8 +39,10 @@ jobs:
         run: npm run test:tracking
       - name: Check JavaScript syntax
         run: npm run test:js
-      - name: Generate and validate static CMS content
+      - name: Generate and validate deterministic CMS fixture
         run: npm run test:content
+      - name: Smoke-test live Sanity build
+        run: npm run build && npm run test:generated
 
   browser-smoke:
     name: Browser smoke
