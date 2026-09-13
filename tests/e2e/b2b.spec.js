@@ -1,19 +1,19 @@
 const { test, expect } = require('@playwright/test');
 
 const pages=[
-  ['index.html',/energía/i],
+  ['index.html',/decisión de negocio/i],
   ['about.html',/firma energética/i],
   ['contact.html',/contanos/i],
-  ['energia-solar.html',/energía solar/i],
-  ['sustentabilidad.html',/eficiencia energética/i],
-  ['consultoria-tecnica.html',/ingeniería/i],
-  ['mantenimiento.html',/sistema energético/i],
-  ['empresas.html',/energía/i],
-  ['industria.html',/industria/i],
-  ['agroindustria.html',/agroindustria/i],
-  ['logistica.html',/logística/i],
-  ['bitacora.html',/bitácora/i],
-  ['webinar.html',/energía/i]
+  ['energia-solar.html',/arquitectura correcta/i],
+  ['sustentabilidad.html',/consumir mejor/i],
+  ['consultoria-tecnica.html',/reducir incertidumbre/i],
+  ['mantenimiento.html',/instalar es una etapa/i],
+  ['empresas.html',/energía deja de ser/i],
+  ['industria.html',/energía impacta/i],
+  ['agroindustria.html',/estacionalidad/i],
+  ['logistica.html',/infraestructura operativa/i],
+  ['bitacora.html',/energía explicada/i],
+  ['webinar.html',/inversión energética/i]
 ];
 
 test.beforeEach(async({page})=>{
@@ -44,12 +44,12 @@ test('la navegación institucional conecta home, solar e ingeniería',async({pag
   await expect(page).toHaveURL(/consultoria-tecnica\.html$/);
 });
 
-test('navegación B2B principal conecta páginas clave',async({page,isMobile})=>{
+test('la capa B2B conecta Empresas con la vertical industrial y la bitácora',async({page,isMobile})=>{
   test.skip(isMobile,'La interacción del collapse depende del Bootstrap JS externo; mobile se valida con HTML y overflow.');
   await page.goto('/empresas.html');
-  await page.getByRole('link',{name:'Industria',exact:true}).click();
+  await page.locator('a[href="industria.html"]').first().click();
   await expect(page).toHaveURL(/industria\.html$/);
-  await page.getByRole('link',{name:'Bitácora',exact:true}).click();
+  await page.getByRole('link',{name:'Bitácora',exact:true}).first().click();
   await expect(page).toHaveURL(/bitacora\.html$/);
 });
 
@@ -68,6 +68,25 @@ test('calculadora genera evaluación y evento de analytics sin exponer montos es
   expect(event).toBeTruthy();
   expect(event.sector).toBe('industria');
   await expect(page.locator('[data-energy-result]')).not.toContainText('$');
+});
+
+test('bitácora renderiza artículos devueltos por Sanity',async({page})=>{
+  await page.addInitScript(()=>{window.__ECORISE_SANITY_QUERY_URL__='/tests/fixtures/sanity-articles.json';});
+  await page.goto('/bitacora.html');
+  const feed=page.locator('[data-sanity-articles]');
+  await expect(feed).toBeVisible();
+  await expect(feed).toContainText('Cómo leer una oportunidad energética antes de invertir');
+  await expect(page.locator('[data-editorial-fallback]')).toBeHidden();
+  await expect(feed.locator('a.ec-card-link')).toHaveAttribute('href',/articulo\.html\?slug=oportunidad-energetica/);
+});
+
+test('lector de artículo renderiza Portable Text básico desde Sanity',async({page})=>{
+  await page.addInitScript(()=>{window.__ECORISE_SANITY_ARTICLE_URL__='/tests/fixtures/sanity-article.json';});
+  await page.goto('/articulo.html?slug=oportunidad-energetica');
+  await expect(page.locator('[data-article-title]')).toHaveText('Cómo leer una oportunidad energética antes de invertir');
+  await expect(page.locator('[data-article-body]')).toContainText('La primera pregunta no es cuántos paneles instalar');
+  await expect(page.locator('[data-article-body] h2')).toHaveText('Datos antes que tecnología');
+  await expect(page.locator('[data-article-body] strong')).toContainText('Consumo, horario, infraestructura');
 });
 
 test('sitio rediseñado no genera overflow horizontal en viewport móvil',async({page,isMobile})=>{
