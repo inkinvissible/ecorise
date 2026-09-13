@@ -27,7 +27,7 @@ for(const file of pages){
 
 const bitacora=fs.readFileSync('bitacora.html','utf8');
 const main=bitacora.match(/<main>([\s\S]*?)<\/main>/i)?.[1]||'';
-if(/<img\b/i.test(main)) failures.push('bitacora.html: no debe contener imágenes editoriales hardcodeadas; deben venir de artículos reales de Sanity');
+if(/<img\b/i.test(main)) failures.push('bitacora.html: no debe contener imágenes editoriales hardcodeadas; deben venir de artículos reales');
 if(!bitacora.includes('data-editorial-empty')) failures.push('bitacora.html: falta estado vacío editorial limpio');
 
 if(failures.length){
