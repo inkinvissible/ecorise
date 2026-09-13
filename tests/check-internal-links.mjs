@@ -5,7 +5,7 @@ import path from 'node:path';
 const pages=[
   'index.html','about.html','contact.html','energia-solar.html','sustentabilidad.html',
   'consultoria-tecnica.html','mantenimiento.html','empresas.html','industria.html',
-  'agroindustria.html','logistica.html','calculadora-energetica.html','bitacora.html','webinar.html'
+  'agroindustria.html','logistica.html','calculadora-energetica.html','bitacora.html','webinar.html','articulo.html'
 ];
 const failures=[];
 const ignored=/^(https?:|mailto:|tel:|#|javascript:|data:)/i;
