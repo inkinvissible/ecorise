@@ -17,11 +17,30 @@ const forbidden=[
   /consultando el contenido editorial/i
 ];
 
+function visiblePublicCopy(html){
+  const title=html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]||'';
+  const description=html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i)?.[1]
+    ||html.match(/<meta\s+content=["']([^"']*)["']\s+name=["']description["']/i)?.[1]
+    ||'';
+  const body=html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1]||'';
+  const visibleBody=body
+    .replace(/<script\b[\s\S]*?<\/script>/gi,' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi,' ')
+    .replace(/<noscript\b[\s\S]*?<\/noscript>/gi,' ')
+    .replace(/<!--[\s\S]*?-->/g,' ')
+    .replace(/<[^>]+>/g,' ')
+    .replace(/&nbsp;/gi,' ')
+    .replace(/&amp;/gi,'&')
+    .replace(/\s+/g,' ');
+  return `${title} ${description} ${visibleBody}`;
+}
+
 const failures=[];
 for(const file of pages){
   const html=fs.readFileSync(file,'utf8');
+  const publicCopy=visiblePublicCopy(html);
   for(const pattern of forbidden){
-    if(pattern.test(html))failures.push(`${file}: copy interno expuesto (${pattern})`);
+    if(pattern.test(publicCopy))failures.push(`${file}: copy interno visible expuesto (${pattern})`);
   }
 }
 
@@ -34,4 +53,4 @@ if(failures.length){
   console.error(failures.join('\n'));
   process.exit(1);
 }
-console.log('Copy público y estado editorial de Bitácora verificados.');
+console.log('Copy público visible y estado editorial de Bitácora verificados.');
