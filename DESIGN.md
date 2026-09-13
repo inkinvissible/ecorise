@@ -96,8 +96,10 @@ El movimiento debe ayudar a contar la secuencia de decisión de Ecorise: problem
 - Cards, imágenes, links y CTAs responden al hover con desplazamientos mínimos; nunca deben “flotar” de forma exagerada.
 - Un indicador de progreso de página puede acompañar el recorrido de forma casi imperceptible.
 - El parallax, cuando existe, debe limitarse a pocos píxeles y sólo en elementos visuales de gran escala.
+- Las páginas pueden tener patrones narrativos propios cuando ayudan a comprender una decisión: por ejemplo, comparar arquitecturas solares de forma interactiva o recorrer etapas de consultoría con foco progresivo.
+- Los componentes interactivos deben conservar todo el contenido en HTML para que siga siendo indexable, accesible y visible si JavaScript falla.
 - No bloquear ni ocultar contenido si JavaScript falla.
-- No introducir dependencias pesadas de animación para efectos que CSS/IntersectionObserver pueden resolver.
+- No introducir dependencias pesadas de animación para efectos que CSS/IntersectionObserver o JavaScript nativo pueden resolver.
 - Respetar siempre `prefers-reduced-motion`; en ese modo el contenido se presenta directamente y sin movimiento innecesario.
 
 ## Responsive behavior
