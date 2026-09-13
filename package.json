@@ -1,0 +1,15 @@
+{
+  "name": "ecorise-site",
+  "private": true,
+  "scripts": {
+    "test": "npm run test:html && npm run test:links && npm run test:js && npm run test:e2e",
+    "test:html": "html-validate index.html about.html contact.html energia-solar.html sustentabilidad.html consultoria-tecnica.html mantenimiento.html empresas.html industria.html agroindustria.html logistica.html calculadora-energetica.html bitacora.html webinar.html",
+    "test:links": "node tests/check-internal-links.mjs",
+    "test:js": "node --check js/b2b-calculator.js",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "html-validate": "^10.4.0"
+  }
+}
