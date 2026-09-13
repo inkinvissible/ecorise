@@ -2,7 +2,10 @@
   "name": "ecorise-site",
   "private": true,
   "scripts": {
-    "test": "npm run test:html && npm run test:links && npm run test:shell && npm run test:brand && npm run test:seo && npm run test:copy && npm run test:tracking && npm run test:js && npm run test:e2e",
+    "build": "node scripts/build-site.mjs",
+    "build:preview": "node scripts/build-site.mjs --include-noindex",
+    "build:test": "node scripts/build-site.mjs --fixture tests/fixtures/sanity-build.json --include-noindex",
+    "test": "npm run test:html && npm run test:links && npm run test:shell && npm run test:brand && npm run test:seo && npm run test:copy && npm run test:tracking && npm run test:js && npm run test:content && npm run test:e2e",
     "test:html": "html-validate index.html about.html contact.html energia-solar.html sustentabilidad.html consultoria-tecnica.html mantenimiento.html empresas.html industria.html agroindustria.html logistica.html calculadora-energetica.html bitacora.html webinar.html articulo.html",
     "test:links": "node tests/check-internal-links.mjs",
     "test:shell": "node tests/check-site-shell.mjs",
@@ -10,8 +13,13 @@
     "test:seo": "node tests/check-seo.mjs",
     "test:copy": "node tests/check-public-copy.mjs",
     "test:tracking": "node tests/check-tracking.mjs",
-    "test:js": "node --check js/tracking.js && node --check js/motion.js && node --check js/story.js && node --check js/b2b-calculator.js && node --check js/sanity-bitacora.js && node --check js/sanity-articulo.js",
-    "test:e2e": "playwright test"
+    "test:js": "node --check js/tracking.js && node --check js/motion.js && node --check js/story.js && node --check js/b2b-calculator.js && node --check scripts/build-site.mjs",
+    "test:content": "npm run build:test && node tests/check-generated-content.mjs",
+    "test:generated": "node tests/check-generated-content.mjs",
+    "test:e2e": "npm run build:test && playwright test"
+  },
+  "dependencies": {
+    "@portabletext/to-html": "latest"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
