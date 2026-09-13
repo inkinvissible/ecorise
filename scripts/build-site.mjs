@@ -271,11 +271,12 @@ function normalizeContent(content){
   return {articles:normalize(content.articles),products:normalize(content.products),solutions:normalize(content.solutions),cases:normalize(content.cases)};
 }
 
-function isListed(item){return INCLUDE_NOINDEX||item.seo?.noIndex!==true;}
+function isPromotable(item){return INCLUDE_NOINDEX||item.seo?.noIndex!==true;}
 function isIndexable(item){return item.seo?.noIndex!==true;}
 
 function collectionPage({kind,title,description,eyebrow,heading,intro,items,card,active}){
-  const listed=items.filter(isListed);
+  // Published content is visible. noIndex only controls search indexing, not publication visibility.
+  const listed=items;
   const indexable=items.filter(isIndexable);
   const canonical=`${BASE_URL}/${kind}/`;
   const itemList={'@context':'https://schema.org','@type':'CollectionPage',name:title,url:canonical,mainEntity:{'@type':'ItemList',itemListElement:indexable.map((item,index)=>({'@type':'ListItem',position:index+1,url:`${BASE_URL}/${kind}/${item.slug}/`,name:item.title}))}};
@@ -369,9 +370,10 @@ async function writeCollections(content){
 }
 
 async function enrichCorePages(content){
-  const products=content.products.filter(isListed).slice(0,3);
-  const solutions=content.solutions.filter(isListed).slice(0,3);
-  const cases=content.cases.filter(isListed).slice(0,3);
+  // Strong SEO landing pages only promote indexable content. Preview may opt in to noIndex demos.
+  const products=content.products.filter(isPromotable).slice(0,3);
+  const solutions=content.solutions.filter(isPromotable).slice(0,3);
+  const cases=content.cases.filter(isPromotable).slice(0,3);
 
   const solarPath=path.join(OUT,'energia-solar.html');
   let solar=await fs.readFile(solarPath,'utf8');
@@ -413,7 +415,8 @@ async function writeManifest(content){
 }
 
 async function writeBitacora(content){
-  const listed=content.articles.filter(isListed);
+  // As with other collections, every published article is visible; noIndex only affects robots/sitemap.
+  const listed=content.articles;
   const bitacoraPath=path.join(OUT,'bitacora.html');
   const bitacora=await fs.readFile(bitacoraPath,'utf8');
   const listing=listed.length?`<div class="ec-article-grid">${listed.map(articleCard).join('')}</div>`:emptyState('Estamos preparando los primeros análisis de la Bitácora Ecorise.','Cuando se publiquen, aparecerán acá directamente desde nuestro espacio editorial.');
@@ -432,7 +435,7 @@ async function writeContent(rawContent){
   await writeSitemap(content);
   await writeManifest(content);
   const summary=['articles','products','solutions','cases'].map(key=>`${content[key].length} ${key}`).join(', ');
-  console.log(`Sitio generado desde Sanity: ${summary}. noIndex se genera pero queda fuera de listados públicos salvo preview y fuera del sitemap.`);
+  console.log(`Sitio generado desde Sanity: ${summary}. Todo lo publicado es visible en su colección; noIndex excluye el documento del sitemap y de promoción SEO.`);
 }
 
 async function main(){
