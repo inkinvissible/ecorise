@@ -16,6 +16,14 @@ const pages=[
   ['webinar.html',/energía/i]
 ];
 
+test.beforeEach(async({page})=>{
+  await page.route('**/*',async route=>{
+    const url=new URL(route.request().url());
+    if(url.hostname==='127.0.0.1') return route.continue();
+    return route.abort();
+  });
+});
+
 for(const [url,heading] of pages){
   test(`${url} carga sin errores de página`,async({page})=>{
     const errors=[];
