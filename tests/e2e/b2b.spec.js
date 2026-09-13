@@ -70,13 +70,21 @@ test('calculadora genera evaluación y evento de analytics sin exponer montos es
   await expect(page.locator('[data-energy-result]')).not.toContainText('$');
 });
 
-test('bitácora renderiza artículos devueltos por Sanity',async({page})=>{
+test('bitácora vacía no inventa artículos ni imágenes editoriales',async({page})=>{
+  await page.goto('/bitacora.html');
+  await expect(page.locator('[data-editorial-empty]')).toBeVisible();
+  await expect(page.locator('[data-sanity-articles]')).toBeHidden();
+  await expect(page.locator('main .ec-article-card')).toHaveCount(0);
+  await expect(page.locator('main img')).toHaveCount(0);
+});
+
+test('bitácora renderiza únicamente artículos devueltos por Sanity',async({page})=>{
   await page.addInitScript(()=>{window.__ECORISE_SANITY_QUERY_URL__='/tests/fixtures/sanity-articles.json';});
   await page.goto('/bitacora.html');
   const feed=page.locator('[data-sanity-articles]');
   await expect(feed).toBeVisible();
   await expect(feed).toContainText('Cómo leer una oportunidad energética antes de invertir');
-  await expect(page.locator('[data-editorial-fallback]')).toBeHidden();
+  await expect(page.locator('[data-editorial-empty]')).toBeHidden();
   await expect(feed.locator('a.ec-card-link')).toHaveAttribute('href',/articulo\.html\?slug=oportunidad-energetica/);
 });
 
