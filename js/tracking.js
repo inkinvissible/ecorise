@@ -3,16 +3,17 @@
   window.__ecoriseTrackingLoaded=true;
 
   // Load the visual interaction layer as a separate first-party asset.
+  // Root-relative paths keep working on generated routes such as /bitacora/<slug>/.
   if(!document.querySelector('link[data-ec-motion]')){
     var motionStyle=document.createElement('link');
     motionStyle.rel='stylesheet';
-    motionStyle.href='css/motion.css';
+    motionStyle.href='/css/motion.css';
     motionStyle.setAttribute('data-ec-motion','');
     document.head.appendChild(motionStyle);
   }
   if(!document.querySelector('script[data-ec-motion]')){
     var motionScript=document.createElement('script');
-    motionScript.src='js/motion.js';
+    motionScript.src='/js/motion.js';
     motionScript.async=true;
     motionScript.setAttribute('data-ec-motion','');
     document.head.appendChild(motionScript);
