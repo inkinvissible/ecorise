@@ -105,36 +105,35 @@ test('calculadora genera evaluación y evento de analytics sin exponer montos es
   await expect(page.locator('[data-energy-result]')).not.toContainText('$');
 });
 
-test('bitácora vacía no inventa artículos ni imágenes editoriales',async({page})=>{
+test('bitácora llega renderizada desde el build, sin pedir contenido a Sanity en el navegador',async({page})=>{
+  const sanityRequests=[];
+  page.on('request',request=>{if(request.url().includes('sanity.io'))sanityRequests.push(request.url());});
   await page.goto('/bitacora.html');
-  await expect(page.locator('[data-editorial-empty]')).toBeVisible();
-  await expect(page.locator('[data-sanity-articles]')).toBeHidden();
-  await expect(page.locator('main .ec-article-card')).toHaveCount(0);
-  await expect(page.locator('main img')).toHaveCount(0);
+  await expect(page.locator('.ec-article-card')).toHaveCount(2);
+  await expect(page.locator('main')).toContainText('Cómo evaluar energía solar para una industria');
+  await expect(page.locator('main')).toContainText('Artículo de prueba no indexable');
+  expect(sanityRequests).toEqual([]);
 });
 
-test('bitácora renderiza únicamente artículos devueltos por Sanity',async({page})=>{
-  await page.addInitScript(()=>{window.__ECORISE_SANITY_QUERY_URL__='/tests/fixtures/sanity-articles.json';});
-  await page.goto('/bitacora.html');
-  const feed=page.locator('[data-sanity-articles]');
-  await expect(feed).toBeVisible();
-  await expect(feed).toContainText('Cómo leer una oportunidad energética antes de invertir');
-  await expect(page.locator('[data-editorial-empty]')).toBeHidden();
-  await expect(feed.locator('a.ec-card-link')).toHaveAttribute('href',/articulo\.html\?slug=oportunidad-energetica/);
+test('artículo generado tiene URL limpia, contenido y metadata ya presentes en el HTML',async({page})=>{
+  const response=await page.goto('/bitacora/energia-solar-industria/');
+  expect(response.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveText('Cómo evaluar energía solar para una industria');
+  await expect(page.locator('.ec-article-body')).toContainText('La primera pregunta no es cuántos paneles instalar');
+  await expect(page.locator('.ec-article-body h2')).toHaveText('Datos antes que tecnología');
+  await expect(page.locator('.ec-article-body strong')).toContainText('Consumo, horario, infraestructura');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://ecorise.com.ar/bitacora/energia-solar-industria/');
 });
 
-test('lector de artículo renderiza Portable Text básico desde Sanity',async({page})=>{
-  await page.addInitScript(()=>{window.__ECORISE_SANITY_ARTICLE_URL__='/tests/fixtures/sanity-article.json';});
-  await page.goto('/articulo.html?slug=oportunidad-energetica');
-  await expect(page.locator('[data-article-title]')).toHaveText('Cómo leer una oportunidad energética antes de invertir');
-  await expect(page.locator('[data-article-body]')).toContainText('La primera pregunta no es cuántos paneles instalar');
-  await expect(page.locator('[data-article-body] h2')).toHaveText('Datos antes que tecnología');
-  await expect(page.locator('[data-article-body] strong')).toContainText('Consumo, horario, infraestructura');
+test('preview noIndex se genera pero conserva la directiva de exclusión',async({page})=>{
+  await page.goto('/bitacora/articulo-prueba-noindex/');
+  await expect(page.locator('h1')).toHaveText('Artículo de prueba no indexable');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content','noindex,follow');
 });
 
 test('sitio rediseñado no genera overflow horizontal en viewport móvil',async({page,isMobile})=>{
   test.skip(!isMobile,'Este control aplica al proyecto mobile.');
-  for(const [url] of [...pages,['calculadora-energetica.html']]){
+  for(const [url] of [...pages,['calculadora-energetica.html'],['bitacora/energia-solar-industria/']]){
     await page.goto(`/${url}`);
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+1);
     expect(overflow,`${url} tiene overflow horizontal`).toBe(false);
