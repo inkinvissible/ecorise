@@ -1,0 +1,5 @@
+node_modules/
+_site/
+.build/
+sanity-pipeline/node_modules/
+sanity-pipeline/.sanity/
