@@ -37,7 +37,7 @@ function escapeHtml(value=''){
 }
 
 function safeJson(value){return JSON.stringify(value).replace(/</g,'\\u003c');}
-function compact(values){return values.filter(value=>value!==undefined&&value!==null&&value!=='');}
+function compact(values){return values.filter(value=>value!==undefined&&value!==null&&value!==''&&value!==false);}
 function refTitle(ref){return ref?.title||ref?.name||'';}
 
 function safeSlug(value){
