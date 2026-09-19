@@ -438,8 +438,17 @@ async function writeContent(rawContent){
   console.log(`Sitio generado desde Sanity: ${summary}. Todo lo publicado es visible en su colección; noIndex excluye el documento del sitemap y de promoción SEO.`);
 }
 
+async function injectRuntimeAnalyticsConfig(){
+  const trackingPath=path.join(OUT,'js','tracking.js');
+  let tracking=await fs.readFile(trackingPath,'utf8');
+  const token=process.env.POSTHOG_PROJECT_TOKEN||'';
+  tracking=tracking.replace('__ECORISE_POSTHOG_TOKEN__',token.replaceAll('\\','\\\\').replaceAll("'","\\'"));
+  await fs.writeFile(trackingPath,tracking);
+}
+
 async function main(){
   await copyPublicTree();
+  await injectRuntimeAnalyticsConfig();
   const content=await loadContent();
   await writeContent(content);
 }
