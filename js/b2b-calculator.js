@@ -39,14 +39,16 @@
     fitEl.textContent=assessment.fit;
     result.classList.add('is-visible');
     result.scrollIntoView({behavior:'smooth',block:'nearest'});
-    if(window.dataLayer){
-      window.dataLayer.push({
-        event:'b2b_energy_assessment_completed',
-        sector:sector,
-        consumption_band:consumption<10000?'lt_10mwh':consumption<50000?'10_50mwh':consumption<150000?'50_150mwh':'gt_150mwh',
-        bill_band:assessment.billBand,
-        daytime_fit:assessment.fit.toLowerCase().replace(' ','_')
-      });
+    const analyticsProperties={
+      sector:sector,
+      consumption_band:consumption<10000?'lt_10mwh':consumption<50000?'10_50mwh':consumption<150000?'50_150mwh':'gt_150mwh',
+      bill_band:assessment.billBand,
+      daytime_fit:assessment.fit.toLowerCase().replace(' ','_')
+    };
+    if(typeof window.ecoriseTrack==='function'){
+      window.ecoriseTrack('b2b_energy_assessment_completed',analyticsProperties);
+    }else if(window.dataLayer){
+      window.dataLayer.push(Object.assign({event:'b2b_energy_assessment_completed'},analyticsProperties));
     }
   });
 })();
