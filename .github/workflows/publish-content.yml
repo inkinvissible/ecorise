@@ -32,6 +32,8 @@ jobs:
       - run: npm install
       - name: Generate site from published Sanity content
         run: npm run build
+        env:
+          POSTHOG_PROJECT_TOKEN: ${{ secrets.POSTHOG_PROJECT_TOKEN }}
       - name: Validate generated content
         run: npm run test:generated
       - uses: actions/configure-pages@v5
