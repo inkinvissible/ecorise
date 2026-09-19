@@ -14,10 +14,16 @@ for(const file of pages){
 }
 
 const tracking=fs.readFileSync('js/tracking.js','utf8');
-for(const required of ['GTM-5Q7XKBN5','G-G4TLBRV3SH','AW-17629078632','2521676828246674','lead_intent_click','/js/motion.js','/css/motion.css']){
+for(const required of ['GTM-5Q7XKBN5','G-G4TLBRV3SH','AW-17629078632','2521676828246674','lead_intent_click','__ECORISE_POSTHOG_TOKEN__','posthog.init','person_profiles','respect_dnt','maskAllInputs','product_viewed','solution_viewed','case_study_viewed','article_viewed','whatsapp_clicked','calculator_result_cta_clicked','/js/motion.js','/css/motion.css']){
   if(!tracking.includes(required)) failures.push(`js/tracking.js: falta ${required}`);
 }
 if(/(?:href|src)=['"]?(?:css\/motion\.css|js\/motion\.js)/i.test(tracking)) failures.push('js/tracking.js: motion debe cargarse con rutas raíz para funcionar en URLs anidadas.');
+
+const calculator=fs.readFileSync('js/b2b-calculator.js','utf8');
+if(!calculator.includes("ecoriseTrack('b2b_energy_assessment_completed'")) failures.push('js/b2b-calculator.js: falta envío unificado de b2b_energy_assessment_completed');
+
+const build=fs.readFileSync('scripts/build-site.mjs','utf8');
+if(!build.includes('POSTHOG_PROJECT_TOKEN')) failures.push('scripts/build-site.mjs: falta inyección de POSTHOG_PROJECT_TOKEN');
 
 if(!fs.existsSync('js/motion.js')) failures.push('falta js/motion.js');
 if(!fs.existsSync('css/motion.css')) failures.push('falta css/motion.css');
