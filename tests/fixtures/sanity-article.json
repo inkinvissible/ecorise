@@ -1,0 +1,28 @@
+{
+  "result": {
+    "_id": "article-test-1",
+    "title": "Cómo leer una oportunidad energética antes de invertir",
+    "excerpt": "Una guía de prueba para validar la integración editorial con Sanity.",
+    "publishedAt": "2026-09-13T12:00:00.000Z",
+    "category": "Estrategia",
+    "heroImageUrl": "http://127.0.0.1:4173/img/evaluacion-economica.jpg",
+    "heroAlt": "Evaluación económica de una oportunidad energética",
+    "body": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [{"_type":"span","text":"La primera pregunta no es cuántos paneles instalar, sino qué problema energético necesita resolver la operación.","marks":[]}]
+      },
+      {
+        "_type": "block",
+        "style": "h2",
+        "children": [{"_type":"span","text":"Datos antes que tecnología","marks":[]}]
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "children": [{"_type":"span","text":"Consumo, horario, infraestructura y restricciones permiten comparar alternativas con una base común.","marks":["strong"]}]
+      }
+    ]
+  }
+}
